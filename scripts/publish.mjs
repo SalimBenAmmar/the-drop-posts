@@ -116,7 +116,8 @@ async function archive(post, destRoot, extra) {
 async function main() {
   if (!TOKEN) {
     console.error('IG_ACCESS_TOKEN secret is missing. Add it under Settings > Secrets and variables > Actions.');
-    process.exit(1);
+    // Scheduled runs skip quietly until setup is finished; a manual check run reports the problem.
+    process.exit(process.argv.includes('--check') ? 1 : 0);
   }
   const me = await ig('GET', '/me', { fields: 'user_id,username,account_type' });
   const igId = me.user_id || me.id;
