@@ -148,17 +148,22 @@ async function main() {
   console.log(`Connected to Instagram @${username} (account id ${igId}) via ${new URL(API).host}`);
 
   if (process.argv.includes('--check')) {
+    const status = { checked_at: new Date().toISOString(), instagram: `@${username}`, account_id: igId, api_host: new URL(API).host };
     try {
       const limit = await ig('GET', `/${igId}/content_publishing_limit`, { fields: 'quota_usage,config' });
-      console.log(`Publishing quota: ${JSON.stringify(limit.data?.[0] || limit)}`);
+      status.publishing_quota = limit.data?.[0] || limit;
+      console.log(`Publishing quota: ${JSON.stringify(status.publishing_quota)}`);
     } catch (e) {
+      status.publishing_quota_error = e.message;
       console.log(`Could not read publishing quota: ${e.message}`);
     }
-    if (!BASE) console.log('MEDIA_BASE_URL is not set.');
+    if (!BASE) status.pages = 'MEDIA_BASE_URL not set';
     else {
       const res = await fetch(`${BASE}/README.md`, { method: 'HEAD' }).catch(() => null);
-      console.log(res && res.ok ? `GitHub Pages is serving files at ${BASE}` : `GitHub Pages is NOT serving ${BASE} yet. Enable it under Settings > Pages.`);
+      status.pages = res && res.ok ? `serving at ${BASE}` : `NOT serving ${BASE} yet`;
+      console.log(`GitHub Pages: ${status.pages}`);
     }
+    await fs.writeFile(path.join(ROOT, 'status.json'), JSON.stringify(status, null, 2) + '\n');
     return;
   }
 
@@ -187,4 +192,11 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error(e.message); process.exit(1); });
+main().catch(async (e) => {
+  console.error(e.message);
+  if (process.argv.includes('--check')) {
+    await fs.writeFile(path.join(ROOT, 'status.json'),
+      JSON.stringify({ checked_at: new Date().toISOString(), error: e.message }, null, 2) + '\n').catch(() => {});
+  }
+  process.exit(1);
+});
