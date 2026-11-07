@@ -1,0 +1,6 @@
+{
+  "cycle": ["reel", "reel", "reel", "reel", "carousel"],
+  "next_index": 0,
+  "slots_uk": ["12:30", "19:30"],
+  "last_queued_slot": null
+}
