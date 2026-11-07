@@ -120,7 +120,8 @@ async function connect() {
   try {
     const me = await ig('GET', '/me', { fields: 'user_id,username' });
     return { igId: me.user_id || me.id, username: me.username };
-  } catch {
+  } catch (e) {
+    console.log(`Not an Instagram-login token (${e.message}); trying the business API.`);
     API = `https://graph.facebook.com/${VERSION}`;
   }
   let igId = process.env.IG_USER_ID;
