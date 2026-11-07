@@ -50,9 +50,16 @@ async function waitReady(containerId) {
   throw new Error(`Media container ${containerId} not ready after 10 minutes`);
 }
 
+// GitHub Pages takes a minute or two to publish new files, so wait up to 4 minutes.
 async function assertReachable(url) {
-  const res = await fetch(url, { method: 'HEAD' });
-  if (!res.ok) throw new Error(`Media not reachable yet (${res.status}): ${url}`);
+  let status = 0;
+  for (let i = 0; i < 24; i++) {
+    const res = await fetch(url, { method: 'HEAD' }).catch(() => null);
+    status = res?.status || 0;
+    if (res?.ok) return;
+    await sleep(10000);
+  }
+  throw new Error(`Media not reachable (${status}): ${url}`);
 }
 
 function mediaUrl(post, file) {
