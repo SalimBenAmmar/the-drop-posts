@@ -6,7 +6,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const API = `https://graph.instagram.com/${process.env.IG_API_VERSION || 'v22.0'}`;
+const VERSION = process.env.IG_API_VERSION || 'v22.0';
+// Instagram-login tokens use graph.instagram.com; business (system-user) tokens use graph.facebook.com.
+let API = `https://graph.instagram.com/${VERSION}`;
 const TOKEN = process.env.IG_ACCESS_TOKEN;
 const BASE = (process.env.MEDIA_BASE_URL || '').replace(/\/$/, '');
 const ROOT = process.cwd();
@@ -113,15 +115,37 @@ async function archive(post, destRoot, extra) {
   await fs.rm(path.join(QUEUE, id), { recursive: true, force: true });
 }
 
+// Works out which API the token belongs to and which Instagram account it can publish to.
+async function connect() {
+  try {
+    const me = await ig('GET', '/me', { fields: 'user_id,username' });
+    return { igId: me.user_id || me.id, username: me.username };
+  } catch {
+    API = `https://graph.facebook.com/${VERSION}`;
+  }
+  let igId = process.env.IG_USER_ID;
+  if (!igId) {
+    const dbg = await ig('GET', '/debug_token', { input_token: TOKEN });
+    const scopes = dbg.data?.granular_scopes || [];
+    const publish = scopes.find((s) => s.scope === 'instagram_content_publish')
+      || scopes.find((s) => s.scope === 'instagram_basic');
+    const ids = publish?.target_ids || [];
+    if (ids.length === 0) throw new Error('The token has no Instagram account attached. Regenerate it and select the account.');
+    if (ids.length > 1) console.log(`Token covers several Instagram accounts (${ids.join(', ')}); using the first. Set IG_USER_ID to choose.`);
+    igId = ids[0];
+  }
+  const acct = await ig('GET', `/${igId}`, { fields: 'username' });
+  return { igId, username: acct.username };
+}
+
 async function main() {
   if (!TOKEN) {
     console.error('IG_ACCESS_TOKEN secret is missing. Add it under Settings > Secrets and variables > Actions.');
     // Scheduled runs skip quietly until setup is finished; a manual check run reports the problem.
     process.exit(process.argv.includes('--check') ? 1 : 0);
   }
-  const me = await ig('GET', '/me', { fields: 'user_id,username,account_type' });
-  const igId = me.user_id || me.id;
-  console.log(`Connected to Instagram @${me.username} (${me.account_type || 'account type unknown'})`);
+  const { igId, username } = await connect();
+  console.log(`Connected to Instagram @${username} (account id ${igId}) via ${new URL(API).host}`);
 
   if (process.argv.includes('--check')) {
     try {

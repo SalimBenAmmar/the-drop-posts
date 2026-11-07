@@ -32,8 +32,8 @@ Each post is a folder `queue/<YYYY-MM-DD-HHMM-slug>/` containing `post.json` and
 
 ## One-time setup
 
-- Secret `IG_ACCESS_TOKEN`: the Instagram token from the Meta developer app.
+- Secret `IG_ACCESS_TOKEN`: the system-user token from the Meta app "Drop Poster" (never expires).
 - Settings > Pages: deploy from branch `main`, folder `/ (root)`.
-- Optional secret `GH_PAT`: lets the weekly token refresh save a changed token automatically.
+- Optional variable `IG_USER_ID`: only needed if the token covers more than one Instagram account.
 
 Test the connection: Actions > Publish due posts > Run workflow > mode `check`.
