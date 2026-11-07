@@ -1,0 +1,4 @@
+{
+  "checked_at": "2026-11-07T23:39:04.699Z",
+  "error": "GET /debug_token: (#100) You must provide an app access token, or a user access token that is an owner or developer of the app (code 100, subcode ?)"
+}
