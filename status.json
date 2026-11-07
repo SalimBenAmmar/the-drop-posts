@@ -1,4 +1,14 @@
 {
-  "checked_at": "2026-11-07T23:39:04.699Z",
-  "error": "GET /debug_token: (#100) You must provide an app access token, or a user access token that is an owner or developer of the app (code 100, subcode ?)"
+  "checked_at": "2026-11-07T23:39:29.524Z",
+  "instagram": "@ukwaterlab",
+  "account_id": "17841457015304435",
+  "api_host": "graph.facebook.com",
+  "publishing_quota": {
+    "quota_usage": 0,
+    "config": {
+      "quota_total": 100,
+      "quota_duration": 86400
+    }
+  },
+  "pages": "serving at https://SalimBenAmmar.github.io/the-drop-posts"
 }
