@@ -3,6 +3,9 @@ name: Publish due posts
 on:
   schedule:
     - cron: '*/15 * * * *'
+  push:
+    branches: [main]
+    paths: ['.github/check-trigger']
   workflow_dispatch:
     inputs:
       mode:
@@ -34,7 +37,7 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ vars.IG_USER_ID }}
           MEDIA_BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-          MODE: ${{ inputs.mode }}
+          MODE: ${{ github.event_name == 'push' && 'check' || inputs.mode }}
         run: |
           if [ "$MODE" = "check" ]; then
             node scripts/publish.mjs --check
