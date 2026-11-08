@@ -167,6 +167,12 @@ async function main() {
       status.publishing_quota_error = e.message;
       console.log(`Could not read publishing quota: ${e.message}`);
     }
+    try {
+      const media = await ig('GET', `/${igId}/media`, { fields: 'id,media_type,media_product_type,permalink,timestamp,caption', limit: 8 });
+      status.recent_media = (media.data || []).map((m) => ({ id: m.id, type: m.media_product_type || m.media_type, time: m.timestamp, link: m.permalink, caption: (m.caption || '').split('\n')[0].slice(0, 60) }));
+    } catch (e) {
+      status.recent_media_error = e.message;
+    }
     if (!BASE) status.pages = 'MEDIA_BASE_URL not set';
     else {
       const res = await fetch(`${BASE}/README.md`, { method: 'HEAD' }).catch(() => null);
