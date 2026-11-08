@@ -1,0 +1,12 @@
+{
+  "topic": "LONDON WATER",
+  "slides": [
+    {"type": "cover", "tag": "LONDON · HARD WATER", "l1": "Why your kettle", "l2": "turns white", "lead": "It isn't dirt. It's dissolved rock.", "icon": "kettle"},
+    {"type": "text", "tag": "WHAT IT IS", "l1": "It's called", "l2": "limescale", "lead": "Hard water carries dissolved calcium and magnesium. Heat it, and they come back out as a white crust.", "icon": "drop", "source": "THAMES WATER, WATER HARDNESS"},
+    {"type": "steps", "tag": "THE ROUTE TO YOUR TAP", "l1": "Where the", "l2": "rock comes from", "steps": ["Rain falls on the land west of London.", "It passes through chalk and limestone.", "It picks up calcium and magnesium.", "It reaches your tap, hard."], "source": "THAMES WATER · LONDONIST"},
+    {"type": "stats", "tag": "WHERE IT'S TAKEN FROM", "l1": "Two sources,", "l2": "one region", "items": [{"v": "65%", "l": "FROM RIVERS", "red": true}, {"v": "35%", "l": "FROM UNDERGROUND"}], "lead": "Both pass through the same chalky rock, so all of it ends up hard.", "source": "THAMES WATER, WATER HARDNESS"},
+    {"type": "scale", "tag": "HOW HARD IS HARD?", "l1": "Thames Water's", "l2": "hardness bands", "rows": [{"b": "SOFT", "w": 1, "t": "up to 100 mg/l"}, {"b": "SLIGHTLY HARD", "w": 1.6, "t": "100–150 mg/l"}, {"b": "MODERATELY HARD", "w": 2.2, "t": "150–200 mg/l"}, {"b": "HARD", "w": 3.1, "t": "200–300 mg/l", "hot": true}, {"b": "VERY HARD", "w": 4, "t": "over 300 mg/l", "hot": true}], "lead": "Measured as calcium carbonate. All water in Thames Water's region is hard.", "source": "THAMES WATER, WATER HARDNESS"},
+    {"type": "text", "big": true, "tag": "IS IT SAFE?", "l1": "Not", "l2": "harmful", "paras": ["Thames Water says hard water is not considered harmful, and that its minerals are good for us, especially for bones.", "The real cost is limescale: on kettles, showers and taps."], "source": "THAMES WATER, WATER HARDNESS"},
+    {"type": "tips", "tag": "LESS LIMESCALE", "l1": "3 tips from", "l2": "Thames Water", "tips": ["Set your hot water to 60°C instead of hotter.", "Put a steel scale collector in your kettle.", "Empty the kettle when you're not using it."], "cta": ["IS YOUR WATER HARD?", "Comment your town and we'll cover it next."], "source": "THAMES WATER, WATER HARDNESS"}
+  ]
+}
