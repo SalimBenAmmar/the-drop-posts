@@ -18,7 +18,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: publish
+  group: publish-${{ github.event_name == 'push' && contains(join(github.event.head_commit.modified, ','), 'check-trigger') && 'check' || 'run' }}
   cancel-in-progress: false
 
 jobs:
