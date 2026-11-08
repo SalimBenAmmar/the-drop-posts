@@ -15,7 +15,7 @@ const ROOT = process.cwd();
 const QUEUE = path.join(ROOT, 'queue');
 const POSTED = path.join(ROOT, 'posted');
 const FAILED = path.join(ROOT, 'failed');
-const MAX_PER_RUN = 2;
+const MAX_PER_RUN = 5;
 const MAX_ATTEMPTS = 3;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -86,6 +86,8 @@ async function publishPost(igId, post) {
     creationId = (await ig('POST', `/${igId}/media`, {
       media_type: 'CAROUSEL', children: children.join(','), caption: post.caption || '',
     })).id;
+  } else if (post.type === 'story') {
+    creationId = (await ig('POST', `/${igId}/media`, { media_type: 'STORIES', image_url: urls[0] })).id;
   } else if (post.type === 'image') {
     creationId = (await ig('POST', `/${igId}/media`, { image_url: urls[0], caption: post.caption || '' })).id;
   } else {

@@ -26,7 +26,7 @@ Each post is a folder `queue/<YYYY-MM-DD-HHMM-slug>/` containing `post.json` and
 }
 ```
 
-- `type`: `reel` (one MP4, 9:16), `carousel` (2–10 JPEG images, 4:5) or `image`.
+- `type`: `reel` (one MP4, 9:16), `carousel` (2–10 JPEG images, 4:5), `story` (one 9:16 JPEG) or `image`.
 - `publish_at`: UTC time. UK time is UTC in winter and UTC+1 in summer.
 - Carousel images must be JPEG; Instagram's API does not accept PNG.
 
