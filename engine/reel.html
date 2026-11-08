@@ -1,0 +1,555 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Oswald;font-weight:700;src:url("node_modules/@fontsource/oswald/files/oswald-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:400;src:url("node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:700;src:url("node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2")}
+html,body{margin:0;background:#012169}
+canvas{display:block}
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<span style="font-family:Oswald;font-weight:700;position:absolute;left:-999px">a</span>
+<span style="font-family:Inter;position:absolute;left:-999px">a</span>
+<script>
+const W = 1080, H = 1920;
+const BLUE = '#012169', RED = '#C8102E', WHITE = '#FFFFFF', DEEP = '#7a0a1c';
+const c = document.getElementById('c'), g = c.getContext('2d');
+let D = null; // {geo, timing, script}
+
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const outBack = (x) => { x = clamp(x); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const lerp = (a, b, t) => a + (b - a) * t;
+const rad = (d) => d * Math.PI / 180;
+const mY = (lat) => Math.log(Math.tan(Math.PI / 4 + rad(lat) / 2));
+
+// ---- camera -------------------------------------------------------------
+const CAMS = {
+  uk: [-3.0, 54.6, 3500], london: [-0.3, 51.62, 9500], londonClose: [-0.12, 51.5, 20000],
+  south: [-1.1, 52.0, 7500], thames: [-0.72, 51.6, 30000], chalk: [-0.85, 51.66, 26000],
+  dim: [-2.6, 54.2, 3000], ukEnd: [-3.0, 54.8, 3300]
+};
+const SCENE_CAM = {
+  hook: ['uk', 'london'], drop: ['dim', 'dim'], zoomout: ['south', 'south'],
+  split: ['thames', 'thames'], chalkmap: ['chalk', 'chalk'], particles: ['dim', 'dim'],
+  official: ['dim', 'dim'], kettle: ['dim', 'dim'], kettle2: ['dim', 'dim'], safe: ['dim', 'dim'], cta: ['ukEnd', 'ukEnd']
+};
+let cam = { lon: -3, lat: 54.6, k: 3500, cy: 820 };
+function proj(lon, lat) {
+  return [W / 2 + (rad(lon) - rad(cam.lon)) * cam.k, cam.cy - (mY(lat) - mY(cam.lat)) * cam.k];
+}
+
+// ---- timing helpers -----------------------------------------------------
+function lineAt(t) {
+  const L = D.timing.lines;
+  for (let i = L.length - 1; i >= 0; i--) if (t >= L[i].s - (i === 0 ? 1 : 0.12)) return i;
+  return 0;
+}
+function sceneSpan(i) {
+  const L = D.timing.lines, sc = D.script.lines;
+  let s = i, e = i;
+  while (s > 0 && sk(s - 1) === sk(i)) s--;
+  while (e < L.length - 1 && sk(e + 1) === sk(i)) e++;
+  const start = s === 0 ? 0 : L[s].s - 0.12;
+  const end = e === L.length - 1 ? D.timing.duration : L[e + 1].s - 0.12;
+  return [start, end];
+}
+
+// ---- drawing primitives -------------------------------------------------
+function ring(r) { g.beginPath(); r.forEach(([x, y], j) => { const p = proj(x, y); j ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]); }); g.closePath(); }
+function drawMap(dim) {
+  const bg = g.createRadialGradient(W / 2, 800, 100, W / 2, 900, 1300);
+  bg.addColorStop(0, '#0a2d7a'); bg.addColorStop(1, '#00113d');
+  g.fillStyle = bg; g.fillRect(0, 0, W, H);
+  g.fillStyle = 'rgba(255,255,255,0.13)';
+  for (const [k, rings] of Object.entries(D.geo)) if (k !== 'uk') rings.forEach((r) => { ring(r); g.fill(); });
+  g.save(); g.translate(0, 14); g.fillStyle = DEEP; D.geo.uk.forEach((r) => { ring(r); g.fill(); }); g.restore();
+  g.fillStyle = RED; g.strokeStyle = 'rgba(255,255,255,0.45)'; g.lineWidth = 2;
+  D.geo.uk.forEach((r) => { ring(r); g.fill(); g.stroke(); });
+  if (dim) { g.fillStyle = `rgba(0,17,61,${0.72 * dim})`; g.fillRect(0, 0, W, H); }
+}
+function rr(x, y, w, h, r) { g.beginPath(); g.roundRect(x, y, w, h, r); }
+function text(s, x, y, size, color, opts = {}) {
+  g.font = `${opts.weight || 700} ${size}px ${opts.font || 'Oswald'}`;
+  g.textAlign = opts.align || 'center'; g.textBaseline = 'middle';
+  if (opts.ls) g.letterSpacing = opts.ls + 'px'; else g.letterSpacing = '0px';
+  if (opts.shadow) { g.shadowColor = 'rgba(0,0,0,0.55)'; g.shadowBlur = 18; g.shadowOffsetY = 6; }
+  g.fillStyle = color; g.fillText(s, x, y);
+  g.shadowColor = 'transparent'; g.shadowBlur = 0; g.shadowOffsetY = 0;
+}
+function textW(s, size, font = 'Oswald', weight = 700, ls = 0) { g.font = `${weight} ${size}px ${font}`; g.letterSpacing = ls + 'px'; return g.measureText(s).width; }
+function pill(s, x, y, size, bg, fg, padX = 22, padY = 10, font = 'Oswald', weight = 700, ls = 0) {
+  const w = textW(s, size, font, weight, ls) + padX * 2, h = size * 1.2 + padY * 2;
+  g.fillStyle = bg; rr(x - w / 2, y - h / 2, w, h, 10); g.fill();
+  text(s, x, y + size * 0.04, size, fg, { font, weight, ls });
+  return w;
+}
+function pin(lon, lat, label, t0, t, opts = {}) {
+  const a = clamp((t - t0) / 0.35); if (a <= 0) return;
+  const [x, y] = proj(lon, lat), s = outBack(a);
+  const pulse = ((t - t0) % 1.4) / 1.4;
+  g.strokeStyle = `rgba(255,255,255,${0.6 * (1 - pulse)})`; g.lineWidth = 4;
+  g.beginPath(); g.arc(x, y, 14 + pulse * 46, 0, Math.PI * 2); g.stroke();
+  g.fillStyle = WHITE; g.beginPath(); g.arc(x, y, 14 * s, 0, Math.PI * 2); g.fill();
+  g.fillStyle = BLUE; g.beginPath(); g.arc(x, y, 6 * s, 0, Math.PI * 2); g.fill();
+  if (label) {
+    g.globalAlpha = a;
+    const dx = opts.dx ?? 0, dy = opts.dy ?? -62;
+    pill(label, x + dx, y + dy, opts.size || 34, WHITE, BLUE, 18, 6, 'Inter', 700, 2);
+    g.globalAlpha = 1;
+  }
+}
+function dropPath(cx, cy, s) {
+  g.beginPath();
+  g.moveTo(cx, cy - 150 * s);
+  g.bezierCurveTo(cx - 40 * s, cy - 80 * s, cx - 105 * s, cy - 20 * s, cx - 105 * s, cy + 50 * s);
+  g.bezierCurveTo(cx - 105 * s, cy + 115 * s, cx - 58 * s, cy + 160 * s, cx, cy + 160 * s);
+  g.bezierCurveTo(cx + 58 * s, cy + 160 * s, cx + 105 * s, cy + 115 * s, cx + 105 * s, cy + 50 * s);
+  g.bezierCurveTo(cx + 105 * s, cy - 20 * s, cx + 40 * s, cy - 80 * s, cx, cy - 150 * s);
+  g.closePath();
+}
+function card(cx, cy, w, h, a) {
+  const s = lerp(0.86, 1, outBack(a));
+  g.save(); g.globalAlpha = clamp(a * 1.6); g.translate(cx, cy); g.scale(s, s);
+  g.shadowColor = 'rgba(0,0,0,0.45)'; g.shadowBlur = 40; g.shadowOffsetY = 16;
+  g.fillStyle = WHITE; rr(-w / 2, -h / 2, w, h, 26); g.fill();
+  g.shadowColor = 'transparent';
+  return () => g.restore();
+}
+function tag(s, x, y) { return pill(s, x, y, 28, RED, WHITE, 18, 8, 'Inter', 700, 3); }
+
+// ---- scenes -------------------------------------------------------------
+const THAMES = [[-1.26, 51.75], [-1.15, 51.65], [-1.08, 51.56], [-0.98, 51.46], [-0.85, 51.5], [-0.72, 51.53], [-0.6, 51.48], [-0.5, 51.43], [-0.33, 51.46], [-0.22, 51.47], [-0.12, 51.5]];
+const CHALK = [[-1.75, 51.45], [-1.45, 51.58], [-1.1, 51.66], [-0.85, 51.76], [-0.55, 51.86], [-0.3, 51.95], [-0.15, 51.9], [-0.42, 51.77], [-0.75, 51.62], [-1.05, 51.5], [-1.4, 51.38], [-1.75, 51.33]];
+const TOWNS = [['LONDON', -0.12, 51.5], ['BIRMINGHAM', -1.9, 52.48], ['MANCHESTER', -2.24, 53.48], ['LEEDS', -1.55, 53.8], ['BRISTOL', -2.59, 51.45], ['CARDIFF', -3.18, 51.48], ['NEWCASTLE', -1.61, 54.97], ['GLASGOW', -4.25, 55.86], ['BELFAST', -5.93, 54.6], ['NORWICH', 1.3, 52.63]];
+
+function polyline(pts, prog, color, width) {
+  const P = pts.map(([a, b]) => proj(a, b));
+  const n = (P.length - 1) * clamp(prog);
+  g.strokeStyle = color; g.lineWidth = width; g.lineCap = 'round'; g.lineJoin = 'round';
+  g.beginPath(); g.moveTo(P[0][0], P[0][1]);
+  for (let i = 1; i <= Math.floor(n); i++) g.lineTo(P[i][0], P[i][1]);
+  const f = n - Math.floor(n), i0 = Math.floor(n);
+  if (i0 < P.length - 1) g.lineTo(lerp(P[i0][0], P[i0 + 1][0], f), lerp(P[i0][1], P[i0 + 1][1], f));
+  g.stroke();
+}
+function placeLabel(s, lon, lat, a, dx = 0, dy = 34, size = 30) {
+  if (a <= 0) return; const [x, y] = proj(lon, lat);
+  g.globalAlpha = clamp(a);
+  g.fillStyle = WHITE; g.beginPath(); g.arc(x, y, 8, 0, Math.PI * 2); g.fill();
+  text(s, x + dx, y + dy, size, WHITE, { font: 'Inter', weight: 700, ls: 3, shadow: true, align: dx < 0 ? 'right' : 'center' });
+  g.globalAlpha = 1;
+}
+function riverLabels(a) {
+  placeLabel('OXFORD', -1.26, 51.75, a, -22, 0); placeLabel('READING', -0.98, 51.46, a);
+  const [x, y] = proj(-0.72, 51.53); g.globalAlpha = clamp(a);
+  text('RIVER THAMES', x, y - 46, 34, WHITE, { font: 'Inter', weight: 700, ls: 4, shadow: true }); g.globalAlpha = 1;
+}
+function hatch(pts, a) {
+  g.save(); ring(pts); g.clip();
+  g.beginPath(); D.geo.uk.forEach((r) => r.forEach(([x, y], j) => { const q = proj(x, y); j ? g.lineTo(q[0], q[1]) : g.moveTo(q[0], q[1]); })); g.clip();
+  g.fillStyle = `rgba(255,255,255,${0.22 * a})`; g.fillRect(0, 0, W, H);
+  g.strokeStyle = `rgba(255,255,255,${0.75 * a})`; g.lineWidth = 5;
+  for (let x = -H; x < W + H; x += 26) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x + H, H); g.stroke(); }
+  g.strokeStyle = `rgba(255,255,255,${a})`; g.lineWidth = 8; ring(pts); g.stroke();
+  g.restore();
+}
+function topTitle(s, a, y = 330) { if (!s) return; g.globalAlpha = clamp(a); text(s, W / 2, y, 70, WHITE, { shadow: true }); g.globalAlpha = 1; }
+
+const SCENES = {
+  hook(t, p, s0) {
+    drawMap(0); pin(-0.12, 51.5, 'LONDON', 0.2, t);
+  },
+  drop(t, p, s0) {
+    drawMap(0.55);
+    const a = clamp((t - s0) / 0.3), s = outBack(a) * 1.55;
+    g.save(); g.shadowColor = 'rgba(0,0,0,0.5)'; g.shadowBlur = 50;
+    g.fillStyle = WHITE; dropPath(540, 800, s); g.fill(); g.restore();
+    g.save(); dropPath(540, 800, s); g.clip();
+    const pts = [[-50, 40, 14, 0.4], [40, -10, 10, 0.8], [10, 90, 12, 1.1], [-30, 120, 8, 1.4], [60, 70, 16, 1.7], [-60, -30, 7, 2.0]];
+    pts.forEach(([x, y, r, at], i) => {
+      const b = clamp((t - s0 - at) / 0.3);
+      const wob = Math.sin(t * 2 + i) * 6;
+      g.fillStyle = i === 4 ? RED : BLUE; g.globalAlpha = b;
+      g.beginPath(); g.arc(540 + x * 1.55 + wob, 800 + y * 1.55, r * 1.55 * outBack(b), 0, Math.PI * 2); g.fill();
+    });
+    g.restore(); g.globalAlpha = 1;
+    topTitle('INVISIBLE, BUT THERE', (t - s0) / 0.4);
+  },
+  zoomout(t, p, s0) {
+    drawMap(0); pin(-0.12, 51.5, 'LONDON', s0, t);
+    topTitle('HOW IT GETS THERE', (t - s0) / 0.3);
+  },
+  split(t, p, s0) {
+    drawMap(0);
+    polyline(THAMES, (t - s0) / 1.6, 'rgba(255,255,255,0.95)', 12);
+    riverLabels((t - s0 - 0.6) / 0.4);
+    pin(-0.12, 51.5, 'LONDON', s0, t, { dx: 70, dy: 60 });
+    const a = clamp((t - s0 - 0.9) / 0.35);
+    if (a > 0) {
+      const done = card(540, 470, 900, 360, a);
+      text('RIVERS', -220, -125, 34, BLUE, { font: 'Inter', ls: 3 });
+      text('UNDERGROUND', 220, -125, 34, BLUE, { font: 'Inter', ls: 3 });
+      const k = ease(clamp((t - s0 - 1.1) / 1.2));
+      text(Math.round(65 * k) + '%', -220, -15, 130, RED);
+      text(Math.round(35 * k) + '%', 220, -15, 130, BLUE);
+      g.fillStyle = '#E6E9F2'; rr(-400, 75, 800, 24, 12); g.fill();
+      g.fillStyle = RED; rr(-400, 75, 800 * 0.65 * k, 24, 12); g.fill();
+      text('SOURCE: THAMES WATER', 0, 135, 24, '#5a6a93', { font: 'Inter', weight: 400, ls: 3 });
+      done();
+    }
+    topTitle('', 0);
+  },
+  chalkmap(t, p, s0) {
+    drawMap(0);
+    const a = ease((t - s0) / 0.8);
+    hatch(CHALK, a);
+    polyline(THAMES, 1, 'rgba(255,255,255,0.95)', 12);
+    riverLabels(1);
+    pin(-0.12, 51.5, 'LONDON', s0 - 1, t, { dx: 60, dy: 70 });
+    if (a > 0.3) { const [x, y] = proj(-1.05, 51.7); g.globalAlpha = clamp((a - 0.3) * 2); pill('CHALK & LIMESTONE', x, y - 120, 40, RED, WHITE, 20, 10, 'Oswald', 700, 1); g.globalAlpha = 1; }
+    topTitle('THE ROUTE TO YOUR TAP', (t - s0) / 0.3);
+  },
+  particles(t, p, s0) {
+    drawMap(0.85);
+    const a = outBack(clamp((t - s0) / 0.4));
+    const R = 360 * a;
+    g.fillStyle = '#021a52'; g.beginPath(); g.arc(540, 800, R, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = WHITE; g.lineWidth = 14; g.stroke();
+    g.save(); g.beginPath(); g.arc(540, 800, R, 0, Math.PI * 2); g.clip();
+    const P = [[-150, -120, 'ca'], [80, -170, 'ca'], [160, 40, 'mg'], [-60, 60, 'ca'], [-190, 110, 'mg'], [60, 180, 'ca'], [200, -60, 'ca'], [-90, -10, 'mg']];
+    P.forEach(([x, y, k], i) => {
+      const dx = Math.sin(t * 1.3 + i * 1.7) * 18, dy = Math.cos(t * 1.1 + i) * 18;
+      g.beginPath(); g.arc(540 + x + dx, 800 + y + dy, k === 'ca' ? 34 : 28, 0, Math.PI * 2);
+      if (k === 'ca') { g.fillStyle = WHITE; g.fill(); } else { g.strokeStyle = WHITE; g.lineWidth = 10; g.stroke(); }
+    });
+    g.restore();
+    const mw = D.timing.lines[lineAt(t)].words.find((w) => /magnesium/i.test(w.w));
+    const la = clamp((t - s0 - 0.4) / 0.3), lb = mw ? clamp((t - mw.s + 0.1) / 0.3) : clamp((t - s0 - 1.2) / 0.3);
+    g.globalAlpha = la; pill('CALCIUM', 300, 380, 46, RED, WHITE); g.globalAlpha = lb; pill('MAGNESIUM', 790, 1220, 46, WHITE, BLUE); g.globalAlpha = 1;
+  },
+  official(t, p, s0) {
+    drawMap(0.85);
+    const a = clamp((t - s0) / 0.35);
+    const done = card(540, 800, 920, 640, a);
+    g.strokeStyle = BLUE; g.lineWidth = 3; rr(-300, -255, 600, 62, 6); g.stroke();
+    text('OFFICIAL · THAMES WATER', 0, -223, 30, BLUE, { font: 'Inter', ls: 4 });
+    text('ALL OF IT', 0, -105, 120, BLUE);
+    text('IS HARD', 0, 25, 120, RED);
+    const labels = ['SOFT', 'MODERATE', 'HARD', 'VERY HARD'];
+    labels.forEach((l, i) => {
+      const x = -390 + i * 195;
+      g.fillStyle = i === 2 ? RED : `rgba(1,33,105,${0.15 + i * 0.12})`; rr(x, 140, 185, 26, 6); g.fill();
+      text(l, x + 92, 205, 24, BLUE, { font: 'Inter', ls: 2 });
+    });
+    const mk = ease(clamp((t - s0 - 0.6) / 1.0));
+    const mx = lerp(-390, -390 + 2 * 195 + 92, mk);
+    g.fillStyle = RED; g.beginPath(); g.moveTo(mx, 130); g.lineTo(mx - 18, 100); g.lineTo(mx + 18, 100); g.closePath(); g.fill();
+    done();
+  },
+  kettle(t, p, s0, crust = 0) {
+    drawMap(0.85);
+    const a = outBack(clamp((t - s0) / 0.4));
+    g.save(); g.translate(540, 820); g.scale(a, a);
+    g.strokeStyle = WHITE; g.lineWidth = 18; g.lineJoin = 'round'; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(-200, 260); g.lineTo(-160, -180); g.lineTo(160, -180); g.lineTo(200, 260); g.closePath(); g.stroke();
+    g.beginPath(); g.moveTo(-120, -180); g.quadraticCurveTo(0, -260, 120, -180); g.stroke();
+    g.fillStyle = WHITE; g.beginPath(); g.arc(0, -232, 20, 0, Math.PI * 2); g.fill();
+    g.beginPath(); g.moveTo(180, -120); g.bezierCurveTo(330, -120, 330, 160, 190, 160); g.stroke();
+    g.beginPath(); g.moveTo(-182, 70); g.lineTo(-300, -110); g.lineTo(-262, -126); g.lineTo(-170, -20); g.closePath(); g.fill();
+    g.fillStyle = WHITE; rr(-240, 268, 480, 34, 12); g.fill();
+    g.fillStyle = 'rgba(255,255,255,0.08)'; g.beginPath(); g.moveTo(-190, 250); g.lineTo(-165, -40); g.lineTo(165, -40); g.lineTo(190, 250); g.closePath(); g.fill();
+    // heat
+    for (let i = -1; i <= 1; i++) {
+      g.strokeStyle = RED; g.lineWidth = 10; g.beginPath();
+      for (let y = 0; y <= 70; y += 4) { const x = i * 90 + Math.sin(y / 12 + t * 6 + i) * 12; y ? g.lineTo(x, 330 + y) : g.moveTo(x, 330 + y); }
+      g.stroke();
+    }
+    if (crust > 0) {
+      g.fillStyle = WHITE; g.beginPath(); g.moveTo(-188, 248);
+      for (let x = -188; x <= 188; x += 12) g.lineTo(x, 248 - crust * (36 + 14 * Math.sin(x * 0.19) + 10 * Math.sin(x * 0.07 + 2)));
+      g.lineTo(188, 248); g.closePath(); g.fill();
+    }
+    g.restore();
+    topTitle('WHY YOUR KETTLE GOES WHITE', (t - s0) / 0.3, 300);
+  },
+  kettle2(t, p, s0) {
+    const L = D.timing.lines[7];
+    SCENES.kettle(t, p, L.s - 0.12, 1);
+    const a = clamp((t - s0) / 0.3);
+    g.globalAlpha = a; pill('LIMESCALE', 540, 1180, 56, RED, WHITE); g.globalAlpha = 1;
+  },
+  safe(t, p, s0) {
+    drawMap(0.85);
+    const a = outBack(clamp((t - s0) / 0.4));
+    g.fillStyle = WHITE; g.beginPath(); g.arc(540, 700, 190 * a, 0, Math.PI * 2); g.fill();
+    const k = ease(clamp((t - s0 - 0.3) / 0.5));
+    g.strokeStyle = BLUE; g.lineWidth = 34; g.lineCap = 'round'; g.lineJoin = 'round';
+    g.beginPath(); g.moveTo(450, 705);
+    if (k < 0.4) g.lineTo(lerp(450, 515, k / 0.4), lerp(705, 770, k / 0.4));
+    else { g.lineTo(515, 770); g.lineTo(lerp(515, 640, (k - 0.4) / 0.6), lerp(770, 625, (k - 0.4) / 0.6)); }
+    g.stroke();
+    g.globalAlpha = clamp((t - s0 - 0.4) / 0.3);
+    text('NOT HARMFUL', 540, 990, 110, WHITE, { shadow: true });
+    text('SOURCE: THAMES WATER', 540, 1075, 30, '#c9d2ea', { font: 'Inter', weight: 400, ls: 4 });
+    g.globalAlpha = 1;
+  },
+  cta(t, p, s0) {
+    drawMap(0);
+    TOWNS.forEach(([n, lon, lat], i) => pin(lon, lat, null, s0 + 0.15 + i * 0.12, t));
+    topTitle('IS YOUR WATER HARD?', (t - s0) / 0.3, 300);
+  }
+};
+
+// ---- generic scenes (data-driven, used by the daily automation) -----------
+const REGIONS = {
+  chalk: CHALK,
+  southeast: [[-1.8, 51.0], [-1.6, 51.6], [-1.0, 52.1], [0.3, 52.35], [1.6, 52.7], [1.75, 52.3], [1.45, 51.4], [1.1, 51.1], [0.2, 50.75], [-1.0, 50.75]],
+  scotland: [[-5.2, 54.9], [-3.1, 55.0], [-2.0, 55.8], [-1.75, 57.5], [-3.0, 58.7], [-5.0, 58.6], [-6.3, 57.4], [-5.9, 56.0]]
+};
+// White line icons, drawn centred at 0,0 inside a ~600px box.
+const ICON = {
+  drop(t) { g.fillStyle = WHITE; dropPath(0, 0, 1.6); g.fill(); g.fillStyle = RED; g.beginPath(); g.arc(50, 90, 34, 0, Math.PI * 2); g.fill(); },
+  flask(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineJoin = 'round'; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(-80, -260); g.lineTo(80, -260); g.moveTo(-55, -260); g.lineTo(-55, -60); g.lineTo(-220, 230); g.lineTo(220, 230); g.lineTo(55, -60); g.lineTo(55, -260); g.stroke();
+    g.fillStyle = RED; g.beginPath(); g.moveTo(-150, 110); g.lineTo(150, 110); g.lineTo(205, 218); g.lineTo(-205, 218); g.closePath(); g.fill();
+    for (let k = 0; k < 4; k++) { const y = 80 - ((t * 120 + k * 70) % 280); g.fillStyle = WHITE; g.beginPath(); g.arc(-30 + k * 22, y, 12, 0, Math.PI * 2); g.fill(); }
+  },
+  shower(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(220, 260); g.lineTo(220, -230); g.quadraticCurveTo(220, -280, 160, -280); g.lineTo(40, -280); g.lineTo(40, -220); g.stroke();
+    g.fillStyle = WHITE; rr(-90, -230, 260, 50, 25); g.fill();
+    for (let k = 0; k < 14; k++) { const x = -70 + (k % 7) * 36, y = -150 + ((t * 420 + k * 61) % 380); g.fillStyle = k % 5 === 0 ? RED : WHITE; rr(x, y, 10, 30, 5); g.fill(); }
+  },
+  bath(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineJoin = 'round'; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(-260, -20); g.lineTo(260, -20); g.lineTo(230, 140); g.quadraticCurveTo(220, 190, 170, 190); g.lineTo(-170, 190); g.quadraticCurveTo(-220, 190, -230, 140); g.closePath(); g.stroke();
+    g.beginPath(); g.moveTo(-180, 190); g.lineTo(-200, 250); g.moveTo(180, 190); g.lineTo(200, 250); g.moveTo(-200, -20); g.lineTo(-200, -200); g.quadraticCurveTo(-200, -250, -140, -250); g.lineTo(-110, -250); g.stroke();
+    g.fillStyle = RED; g.beginPath(); g.moveTo(-232, 20); g.lineTo(232, 20); g.lineTo(222, 120); g.lineTo(-222, 120); g.closePath(); g.fill();
+  },
+  toilet(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineJoin = 'round'; g.lineCap = 'round';
+    rr(-200, -280, 170, 230, 18); g.stroke();
+    g.beginPath(); g.moveTo(-200, -40); g.lineTo(200, -40); g.quadraticCurveTo(200, 120, 40, 150); g.lineTo(60, 260); g.lineTo(-150, 260); g.lineTo(-130, 150); g.quadraticCurveTo(-200, 110, -200, -40); g.stroke();
+    g.fillStyle = RED; rr(-160, -250, 90, 22, 8); g.fill();
+    const w = (Math.sin(t * 4) + 1) / 2; g.fillStyle = `rgba(200,16,46,${0.4 + 0.6 * w})`; g.beginPath(); g.ellipse(20, 10, 120, 26, 0, 0, Math.PI * 2); g.fill();
+  },
+  washer(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineJoin = 'round';
+    rr(-230, -270, 460, 540, 30); g.stroke();
+    g.beginPath(); g.moveTo(-230, -170); g.lineTo(230, -170); g.stroke();
+    g.fillStyle = WHITE; g.beginPath(); g.arc(150, -220, 18, 0, Math.PI * 2); g.fill(); rr(-180, -232, 140, 24, 8); g.fill();
+    g.beginPath(); g.arc(0, 50, 150, 0, Math.PI * 2); g.stroke();
+    g.save(); g.beginPath(); g.arc(0, 50, 130, 0, Math.PI * 2); g.clip();
+    g.fillStyle = RED; g.beginPath(); g.moveTo(-140, 80 + Math.sin(t * 5) * 12);
+    for (let x = -140; x <= 140; x += 10) g.lineTo(x, 70 + Math.sin(x / 30 + t * 5) * 14);
+    g.lineTo(140, 200); g.lineTo(-140, 200); g.closePath(); g.fill(); g.restore();
+  },
+  kettle(t) { g.save(); g.scale(1, 1); SCENES_KETTLE_ICON(t); g.restore(); },
+  glass(t) {
+    g.strokeStyle = WHITE; g.lineWidth = 22; g.lineJoin = 'round';
+    g.beginPath(); g.moveTo(-150, -250); g.lineTo(150, -250); g.lineTo(115, 250); g.lineTo(-115, 250); g.closePath(); g.stroke();
+    g.fillStyle = 'rgba(255,255,255,0.25)'; g.beginPath(); g.moveTo(-138, -80); g.lineTo(138, -80); g.lineTo(112, 238); g.lineTo(-112, 238); g.closePath(); g.fill();
+    g.fillStyle = WHITE; rr(-60, -60, 34, 34, 6); g.fill(); rr(10, 0, 30, 30, 6); g.fill();
+  },
+  rock(t) {
+    g.fillStyle = WHITE; g.beginPath(); g.moveTo(-230, 160); g.lineTo(-180, -40); g.lineTo(-60, -170); g.lineTo(90, -150); g.lineTo(210, -20); g.lineTo(240, 160); g.closePath(); g.fill();
+    g.strokeStyle = BLUE; g.lineWidth = 10; g.beginPath(); g.moveTo(-180, -40); g.lineTo(-20, 0); g.lineTo(90, -150); g.moveTo(-20, 0); g.lineTo(60, 160); g.stroke();
+    g.fillStyle = RED; g.beginPath(); g.arc(150, 70, 36, 0, Math.PI * 2); g.fill();
+  }
+};
+function SCENES_KETTLE_ICON(t) {
+  g.strokeStyle = WHITE; g.lineWidth = 18; g.lineJoin = 'round'; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(-200, 260); g.lineTo(-160, -180); g.lineTo(160, -180); g.lineTo(200, 260); g.closePath(); g.stroke();
+  g.beginPath(); g.moveTo(-120, -180); g.quadraticCurveTo(0, -260, 120, -180); g.stroke();
+  g.fillStyle = WHITE; g.beginPath(); g.arc(0, -232, 20, 0, Math.PI * 2); g.fill();
+  g.beginPath(); g.moveTo(180, -120); g.bezierCurveTo(330, -120, 330, 160, 190, 160); g.stroke();
+  g.beginPath(); g.moveTo(-182, 70); g.lineTo(-300, -110); g.lineTo(-262, -126); g.lineTo(-170, -20); g.closePath(); g.fill();
+  rr(-240, 268, 480, 34, 12); g.fill();
+}
+function pinTag(lon, lat, label, kind, t0, t) {
+  pin(lon, lat, null, t0, t);
+  const a = clamp((t - t0 - 0.15) / 0.3); if (a <= 0) return;
+  const [x, y] = proj(lon, lat); g.globalAlpha = a;
+  const w = pill(label, x, y - 66, 36, WHITE, BLUE, 16, 6, 'Inter', 700, 2);
+  if (kind) pill(kind, x, y + 62, 44, kind === 'HARD' || kind === 'VERY HARD' ? RED : WHITE, kind === 'HARD' || kind === 'VERY HARD' ? WHITE : BLUE, 18, 6);
+  g.globalAlpha = 1;
+}
+const GEN = {
+  map(t, p, s0, sc) {
+    drawMap(sc.dim || 0);
+    if (sc.hatch) hatch(REGIONS[sc.hatch], ease((t - s0) / 0.8));
+    if (sc.hatchLabel) { const c = sc.hatchLabelAt || [-0.5, 51.9]; const [x, y] = proj(c[0], c[1]); g.globalAlpha = clamp((t - s0 - 0.5) / 0.3); pill(sc.hatchLabel, x, y, 40, RED, WHITE); g.globalAlpha = 1; }
+    (sc.pins || []).forEach(([label, lon, lat, kind], k) => pinTag(lon, lat, label, kind, s0 + 0.15 + k * 0.35, t));
+    topTitle(sc.title || '', (t - s0) / 0.3, 300);
+  },
+  icon(t, p, s0, sc) {
+    drawMap(0.85);
+    const a = s0 <= 0 ? 1 : outBack(clamp((t - s0) / 0.4));
+    g.save(); g.translate(540, sc.value ? 700 : 800); const sz = (sc.value ? 0.82 : 1) * a; g.scale(sz, sz); ICON[sc.icon](t); g.restore();
+    if (sc.value) {
+      const b = s0 <= 0 ? 1 : clamp((t - s0 - 0.25) / 0.3); g.globalAlpha = b;
+      text(sc.value, 540, 1075, 150, WHITE, { shadow: true });
+      if (sc.unit) pill(sc.unit, 540, 1185, 40, RED, WHITE, 18, 6, 'Inter', 700, 3);
+      g.globalAlpha = 1;
+    } else if (sc.label) { g.globalAlpha = clamp((t - s0 - 0.3) / 0.3); pill(sc.label, 540, 1180, 56, RED, WHITE); g.globalAlpha = 1; }
+    topTitle(sc.title || '', (t - s0) / 0.3, 300);
+  },
+  stat(t, p, s0, sc) {
+    drawMap(0.85);
+    const a = clamp((t - s0) / 0.35);
+    const items = sc.items, n = items.length, h = sc.bars ? 600 : 470;
+    const done = card(540, 780, 920, h, a);
+    if (sc.tag) { g.strokeStyle = BLUE; g.lineWidth = 3; const w = textW(sc.tag, 28, 'Inter', 700, 4) + 50; rr(-w / 2, -h / 2 + 40, w, 58, 6); g.stroke(); text(sc.tag, 0, -h / 2 + 70, 28, BLUE, { font: 'Inter', ls: 4 }); }
+    const k = ease(clamp((t - s0 - 0.3) / 1.0));
+    items.forEach((it, j) => {
+      const x = n === 1 ? 0 : (j - (n - 1) / 2) * 420, y = sc.tag ? -20 : -40;
+      const num = parseFloat(it.v); const shown = isNaN(num) || it.static ? it.v : (Number.isInteger(num) ? Math.round(num * k) : (num * k).toFixed(1)) + (it.suffix || '');
+      text(shown, x, y, n === 1 ? 190 : 150, it.red ? RED : BLUE);
+      text(it.l, x, y + 115, 30, BLUE, { font: 'Inter', ls: 3 });
+    });
+    if (sc.bars) {
+      const max = Math.max(...items.map((it) => parseFloat(it.v)));
+      items.forEach((it, j) => {
+        const w = 760 * parseFloat(it.v) / max * k;
+        g.fillStyle = '#E6E9F2'; rr(-380, 150 + j * 44, 760, 26, 13); g.fill();
+        g.fillStyle = it.red ? RED : BLUE; rr(-380, 150 + j * 44, Math.max(26, w), 26, 13); g.fill();
+      });
+    }
+    if (sc.source) text('SOURCE: ' + sc.source, 0, h / 2 - 40, 24, '#5a6a93', { font: 'Inter', weight: 400, ls: 3 });
+    done();
+    topTitle(sc.title || '', (t - s0) / 0.3, 300);
+  },
+  card(t, p, s0, sc) {
+    drawMap(0.85);
+    const a = clamp((t - s0) / 0.35);
+    const done = card(540, 800, 920, 560, a);
+    g.strokeStyle = BLUE; g.lineWidth = 3; const w = textW(sc.tag, 30, 'Inter', 700, 4) + 60; rr(-w / 2, -215, w, 62, 6); g.stroke();
+    text(sc.tag, 0, -183, 30, BLUE, { font: 'Inter', ls: 4 });
+    const f1 = Math.min(120, 120 * 800 / textW(sc.l1, 120)), f2 = Math.min(120, 120 * 800 / textW(sc.l2, 120));
+    text(sc.l1, 0, -60, f1, BLUE); text(sc.l2, 0, 70, f2, RED);
+    if (sc.source) text('SOURCE: ' + sc.source, 0, 200, 24, '#5a6a93', { font: 'Inter', weight: 400, ls: 3 });
+    done();
+  },
+  check(t, p, s0, sc) {
+    drawMap(0.85);
+    const a = outBack(clamp((t - s0) / 0.4));
+    g.fillStyle = WHITE; g.beginPath(); g.arc(540, 700, 190 * a, 0, Math.PI * 2); g.fill();
+    const k = ease(clamp((t - s0 - 0.3) / 0.5));
+    g.strokeStyle = BLUE; g.lineWidth = 34; g.lineCap = 'round'; g.lineJoin = 'round';
+    g.beginPath(); g.moveTo(450, 705);
+    if (k < 0.4) g.lineTo(lerp(450, 515, k / 0.4), lerp(705, 770, k / 0.4));
+    else { g.lineTo(515, 770); g.lineTo(lerp(515, 640, (k - 0.4) / 0.6), lerp(770, 625, (k - 0.4) / 0.6)); }
+    g.stroke();
+    g.globalAlpha = clamp((t - s0 - 0.4) / 0.3);
+    const f = Math.min(110, 110 * 940 / textW(sc.text, 110));
+    text(sc.text, 540, 990, f, WHITE, { shadow: true });
+    if (sc.source) text('SOURCE: ' + sc.source, 540, 1075, 30, '#c9d2ea', { font: 'Inter', weight: 400, ls: 4 });
+    g.globalAlpha = 1;
+  },
+  particles(t, p, s0, sc) {
+    SCENES.particles(t, p, s0);
+  },
+  cta(t, p, s0, sc) {
+    drawMap(0);
+    TOWNS.forEach(([n, lon, lat], k) => pin(lon, lat, null, s0 + 0.15 + k * 0.12, t));
+    topTitle(sc.title || 'COMMENT YOUR TOWN', (t - s0) / 0.3, 300);
+  }
+};
+
+// ---- captions, hook, chrome ---------------------------------------------
+function captionAt(t) {
+  const L = D.timing.lines, i = lineAt(t), line = L[i], caps = D.script.lines[i].caps;
+  if (t < line.s - 0.05 || t > line.e + 0.25) return null;
+  const lens = caps.map((c) => c.replace(/\*/g, '').length + 4), tot = lens.reduce((a, b) => a + b, 0);
+  let acc = 0;
+  for (let j = 0; j < caps.length; j++) {
+    const s = line.s + (line.e - line.s) * acc / tot; acc += lens[j];
+    const e = line.s + (line.e - line.s) * acc / tot;
+    if (t < e || j === caps.length - 1) return { text: caps[j], s };
+  }
+}
+function drawCaption(t) {
+  const cap = captionAt(t); if (!cap) return;
+  const a = clamp((t - cap.s) / 0.12), sc = lerp(0.85, 1, outBack(a));
+  const words = cap.text.split(' '), size = 92, gap = 22;
+  const ws = words.map((w) => textW(w.replace('*', ''), size) + (w.startsWith('*') ? 36 : 0));
+  const total = ws.reduce((x, y) => x + y, 0) + gap * (words.length - 1);
+  const fit = Math.min(1, 840 / total);
+  g.save(); g.translate(540, 1330); g.scale(sc * fit, sc * fit);
+  let x = -total / 2;
+  words.forEach((w, i) => {
+    const key = w.startsWith('*'), s = w.replace('*', '');
+    if (key) { g.fillStyle = RED; rr(x, -size * 0.66, ws[i], size * 1.32, 12); g.fill(); g.strokeStyle = WHITE; g.lineWidth = 5; g.stroke(); text(s, x + ws[i] / 2, 4, size, WHITE); }
+    else { g.lineWidth = 14; g.strokeStyle = 'rgba(0,10,40,0.85)'; g.lineJoin = 'round'; g.font = `700 ${size}px Oswald`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.strokeText(s, x + ws[i] / 2, 4); text(s, x + ws[i] / 2, 4, size, WHITE); }
+    x += ws[i] + gap;
+  });
+  g.restore();
+}
+function drawHook(t) {
+  const L0 = D.timing.lines[0], end = D.timing.lines[1].s - 0.12;
+  if (t > end) return;
+  const out = clamp((end - t) / 0.2);
+  g.globalAlpha = out;
+  const [l1, l2] = D.script.hook;
+  const f1 = Math.min(118, 118 * 960 / textW(l1, 118)), f2 = Math.min(104, 104 * 900 / textW(l2, 104));
+  text(l1, 540, 270, f1, WHITE, { shadow: true });
+  pill(l2, 540, 420, f2, RED, WHITE, 30, 8);
+  g.globalAlpha = 1;
+}
+function drawChrome(t) {
+  // brand
+  g.fillStyle = RED; rr(60, 150, 26, 26, 4); g.fill();
+  text('THE DROP', 100, 165, 36, WHITE, { align: 'left' });
+  text('UK WATER SCIENCE', 1020, 165, 24, 'rgba(255,255,255,0.8)', { font: 'Inter', weight: 700, align: 'right', ls: 4 });
+  // progress
+  const p = t / D.timing.duration;
+  g.fillStyle = 'rgba(255,255,255,0.22)'; rr(90, 1500, 900, 8, 4); g.fill();
+  g.fillStyle = RED; rr(90, 1500, 900 * p, 8, 4); g.fill();
+  g.fillStyle = WHITE; g.beginPath(); g.arc(90 + 900 * p, 1504, 13, 0, Math.PI * 2); g.fill();
+  g.fillStyle = RED; g.beginPath(); g.arc(90 + 900 * p, 1504, 6, 0, Math.PI * 2); g.fill();
+}
+
+// ---- frame --------------------------------------------------------------
+// A line's scene is either a legacy name ("hook", "kettle"...) or an object {type, ...params}.
+function sk(i) { const s = D.script.lines[i].scene; return typeof s === 'string' ? s : JSON.stringify(s); }
+const MAP_TYPES = new Set(['map', 'cta']);
+function camPair(i) {
+  const s = D.script.lines[i].scene;
+  const look = (c) => (Array.isArray(c) ? c : CAMS[c]);
+  if (typeof s === 'string') { const [a, b] = SCENE_CAM[s]; return [CAMS[a], CAMS[b], a === 'dim']; }
+  if (s.type === 'cta') return [CAMS.ukEnd, CAMS.ukEnd, false];
+  if (!MAP_TYPES.has(s.type)) return [CAMS.dim, CAMS.dim, true];
+  const A = look(s.cam || 'uk'); return [A, look(s.cam2 || s.cam || 'uk'), false];
+}
+function setCam(t, i) {
+  const [s0, s1] = sceneSpan(i), [A, B, cut] = camPair(i);
+  const p = clamp((t - s0) / Math.max(0.1, s1 - s0));
+  let target = [lerp(A[0], B[0], ease(p)), lerp(A[1], B[1], ease(p)), lerp(A[2], B[2], ease(p)) * (1 + 0.05 * p)];
+  let first = i; while (first > 0 && sk(first - 1) === sk(i)) first--;
+  if (first > 0 && !cut) {
+    const pc = camPair(first - 1)[1];
+    const q = ease(clamp((t - s0) / 0.7));
+    if (pc && q < 1) target = [lerp(pc[0], target[0], q), lerp(pc[1], target[1], q), Math.exp(lerp(Math.log(pc[2]), Math.log(target[2]), q))];
+  }
+  cam.lon = target[0]; cam.lat = target[1]; cam.k = target[2];
+  return [s0, p];
+}
+window.renderFrame = function (t) {
+  const i = lineAt(t), s = D.script.lines[i].scene;
+  const [s0, p] = setCam(t, i);
+  g.clearRect(0, 0, W, H);
+  if (typeof s === 'string') SCENES[s](t, p, s0); else GEN[s.type](t, p, s0, s, i);
+  drawHook(t);
+  drawChrome(t);
+  drawCaption(t);
+};
+window.init = async function (data) {
+  D = data;
+  await document.fonts.load('700 40px Oswald'); await document.fonts.load('400 40px Inter'); await document.fonts.load('700 40px Inter');
+  return document.fonts.check('700 40px Oswald');
+};
+</script>
+</body></html>

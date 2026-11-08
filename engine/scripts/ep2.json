@@ -1,0 +1,190 @@
+{
+  "title": "There's chlorine in your tap water, on purpose",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "YES, THERE'S CHLORINE",
+    "IN YOUR TAP WATER"
+  ],
+  "lines": [
+    {
+      "text": "Yes, there's chlorine in your tap water. On purpose.",
+      "gap": 0.3,
+      "caps": [
+        "THERE'S *CHLORINE",
+        "ON *PURPOSE"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": "uk",
+        "cam2": [
+          -2.0,
+          53.2,
+          4600
+        ],
+        "pins": [
+          [
+            "LONDON",
+            -0.12,
+            51.5
+          ],
+          [
+            "MANCHESTER",
+            -2.24,
+            53.48
+          ],
+          [
+            "CARDIFF",
+            -3.18,
+            51.48
+          ]
+        ]
+      }
+    },
+    {
+      "text": "In England and Wales, water companies must keep a tiny amount in it, all the way to your tap.",
+      "gap": 0.3,
+      "caps": [
+        "WATER COMPANIES",
+        "*MUST KEEP",
+        "A TINY *AMOUNT",
+        "ALL THE WAY TO YOUR *TAP"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · DRINKING WATER INSPECTORATE",
+        "l1": "A TINY AMOUNT",
+        "l2": "MUST REACH YOUR TAP",
+        "source": "DWI"
+      }
+    },
+    {
+      "text": "It keeps the water hygienic on its long journey through the pipes.",
+      "gap": 0.3,
+      "caps": [
+        "IT KEEPS WATER *HYGIENIC",
+        "THROUGH THE *PIPES"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "flask",
+        "title": "WHY IT'S ADDED",
+        "label": "DISINFECTANT"
+      }
+    },
+    {
+      "text": "So how much is in there? Usually around half a milligram per litre, or less.",
+      "gap": 0.3,
+      "caps": [
+        "HOW *MUCH?",
+        "ABOUT *HALF",
+        "A MILLIGRAM PER *LITRE"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · DWI",
+        "items": [
+          {
+            "v": "0.5",
+            "l": "MG PER LITRE · TYPICAL",
+            "red": true
+          }
+        ],
+        "source": "DRINKING WATER INSPECTORATE"
+      }
+    },
+    {
+      "text": "The World Health Organization's guideline maximum is five.",
+      "gap": 0.2,
+      "caps": [
+        "THE WHO *MAXIMUM",
+        "IS *FIVE"
+      ],
+      "scene": {
+        "type": "stat",
+        "items": [
+          {
+            "v": "0.5",
+            "l": "TYPICAL UK",
+            "red": true
+          },
+          {
+            "v": "5",
+            "l": "WHO MAXIMUM"
+          }
+        ],
+        "bars": true,
+        "source": "DWI · WHO GUIDELINE"
+      }
+    },
+    {
+      "text": "That's about a tenth of the limit.",
+      "gap": 0.3,
+      "caps": [
+        "ABOUT A *TENTH",
+        "OF THE *LIMIT"
+      ],
+      "scene": {
+        "type": "stat",
+        "items": [
+          {
+            "v": "0.5",
+            "l": "TYPICAL UK",
+            "red": true
+          },
+          {
+            "v": "5",
+            "l": "WHO MAXIMUM"
+          }
+        ],
+        "bars": true,
+        "source": "DWI · WHO GUIDELINE"
+      }
+    },
+    {
+      "text": "Don't like the taste? Chill a jug of tap water in the fridge,",
+      "gap": 0.12,
+      "caps": [
+        "DON'T LIKE THE *TASTE?",
+        "CHILL A *JUG",
+        "IN THE *FRIDGE"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "glass",
+        "title": "THE TASTE TIP",
+        "label": "CHILL IT"
+      }
+    },
+    {
+      "text": "and throw it out after twenty-four hours.",
+      "gap": 0.3,
+      "caps": [
+        "THROW IT OUT",
+        "AFTER *24 HOURS"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "glass",
+        "title": "THE TASTE TIP",
+        "label": "CHILL IT"
+      }
+    },
+    {
+      "text": "Can you taste it where you live? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "CAN YOU *TASTE IT?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "CAN YOU TASTE IT?"
+      }
+    }
+  ],
+  "sources": [
+    "Drinking Water Inspectorate, Chlorine: https://www.dwi.gov.uk/consumers/learn-more-about-your-water/chlorine"
+  ]
+}

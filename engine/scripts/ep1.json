@@ -1,0 +1,122 @@
+{
+  "title": "There's rock in London's tap water",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "THERE'S ROCK IN",
+    "LONDON'S TAP WATER"
+  ],
+  "lines": [
+    {
+      "text": "There's rock in London's tap water.",
+      "gap": 0.25,
+      "caps": [
+        "THERE'S *ROCK",
+        "IN LONDON'S *WATER"
+      ],
+      "scene": "hook"
+    },
+    {
+      "text": "Not bits you can see, but rock dissolved into every drop.",
+      "gap": 0.3,
+      "caps": [
+        "NOT BITS",
+        "YOU CAN *SEE",
+        "BUT ROCK *DISSOLVED",
+        "IN EVERY *DROP"
+      ],
+      "scene": "drop"
+    },
+    {
+      "text": "Here's how it gets there.",
+      "gap": 0.25,
+      "caps": [
+        "HERE'S *HOW"
+      ],
+      "scene": "zoomout"
+    },
+    {
+      "text": "About two thirds of London's water comes from rivers, and the rest from underground.",
+      "gap": 0.2,
+      "caps": [
+        "TWO *THIRDS",
+        "FROM *RIVERS",
+        "THE REST FROM",
+        "*UNDERGROUND"
+      ],
+      "scene": "split"
+    },
+    {
+      "text": "On the way, it soaks through chalk and limestone west of the city.",
+      "gap": 0.3,
+      "caps": [
+        "IT SOAKS THROUGH",
+        "*CHALK AND LIMESTONE",
+        "WEST OF THE *CITY"
+      ],
+      "scene": "chalkmap"
+    },
+    {
+      "text": "That rock is calcium and magnesium,",
+      "gap": 0.12,
+      "caps": [
+        "*CALCIUM",
+        "AND *MAGNESIUM"
+      ],
+      "scene": "particles"
+    },
+    {
+      "text": "which is why Thames Water says all the water in its region is hard.",
+      "gap": 0.3,
+      "caps": [
+        "THAMES WATER *SAYS",
+        "*ALL OF IT",
+        "IS *HARD"
+      ],
+      "scene": "official"
+    },
+    {
+      "text": "Boil it, and those minerals come back out as limescale,",
+      "gap": 0.1,
+      "caps": [
+        "*BOIL IT",
+        "THE MINERALS",
+        "COME BACK AS",
+        "*LIMESCALE"
+      ],
+      "scene": "kettle"
+    },
+    {
+      "text": "that white crust in your kettle.",
+      "gap": 0.3,
+      "caps": [
+        "THAT WHITE *CRUST"
+      ],
+      "scene": "kettle2"
+    },
+    {
+      "text": "The good news? Thames Water says it's not harmful.",
+      "gap": 0.3,
+      "caps": [
+        "THE GOOD *NEWS?",
+        "THAMES WATER *SAYS",
+        "IT'S NOT *HARMFUL"
+      ],
+      "scene": "safe"
+    },
+    {
+      "text": "Is your water hard? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "IS YOUR WATER *HARD?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": "cta"
+    }
+  ],
+  "sources": [
+    "Thames Water, Water hardness: https://www.thameswater.co.uk/help/water-and-waste-help/water-quality/hard-water",
+    "Londonist, Where does London's tap water come from: https://londonist.com/london/features/where-s-my-tap-water-from"
+  ]
+}

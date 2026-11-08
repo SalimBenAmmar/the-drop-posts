@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Oswald;font-weight:700;src:url("node_modules/@fontsource/oswald/files/oswald-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:400;src:url("node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:700;src:url("node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2")}
+html,body{margin:0}
+.f{width:1080px;height:1920px;background:#012169;color:#fff;font-family:Inter;box-sizing:border-box;position:relative;overflow:hidden}
+.cover{display:flex;align-items:center;justify-content:center}
+.ring{width:620px;height:620px;border-radius:50%;border:16px solid #fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.story{padding:230px 90px 300px;display:flex;flex-direction:column}
+.badge{align-self:flex-start;background:#C8102E;padding:12px 20px;font-weight:700;font-size:30px;letter-spacing:6px}
+.ico{margin-top:70px;width:260px;height:260px;border-radius:50%;border:10px solid #fff;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+h1{font-family:Oswald;font-weight:700;font-size:118px;line-height:1;margin:56px 0 0;text-transform:uppercase}
+h1 em{font-style:normal;display:inline-block;background:#C8102E;padding:0 18px;margin-top:10px}
+p{font-size:44px;line-height:1.45;margin:44px 0 0;opacity:.95}
+p b{font-weight:700}
+.src{margin-top:auto;font-size:28px;letter-spacing:5px;font-weight:700;opacity:.75}
+.brand{position:absolute;left:90px;top:120px;font-family:Oswald;font-size:40px;display:flex;align-items:center;gap:16px}
+.brand i{width:26px;height:26px;background:#C8102E;display:block}
+</style></head>
+<body><div id="root"></div>
+<script>
+const ICONS = {
+  drop: (s) => `<svg width="${s}" height="${s}" viewBox="-130 -170 260 340"><path d="M0 -150 C-40 -80 -105 -20 -105 50 C-105 115 -58 160 0 160 C58 160 105 115 105 50 C105 -20 40 -80 0 -150 Z" fill="#fff"/><circle cx="40" cy="70" r="30" fill="#C8102E"/></svg>`,
+  kettle: (s) => `<svg width="${s}" height="${s}" viewBox="-330 -290 660 640"><g fill="none" stroke="#fff" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"><path d="M-200 260 L-160 -180 L160 -180 L200 260 Z"/><path d="M-120 -180 Q0 -260 120 -180"/><path d="M180 -120 C330 -120 330 160 190 160"/></g><circle cx="0" cy="-235" r="26" fill="#fff"/><path d="M-182 70 L-300 -110 L-255 -130 L-168 -20 Z" fill="#fff"/><rect x="-245" y="275" width="490" height="44" rx="14" fill="#fff"/><path d="M-182 245 L-182 200 Q-160 176 -135 202 Q-100 172 -70 204 Q-35 174 -5 204 Q30 172 60 204 Q95 174 125 204 Q155 178 182 200 L182 245 Z" fill="#C8102E"/></svg>`,
+  flask: (s) => `<svg width="${s}" height="${s}" viewBox="-170 -200 340 400"><g fill="none" stroke="#fff" stroke-width="24" stroke-linejoin="round" stroke-linecap="round"><path d="M-50 -170 L50 -170 M-35 -170 L-35 -40 L-140 150 Q-150 175 -120 175 L120 175 Q150 175 140 150 L35 -40 L35 -170"/></g><path d="M-95 75 L95 75 L130 150 Q136 162 120 162 L-120 162 Q-136 162 -130 150 Z" fill="#C8102E"/><circle cx="-20" cy="20" r="14" fill="#fff"/><circle cx="25" cy="-15" r="10" fill="#fff"/></svg>`,
+  pin: (s) => `<svg width="${s}" height="${s}" viewBox="-150 -170 300 360"><path d="M0 175 C-20 120 -125 40 -125 -40 C-125 -110 -70 -160 0 -160 C70 -160 125 -110 125 -40 C125 40 20 120 0 175 Z" fill="#fff"/><circle cx="0" cy="-40" r="52" fill="#C8102E"/></svg>`,
+  book: (s) => `<svg width="${s}" height="${s}" viewBox="-200 -160 400 320"><g fill="none" stroke="#fff" stroke-width="22" stroke-linejoin="round"><path d="M0 -100 Q-90 -150 -180 -110 L-180 120 Q-90 80 0 130 Q90 80 180 120 L180 -110 Q90 -150 0 -100 Z"/><path d="M0 -100 L0 130"/></g><rect x="40" y="-140" width="40" height="110" fill="#C8102E"/><path d="M40 -30 L60 -48 L80 -30 Z" fill="#012169"/></svg>`
+};
+const H = [
+  { key: 'start', icon: 'drop', badge: 'START HERE', title: ["What's really in", 'UK tap water?'], body: '<b>The Drop</b> explains UK water: hard water, chlorine, rivers, bills and what it means for your home.<br><br>New reels and carousels every day. Every fact comes from an official source.', src: 'FOLLOW + TURN ON NOTIFICATIONS' },
+  { key: 'hard', icon: 'kettle', badge: 'HARD WATER', title: ['What is', 'hard water?'], body: 'Water that picked up <b>calcium and magnesium</b> from chalk and limestone rock.<br><br>Heat it and the minerals come back out as <b>limescale</b>. Thames Water says all the water in its region is hard.', src: 'SOURCE — THAMES WATER' },
+  { key: 'chlorine', icon: 'flask', badge: 'CHLORINE', title: ['Why is there', 'chlorine in it?'], body: "It's added on purpose to keep water <b>hygienic</b> on its way through the pipes to your tap.<br><br>Levels are usually around <b>0.5 mg/l or less</b>, well under the WHO's 5 mg/l guideline.", src: 'SOURCE — DRINKING WATER INSPECTORATE' },
+  { key: 'area', icon: 'pin', badge: 'YOUR AREA', title: ['How hard is', 'your water?'], body: "Enter your postcode on your <b>water company's website</b>. Most have a hardness checker.<br><br>Then <b>comment your town</b> on any post and we'll cover your area next.", src: 'THE DROP · UK WATER SCIENCE' },
+  { key: 'sources', icon: 'book', badge: 'SOURCES', title: ['Where facts', 'come from'], body: "Only official sources:<br><b>• UK water companies</b><br><b>• Drinking Water Inspectorate</b><br><b>• UK government data</b><br><br>Every post names its source.", src: 'THE DROP · UK WATER SCIENCE' }
+];
+window.cover = (i) => { document.getElementById('root').innerHTML = `<div class="f cover"><div class="ring">${ICONS[H[i].icon](340)}</div></div>`; };
+window.story = (i) => {
+  const h = H[i];
+  document.getElementById('root').innerHTML = `<div class="f story"><div class="brand"><i></i>THE DROP</div><div class="badge">${h.badge}</div><div class="ico">${ICONS[h.icon](150)}</div><h1>${h.title[0]}<br><em>${h.title[1]}</em></h1><p>${h.body}</p><div class="src">${h.src}</div></div>`;
+};
+window.keys = H.map((h) => h.key);
+</script></body></html>

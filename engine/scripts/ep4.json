@@ -1,0 +1,149 @@
+{
+  "title": "You use 136 litres of water a day",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "YOU USE 136 LITRES",
+    "OF WATER A DAY"
+  ],
+  "lines": [
+    {
+      "text": "You use around a hundred and thirty-six litres of water a day.",
+      "gap": 0.3,
+      "caps": [
+        "*136 LITRES",
+        "*EVERY DAY"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "drop",
+        "value": "136 L",
+        "unit": "PER PERSON · PER DAY"
+      }
+    },
+    {
+      "text": "That's the average per person in England, from the government's latest figures.",
+      "gap": 0.3,
+      "caps": [
+        "THE *AVERAGE",
+        "PER PERSON",
+        "IN *ENGLAND"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · UK GOVERNMENT",
+        "l1": "136.5 LITRES",
+        "l2": "PER PERSON, PER DAY",
+        "source": "GOV.UK WATER RESOURCES 2024–25"
+      }
+    },
+    {
+      "text": "But in one survey, nearly half of Brits guessed their whole household uses under twenty.",
+      "gap": 0.3,
+      "caps": [
+        "NEARLY *HALF",
+        "GUESSED UNDER *20",
+        "FOR THE WHOLE *HOME"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "SURVEY · WATER UK",
+        "items": [
+          {
+            "v": "46",
+            "suffix": "%",
+            "l": "GUESSED UNDER 20 LITRES",
+            "red": true
+          }
+        ],
+        "source": "WATER UK"
+      }
+    },
+    {
+      "text": "So where does it all go?",
+      "gap": 0.25,
+      "caps": [
+        "WHERE DOES IT *GO?"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": "uk",
+        "title": "WHERE DOES IT GO?"
+      }
+    },
+    {
+      "text": "A power shower uses about thirteen litres a minute.",
+      "gap": 0.25,
+      "caps": [
+        "A *POWER SHOWER",
+        "*13 LITRES",
+        "A *MINUTE"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "shower",
+        "value": "13 L",
+        "unit": "PER MINUTE"
+      }
+    },
+    {
+      "text": "A full bath, around eighty litres.",
+      "gap": 0.25,
+      "caps": [
+        "A FULL *BATH",
+        "*80 LITRES"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "bath",
+        "value": "80 L",
+        "unit": "PER BATH"
+      }
+    },
+    {
+      "text": "Every toilet flush, five to nine.",
+      "gap": 0.25,
+      "caps": [
+        "EVERY *FLUSH",
+        "*5 TO 9 LITRES"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "toilet",
+        "value": "5–9 L",
+        "unit": "PER FLUSH"
+      }
+    },
+    {
+      "text": "And a washing machine cycle, about fifty.",
+      "gap": 0.3,
+      "caps": [
+        "A WASHING *MACHINE",
+        "ABOUT *50 LITRES"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "washer",
+        "value": "50 L",
+        "unit": "PER CYCLE"
+      }
+    },
+    {
+      "text": "How many litres do you think you use? Comment your guess.",
+      "gap": 0.2,
+      "caps": [
+        "HOW MANY *LITRES?",
+        "COMMENT YOUR *GUESS"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "WHAT'S YOUR GUESS?"
+      }
+    }
+  ],
+  "sources": [
+    "UK Government, Water resources 2024 to 2025: https://www.gov.uk/government/publications/water-resources-2024-2025-analysis-of-the-water-industrys-annual-water-resources-performance/water-resources-2024-to-2025-analysis-of-the-water-industrys-annual-water-resources-performance",
+    "Water UK, water use survey: https://www.water.org.uk/news-item/vast-majority-of-brits-have-no-idea-how-much-water-they-use-each-day/"
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "title": "Scotland's water is soft, London's is hard",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "SCOTLAND'S WATER IS SOFT.",
+    "LONDON'S IS HARD."
+  ],
+  "lines": [
+    {
+      "text": "Scotland's tap water is mostly soft. London's is hard.",
+      "gap": 0.3,
+      "caps": [
+        "SCOTLAND: *SOFT",
+        "LONDON: *HARD"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": "uk",
+        "pins": [
+          [
+            "SCOTLAND",
+            -4.0,
+            56.2,
+            "SOFT"
+          ],
+          [
+            "LONDON",
+            -0.12,
+            51.5,
+            "HARD"
+          ]
+        ]
+      }
+    },
+    {
+      "text": "Same country, so why the difference?",
+      "gap": 0.3,
+      "caps": [
+        "SAME *COUNTRY",
+        "WHY THE *DIFFERENCE?"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": "uk",
+        "pins": [
+          [
+            "SCOTLAND",
+            -4.0,
+            56.2,
+            "SOFT"
+          ],
+          [
+            "LONDON",
+            -0.12,
+            51.5,
+            "HARD"
+          ]
+        ]
+      }
+    },
+    {
+      "text": "It comes down to the rock under your feet.",
+      "gap": 0.3,
+      "caps": [
+        "THE *ROCK",
+        "UNDER YOUR *FEET"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "rock",
+        "title": "IT'S THE ROCK",
+        "label": "GEOLOGY"
+      }
+    },
+    {
+      "text": "As rain soaks through chalk and limestone, it picks up calcium and magnesium.",
+      "gap": 0.3,
+      "caps": [
+        "THROUGH *CHALK",
+        "AND *LIMESTONE",
+        "IT PICKS UP",
+        "CALCIUM AND *MAGNESIUM"
+      ],
+      "scene": {
+        "type": "particles"
+      }
+    },
+    {
+      "text": "That rock is common in the South-East of England,",
+      "gap": 0.12,
+      "caps": [
+        "COMMON IN THE",
+        "*SOUTH-EAST"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -0.2,
+          51.9,
+          7200
+        ],
+        "hatch": "southeast",
+        "hatchLabel": "CHALK & LIMESTONE",
+        "hatchLabelAt": [
+          0.1,
+          52.75
+        ],
+        "title": "SOUTH-EAST ENGLAND"
+      }
+    },
+    {
+      "text": "and Thames Water says most water in the South-East is hard.",
+      "gap": 0.3,
+      "caps": [
+        "THAMES WATER *SAYS",
+        "MOST OF IT IS *HARD"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · THAMES WATER",
+        "l1": "SOUTH-EAST",
+        "l2": "MOSTLY HARD",
+        "source": "THAMES WATER"
+      }
+    },
+    {
+      "text": "But chalk and limestone are uncommon in Scotland,",
+      "gap": 0.12,
+      "caps": [
+        "BUT IN *SCOTLAND",
+        "IT'S *UNCOMMON"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -4.3,
+          56.9,
+          5200
+        ],
+        "pins": [
+          [
+            "SCOTLAND",
+            -4.0,
+            56.2,
+            "SOFT"
+          ]
+        ],
+        "title": "SCOTLAND"
+      }
+    },
+    {
+      "text": "so Scotland's drinking water regulator says most supplies there are soft.",
+      "gap": 0.3,
+      "caps": [
+        "SCOTLAND'S *REGULATOR",
+        "MOST WATER IS *SOFT"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · DWQR SCOTLAND",
+        "l1": "SCOTLAND",
+        "l2": "MOSTLY SOFT",
+        "source": "DRINKING WATER QUALITY REGULATOR"
+      }
+    },
+    {
+      "text": "Hard or soft where you live? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "HARD OR *SOFT?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "HARD OR SOFT?"
+      }
+    }
+  ],
+  "sources": [
+    "Drinking Water Quality Regulator for Scotland, Water hardness: https://dwqr.scot/public-water-supply/drinking-water-quality-faqs/water-hardness/",
+    "Thames Water, Water hardness: https://www.thameswater.co.uk/help/water-and-waste-help/water-quality/hard-water"
+  ]
+}

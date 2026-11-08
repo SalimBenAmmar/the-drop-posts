@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Oswald;font-weight:700;src:url("node_modules/@fontsource/oswald/files/oswald-latin-700-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:400;src:url("node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:Inter;font-weight:700;src:url("node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2") format("woff2")}
+:root{--blue:#012169;--red:#C8102E;--white:#FFFFFF;--soft:#F3F5FA}
+html,body{margin:0}
+.s{width:1080px;height:1350px;box-sizing:border-box;padding:76px 80px 64px;background:var(--white);color:var(--blue);font-family:Inter;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:22px;font-size:26px;letter-spacing:5px;font-weight:700}
+.badge{background:var(--red);color:#fff;padding:10px 16px}
+.page{margin-left:auto}
+.bars{display:flex;gap:10px;margin-top:22px}.bars i{flex:1;height:5px;background:rgba(1,33,105,.12)}.bars i.on{background:var(--blue)}.bars i.cur{background:var(--red)}
+.tag{display:inline-block;border:3px solid var(--blue);padding:10px 18px;font-size:26px;letter-spacing:5px;font-weight:700;margin-top:52px;align-self:flex-start}
+.tag:before{content:"";display:inline-block;width:14px;height:14px;background:var(--blue);margin-right:14px;vertical-align:2px}
+h1{font-family:Oswald;font-weight:700;font-size:128px;line-height:.98;margin:30px 0 0;text-transform:uppercase;letter-spacing:-1px}
+h1 em{font-style:normal;color:var(--red);display:block}
+h1.sm{font-size:104px}
+p.lead{font-size:38px;line-height:1.45;margin:30px 0 0;max-width:900px}
+.foot{margin-top:auto;border-top:2px solid rgba(1,33,105,.15);padding-top:26px;display:flex;align-items:center;font-size:24px;letter-spacing:5px;font-weight:700}
+.foot b{font-family:Oswald;font-size:34px;letter-spacing:1px;margin-right:18px}
+.foot .swipe{margin-left:auto;color:var(--red)}
+.src{font-size:22px;letter-spacing:4px;margin-top:auto;padding-top:20px;opacity:.75}
+.tl{margin-top:44px;border-left:4px solid rgba(1,33,105,.2);padding-left:44px;display:flex;flex-direction:column;gap:38px}
+.tl div{position:relative}.tl div:before{content:"";position:absolute;left:-66px;top:4px;width:30px;height:30px;border-radius:50%;background:#fff;border:5px solid var(--blue)}
+.tl div.hot:before{background:var(--red);border-color:var(--red);box-shadow:0 0 0 10px rgba(200,16,46,.15)}
+.tl small{display:block;color:var(--red);font-size:26px;letter-spacing:5px;font-weight:700}
+.tl span{font-size:38px;font-weight:700}
+.big{display:flex;gap:40px;margin-top:60px}
+.big div{flex:1;background:var(--soft);padding:40px}
+.big strong{font-family:Oswald;font-size:170px;line-height:1;display:block}
+.big small{font-size:28px;letter-spacing:5px;font-weight:700}
+.scale{margin-top:56px;display:flex;flex-direction:column;gap:14px}
+.scale div{white-space:nowrap;display:flex;align-items:center;gap:24px;font-size:34px}
+.scale i{display:block;height:58px;background:rgba(1,33,105,.12)}
+.scale div.hot i{background:var(--red)}
+.scale div.hot{font-weight:700}
+.scale b{width:330px;font-weight:700;font-size:30px;letter-spacing:3px}
+.tips{margin-top:50px;display:flex;flex-direction:column;gap:30px}
+.tips div{display:flex;gap:30px;align-items:flex-start;font-size:38px;line-height:1.35}
+.tips span{font-family:Oswald;font-size:64px;line-height:1;color:var(--red);width:60px;flex:none}
+.visual{margin-top:auto;display:flex;justify-content:center}
+.cta{background:var(--blue);color:#fff;padding:34px 40px;margin-top:44px;font-size:36px;line-height:1.4}
+.cta b{font-family:Oswald;font-size:56px;display:block;letter-spacing:.5px}
+</style></head>
+<body><div id="root"></div>
+<script>
+const N = 7;
+function shell(i, inner, src, last) {
+  const bars = Array.from({ length: N }, (_, k) => `<i class="${k < i ? 'on' : k === i ? 'cur' : ''}"></i>`).join('');
+  return `<div class="s"><div class="top"><span class="badge">THE DROP · UK</span><span>LONDON WATER</span><span class="page">0${i + 1} / 0${N}</span></div><div class="bars">${bars}</div>${inner}${src ? `<div class="src">SOURCE — ${src}</div>` : ''}<div class="foot"><b>THE DROP</b>UK WATER SCIENCE<span class="swipe">${last ? 'FOLLOW +' : 'SWIPE →'}</span></div></div>`;
+}
+const KETTLE = `<svg width="400" height="360" viewBox="-330 -280 660 600" aria-hidden="true"><g fill="none" stroke="#012169" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"><path d="M-200 260 L-160 -180 L160 -180 L200 260 Z"/><path d="M-120 -180 Q0 -260 120 -180"/><path d="M180 -120 C330 -120 330 160 190 160"/></g><circle cx="0" cy="-232" r="20" fill="#012169"/><path d="M-182 70 L-300 -110 L-262 -126 L-170 -20 Z" fill="#012169"/><rect x="-240" y="270" width="480" height="34" rx="12" fill="#012169"/><path d="M-188 248 L-188 210 Q-170 190 -150 212 Q-120 186 -95 214 Q-60 190 -40 212 Q-5 186 20 214 Q55 188 80 212 Q115 190 140 214 Q165 192 188 210 L188 248 Z" fill="#C8102E"/></svg>`;
+const DROP = `<svg width="380" height="460" viewBox="-120 -160 240 330" aria-hidden="true"><path d="M0 -150 C-40 -80 -105 -20 -105 50 C-105 115 -58 160 0 160 C58 160 105 115 105 50 C105 -20 40 -80 0 -150 Z" fill="#012169"/><circle cx="-40" cy="50" r="15" fill="#fff"/><circle cx="35" cy="0" r="11" fill="#fff"/><circle cx="10" cy="95" r="13" fill="#fff"/><circle cx="55" cy="75" r="17" fill="#C8102E"/><circle cx="-50" cy="-10" r="8" fill="#fff"/></svg>`;
+const SLIDES = [
+  (i) => shell(i, `<div class="tag">LONDON · HARD WATER</div><h1>Why your kettle<em>turns white</em></h1><p class="lead">It isn't dirt. It's dissolved rock.</p><div class="visual">${KETTLE}</div>`, ''),
+  (i) => shell(i, `<div class="tag">WHAT IT IS</div><h1 class="sm">It's called<em>limescale</em></h1><p class="lead">Hard water carries dissolved calcium and magnesium. Heat it, and they come back out as a white crust.</p><div class="visual">${DROP}</div>`, 'THAMES WATER, WATER HARDNESS'),
+  (i) => shell(i, `<div class="tag">THE ROUTE TO YOUR TAP</div><h1 class="sm">Where the<em>rock comes from</em></h1><div class="tl"><div><small>STEP 1</small><span>Rain falls on the land west of London.</span></div><div class="hot"><small>STEP 2</small><span>It passes through chalk and limestone.</span></div><div><small>STEP 3</small><span>It picks up calcium and magnesium.</span></div><div><small>STEP 4</small><span>It reaches your tap, hard.</span></div></div>`, 'THAMES WATER · LONDONIST'),
+  (i) => shell(i, `<div class="tag">WHERE IT'S TAKEN FROM</div><h1 class="sm">Two sources,<em>one region</em></h1><div class="big"><div><strong style="color:#C8102E">65%</strong><small>FROM RIVERS</small></div><div><strong>35%</strong><small>FROM UNDERGROUND</small></div></div><p class="lead">Both pass through the same chalky rock, so all of it ends up hard.</p>`, 'THAMES WATER, WATER HARDNESS'),
+  (i) => shell(i, `<div class="tag">HOW HARD IS HARD?</div><h1 class="sm">Thames Water's<em>hardness bands</em></h1><div class="scale"><div><b>SOFT</b><i style="width:80px"></i>up to 100 mg/l</div><div><b>SLIGHTLY HARD</b><i style="width:130px"></i>100–150 mg/l</div><div><b>MODERATELY HARD</b><i style="width:180px"></i>150–200 mg/l</div><div class="hot"><b>HARD</b><i style="width:250px"></i>200–300 mg/l</div><div class="hot"><b>VERY HARD</b><i style="width:320px"></i>over 300 mg/l</div></div><p class="lead">Measured as calcium carbonate. All water in Thames Water's region is hard.</p>`, 'THAMES WATER, WATER HARDNESS'),
+  (i) => shell(i, `<div class="tag">IS IT SAFE?</div><h1>Not<em>harmful</em></h1><p class="lead">Thames Water says hard water is not considered harmful, and that its minerals are good for us, especially for bones.</p><p class="lead">The real cost is limescale: on kettles, showers and taps.</p>`, 'THAMES WATER, WATER HARDNESS'),
+  (i) => shell(i, `<div class="tag">LESS LIMESCALE</div><h1 class="sm">3 tips from<em>Thames Water</em></h1><div class="tips"><div><span>1</span>Set your hot water to 60°C instead of hotter.</div><div><span>2</span>Put a steel scale collector in your kettle.</div><div><span>3</span>Empty the kettle when you're not using it.</div></div><div class="cta"><b>IS YOUR WATER HARD?</b>Comment your town and we'll cover it next.</div>`, 'THAMES WATER, WATER HARDNESS', true)
+];
+window.show = (i) => { document.getElementById('root').innerHTML = SLIDES[i](i); return document.fonts.ready.then(() => true); };
+</script></body></html>
