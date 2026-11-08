@@ -69,7 +69,8 @@ def main():
     # duck music under speech
     env = np.convolve(np.abs(voice), np.ones(2400) / 2400, mode='same')
     duck = 1 - 0.55 * np.clip(env / (env.max() * 0.3 + 1e-9), 0, 1)
-    mix = voice * 1.0 + music * 0.55 * duck + sfx * 0.35
+    n = min(len(voice), len(music), len(duck), len(sfx))
+    mix = voice[:n] * 1.0 + music[:n] * 0.55 * duck[:n] + sfx[:n] * 0.35
     mix = mix / max(1e-9, np.max(np.abs(mix))) * 0.95
     sf.write(out / 'mix.wav', mix.astype(np.float32), SR)
     print(f"mix: {total:.1f}s")
