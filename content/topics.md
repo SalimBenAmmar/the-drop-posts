@@ -9,10 +9,10 @@
 | 2026-11-09 12:30 | reel | Scotland's water is soft, London's is hard | DWQR Scotland, Thames Water |
 | 2026-11-09 19:30 | reel | You use 136 litres of water a day | GOV.UK water resources 2024–25, Water UK |
 | 2026-11-10 12:30 | carousel | Why your kettle turns white | Thames Water |
+| 2026-11-10 19:30 | reel | Birmingham's tap water comes from Wales | Severn Trent, Elan Valley Trust, ICE |
 
 # Ideas backlog (facts must still be checked at the time)
 
-- Where Birmingham's water comes from (Elan Valley, Wales)
 - Is bottled water better than tap? What UK regulators say
 - Why boiling water doesn't remove limescale
 - How much water UK pipes lose to leaks every day

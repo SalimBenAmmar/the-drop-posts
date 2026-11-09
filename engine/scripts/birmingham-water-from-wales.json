@@ -1,0 +1,196 @@
+{
+  "title": "Birmingham's tap water comes from Wales",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "BIRMINGHAM'S WATER",
+    "COMES FROM WALES"
+  ],
+  "lines": [
+    {
+      "text": "Birmingham's tap water comes from Wales.",
+      "gap": 0.3,
+      "caps": [
+        "*BIRMINGHAM'S WATER",
+        "COMES FROM *WALES"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -2.7,
+          52.4,
+          9000
+        ],
+        "pins": [
+          [
+            "ELAN VALLEY",
+            -3.57,
+            52.27,
+            null
+          ],
+          [
+            "BIRMINGHAM",
+            -1.89,
+            52.48,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "text": "It starts in the Elan Valley, in the hills of mid Wales.",
+      "gap": 0.3,
+      "caps": [
+        "IT *STARTS",
+        "IN THE *ELAN VALLEY",
+        "MID *WALES"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -3.3,
+          52.35,
+          13000
+        ],
+        "pins": [
+          [
+            "ELAN VALLEY",
+            -3.57,
+            52.27,
+            null
+          ]
+        ],
+        "title": "ELAN VALLEY · MID WALES"
+      }
+    },
+    {
+      "text": "Then it travels seventy-three miles, through a Victorian aqueduct.",
+      "gap": 0.3,
+      "caps": [
+        "*73 MILES",
+        "A VICTORIAN *AQUEDUCT"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "INSTITUTION OF CIVIL ENGINEERS",
+        "items": [
+          {
+            "v": "73",
+            "suffix": " mi",
+            "l": "ELAN AQUEDUCT · 118 KM",
+            "red": true
+          }
+        ],
+        "source": "ICE"
+      }
+    },
+    {
+      "text": "And there isn't a single pumping station on the way.",
+      "gap": 0.25,
+      "caps": [
+        "NOT A *SINGLE",
+        "PUMPING *STATION"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "INSTITUTION OF CIVIL ENGINEERS",
+        "l1": "NO PUMPS",
+        "l2": "GRAVITY ONLY",
+        "source": "ICE"
+      }
+    },
+    {
+      "text": "It runs on gravity alone, dropping just fifty-two metres the whole way.",
+      "gap": 0.3,
+      "caps": [
+        "*GRAVITY ALONE",
+        "JUST *52 METRES",
+        "THE WHOLE *WAY"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "ELAN VALLEY TRUST",
+        "items": [
+          {
+            "v": "52",
+            "suffix": " m",
+            "l": "TOTAL DROP · WALES TO BIRMINGHAM",
+            "red": true
+          }
+        ],
+        "source": "ELAN VALLEY TRUST"
+      }
+    },
+    {
+      "text": "So the water takes about three days to reach Birmingham.",
+      "gap": 0.3,
+      "caps": [
+        "ABOUT *3 DAYS",
+        "TO REACH *BIRMINGHAM"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "ELAN VALLEY TRUST",
+        "items": [
+          {
+            "v": "3",
+            "suffix": " days",
+            "l": "WALES TO BIRMINGHAM",
+            "red": true
+          }
+        ],
+        "source": "ELAN VALLEY TRUST"
+      }
+    },
+    {
+      "text": "King Edward the Seventh opened the dams in nineteen-oh-four, and it still flows today.",
+      "gap": 0.3,
+      "caps": [
+        "KING *EDWARD VII",
+        "OPENED IT IN *1904",
+        "IT STILL *FLOWS"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "ELAN VALLEY TRUST · SEVERN TRENT",
+        "l1": "OPENED 1904",
+        "l2": "STILL FLOWING",
+        "source": "ELAN VALLEY TRUST, SEVERN TRENT"
+      }
+    },
+    {
+      "text": "And Severn Trent describes this water from Wales as moderately soft.",
+      "gap": 0.3,
+      "caps": [
+        "SEVERN TRENT *SAYS",
+        "MODERATELY *SOFT"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · SEVERN TRENT",
+        "l1": "WATER FROM WALES",
+        "l2": "MODERATELY SOFT",
+        "source": "SEVERN TRENT"
+      }
+    },
+    {
+      "text": "Where does your water come from? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "WHERE DOES *YOURS",
+        "COME FROM?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "COMMENT YOUR TOWN"
+      }
+    }
+  ],
+  "sources": [
+    "Severn Trent, Elan Valley Aqueduct: https://stwater.co.uk/brp",
+    "Elan Valley Trust, Building of the dams: https://elanvalley.org.uk/heritage/reservoir-dams/building-of-the-dams/",
+    "Institution of Civil Engineers, Elan Valley water supply: https://ice.org.uk/what-is-civil-engineering/infrastructure-projects/elan-valley-water-supply"
+  ]
+}
