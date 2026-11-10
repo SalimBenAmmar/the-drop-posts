@@ -10,12 +10,13 @@
 | 2026-11-09 19:30 | reel | You use 136 litres of water a day | GOV.UK water resources 2024–25, Water UK |
 | 2026-11-10 12:30 | carousel | Why your kettle turns white | Thames Water |
 | 2026-11-10 19:30 | reel | Birmingham's tap water comes from Wales | Severn Trent, Elan Valley Trust, ICE |
+| 2026-11-11 12:30 | reel | Almost 1 in 5 litres of England's water leaks away | Environment Agency, Water resources 2025 to 2026 |
+| 2026-11-11 19:30 | reel | Manchester's water arrives at walking pace (Thirlmere aqueduct) | ICE, Lake District National Park, United Utilities |
 
 # Ideas backlog (facts must still be checked at the time)
 
 - Is bottled water better than tap? What UK regulators say
 - Why boiling water doesn't remove limescale
-- How much water UK pipes lose to leaks every day
 - What a hosepipe ban is and when they happen
 - How hard is the water in Manchester / Leeds / Bristol / Cardiff (one city per episode)
 - Where Glasgow's water comes from (Loch Katrine)

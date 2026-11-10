@@ -1,0 +1,177 @@
+{
+  "title": "Manchester's water arrives at walking pace",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "MANCHESTER'S WATER",
+    "ARRIVES AT WALKING PACE"
+  ],
+  "lines": [
+    {
+      "text": "Manchester's tap water arrives at walking pace.",
+      "gap": 0.3,
+      "caps": [
+        "*MANCHESTER'S WATER",
+        "AT *WALKING PACE"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -2.6,
+          54.0,
+          9000
+        ],
+        "pins": [
+          [
+            "THIRLMERE",
+            -3.07,
+            54.54,
+            null
+          ],
+          [
+            "MANCHESTER",
+            -2.24,
+            53.48,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "text": "Much of it comes from the Lake District, starting at Thirlmere reservoir.",
+      "gap": 0.3,
+      "caps": [
+        "THE *LAKE DISTRICT",
+        "*THIRLMERE",
+        "RESERVOIR"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -2.9,
+          54.45,
+          13000
+        ],
+        "pins": [
+          [
+            "THIRLMERE",
+            -3.07,
+            54.54,
+            null
+          ]
+        ],
+        "title": "THIRLMERE · LAKE DISTRICT"
+      }
+    },
+    {
+      "text": "From there, an aqueduct carries it a hundred and fifty-three kilometres, about ninety-five miles.",
+      "gap": 0.3,
+      "caps": [
+        "AN *AQUEDUCT",
+        "*153 KILOMETRES",
+        "ABOUT *95 MILES"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "INSTITUTION OF CIVIL ENGINEERS",
+        "items": [
+          {
+            "v": "153",
+            "suffix": " km",
+            "l": "THIRLMERE TO MANCHESTER",
+            "red": true
+          }
+        ],
+        "source": "ICE"
+      }
+    },
+    {
+      "text": "There are no pumps. It's the longest gravity-fed aqueduct in Britain.",
+      "gap": 0.25,
+      "caps": [
+        "*NO PUMPS",
+        "THE *LONGEST",
+        "*GRAVITY-FED"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "INSTITUTION OF CIVIL ENGINEERS",
+        "l1": "NO PUMPS",
+        "l2": "LONGEST IN BRITAIN",
+        "source": "ICE"
+      }
+    },
+    {
+      "text": "It flows at about six kilometres an hour, so it takes just over a day to arrive.",
+      "gap": 0.3,
+      "caps": [
+        "ABOUT *6 KM/H",
+        "JUST *OVER",
+        "A *DAY"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "INSTITUTION OF CIVIL ENGINEERS",
+        "items": [
+          {
+            "v": "6",
+            "suffix": " km/h",
+            "l": "FLOW SPEED",
+            "red": true
+          }
+        ],
+        "source": "ICE"
+      }
+    },
+    {
+      "text": "It opened in eighteen ninety-four, and Haweswater reservoir now tops it up too.",
+      "gap": 0.3,
+      "caps": [
+        "OPENED *1894",
+        "*HAWESWATER",
+        "TOPS IT *UP"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "ICE · LAKE DISTRICT NATIONAL PARK",
+        "l1": "OPENED 1894",
+        "l2": "PLUS HAWESWATER",
+        "source": "ICE, LAKE DISTRICT NATIONAL PARK"
+      }
+    },
+    {
+      "text": "And United Utilities says most North West water is soft or very soft.",
+      "gap": 0.3,
+      "caps": [
+        "UNITED *UTILITIES",
+        "SOFT OR *VERY SOFT"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "l1": "NORTH WEST WATER",
+        "l2": "SOFT OR VERY SOFT",
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "Where does your water come from? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "WHERE DOES *YOURS",
+        "COME FROM?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "COMMENT YOUR TOWN"
+      }
+    }
+  ],
+  "sources": [
+    "Institution of Civil Engineers, Thirlmere aqueduct and reservoir: https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/thirlmere-aqueduct-and-reservoir",
+    "Lake District National Park, Water (KS2 resources): https://www.lakedistrict.gov.uk/learning/forteachers/teachers-resources/ks2water",
+    "United Utilities, Water hardness: https://www.unitedutilities.com/help-and-support/your-water-supply/your-water/about-your-water/water-hardness/"
+  ]
+}

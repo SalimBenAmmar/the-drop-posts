@@ -1,0 +1,166 @@
+{
+  "title": "Almost 1 in 5 litres of England's water leaks away",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "1 IN 5 LITRES",
+    "LEAKS AWAY"
+  ],
+  "lines": [
+    {
+      "text": "Almost one in five litres of England's tap water leaks away before it reaches a tap.",
+      "gap": 0.3,
+      "caps": [
+        "ALMOST *1 IN 5",
+        "LITRES *LEAK",
+        "BEFORE YOUR *TAP"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "items": [
+          {
+            "v": "18.6",
+            "suffix": "%",
+            "l": "OF SUPPLY LOST TO LEAKS",
+            "red": true
+          }
+        ],
+        "source": "ENVIRONMENT AGENCY 2025–26"
+      }
+    },
+    {
+      "text": "That's from the Environment Agency's new report.",
+      "gap": 0.3,
+      "caps": [
+        "ENVIRONMENT *AGENCY",
+        "NEW *REPORT"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "l1": "WATER RESOURCES",
+        "l2": "2025 TO 2026",
+        "source": "GOV.UK · 29 OCT 2026"
+      }
+    },
+    {
+      "text": "In total, two thousand six hundred and twenty-one million litres leaked every single day.",
+      "gap": 0.3,
+      "caps": [
+        "*2,621 MILLION",
+        "*LITRES",
+        "EVERY *DAY"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "items": [
+          {
+            "v": "2,621",
+            "static": true,
+            "l": "MILLION LITRES A DAY · ENGLAND",
+            "red": true
+          }
+        ],
+        "source": "ENVIRONMENT AGENCY 2025–26"
+      }
+    },
+    {
+      "text": "That's about a hundred and one litres for every home, every day.",
+      "gap": 0.3,
+      "caps": [
+        "*101 LITRES",
+        "EVERY *HOME",
+        "EVERY *DAY"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "drop",
+        "value": "101 L",
+        "unit": "PER PROPERTY · PER DAY"
+      }
+    },
+    {
+      "text": "Essex and Suffolk Water lost eleven per cent. Thames Water, twenty-two point four.",
+      "gap": 0.3,
+      "caps": [
+        "ESSEX & SUFFOLK *11%",
+        "THAMES WATER *22.4%"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "items": [
+          {
+            "v": "11.0",
+            "suffix": "%",
+            "l": "ESSEX & SUFFOLK"
+          },
+          {
+            "v": "22.4",
+            "suffix": "%",
+            "l": "THAMES WATER",
+            "red": true
+          }
+        ],
+        "bars": true,
+        "source": "ENVIRONMENT AGENCY 2025–26"
+      }
+    },
+    {
+      "text": "The good news? Leakage is down about twelve per cent since twenty seventeen.",
+      "gap": 0.3,
+      "caps": [
+        "THE *GOOD NEWS",
+        "DOWN ABOUT *12%",
+        "SINCE *2017"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "items": [
+          {
+            "v": "12",
+            "suffix": "%",
+            "l": "LESS LEAKAGE SINCE 2017–18",
+            "red": false
+          }
+        ],
+        "source": "ENVIRONMENT AGENCY 2025–26"
+      }
+    },
+    {
+      "text": "That's only about one and a half per cent a year.",
+      "gap": 0.3,
+      "caps": [
+        "ONLY *1.5%",
+        "A *YEAR"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · ENVIRONMENT AGENCY",
+        "l1": "ABOUT 1.5%",
+        "l2": "LESS EACH YEAR",
+        "source": "ENVIRONMENT AGENCY 2025–26"
+      }
+    },
+    {
+      "text": "Who do you think leaks the most near you? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "WHO LEAKS *MOST",
+        "NEAR *YOU?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "COMMENT YOUR TOWN"
+      }
+    }
+  ],
+  "sources": [
+    "Environment Agency, Water resources 2025 to 2026 (29 October 2026): https://www.gov.uk/government/publications/water-resources-2025-2026-analysis-of-the-water-industrys-annual-water-resources-performance/water-resources-2025-to-2026-analysis-of-the-water-industrys-annual-water-resources-performance"
+  ]
+}
