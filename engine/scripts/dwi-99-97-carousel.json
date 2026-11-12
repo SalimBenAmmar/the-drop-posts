@@ -1,0 +1,114 @@
+{
+ "topic": "ENGLAND'S TAP WATER",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "ENGLAND · 2025 RESULTS",
+   "l1": "How often does",
+   "l2": "tap water pass?",
+   "lead": "England's regulator looked at more than 3.5 million samples from 2025.",
+   "icon": "flask",
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "text",
+   "tag": "WHO CHECKS IT",
+   "l1": "The Drinking Water",
+   "l2": "Inspectorate",
+   "lead": "Every year the DWI's Chief Inspector reports how England's public water supplies did against the legal standards.",
+   "icon": "drop",
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "THE HEADLINE",
+   "l1": "99.97%",
+   "l2": "passed",
+   "paras": [
+    "99.97% of regulatory samples from public water supplies in England met the standards in 2025.",
+    "That's across more than 3.5 million samples."
+   ],
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "scale",
+   "tag": "BY TYPE OF TEST",
+   "l1": "All four groups",
+   "l2": "above 99.9%",
+   "rows": [
+    {
+     "b": "CHEMICAL",
+     "w": 4,
+     "t": "99.95%"
+    },
+    {
+     "b": "INDICATOR",
+     "w": 4,
+     "t": "99.97%"
+    },
+    {
+     "b": "MICROBIOLOGICAL",
+     "w": 4,
+     "t": "99.98%",
+     "hot": true
+    },
+    {
+     "b": "PESTICIDES",
+     "w": 4,
+     "t": "99.99%",
+     "hot": true
+    }
+   ],
+   "lead": "Share of tests that met the standards, by group.",
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "stats",
+   "tag": "THE 0.03%",
+   "l1": "Where the",
+   "l2": "fails were",
+   "items": [
+    {
+     "v": "982",
+     "l": "TESTS FAILED",
+     "red": true
+    },
+    {
+     "v": "447",
+     "l": "IN CONSUMERS' OWN PIPES"
+    }
+   ],
+   "lead": "Almost half of the failures were linked to consumers' own distribution systems.",
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "NOT PERFECT",
+   "l1": "The regulator",
+   "l2": "still acts",
+   "paras": [
+    "586 water quality events were reported in 2025: none major, 7 serious.",
+    "The DWI served 109 enforcement notices on water companies."
+   ],
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "tips",
+   "tag": "IF YOUR WATER LOOKS ODD",
+   "l1": "What the",
+   "l2": "DWI says",
+   "tips": [
+    "Cloudy, but clears from the bottom up? It's tiny air bubbles.",
+    "Air clouding should normally clear within 24 hours.",
+    "Odd taste or smell, or cloudy for 24h+? Contact your supplier."
+   ],
+   "cta": [
+    "DO YOU DRINK FROM THE TAP?",
+    "Comment your town and we'll cover it next."
+   ],
+   "source": "DWI, WHITE OR CLOUDY WATER"
+  }
+ ]
+}

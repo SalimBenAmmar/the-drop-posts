@@ -12,6 +12,10 @@
 | 2026-11-10 19:30 | reel | Birmingham's tap water comes from Wales | Severn Trent, Elan Valley Trust, ICE |
 | 2026-11-11 12:30 | reel | Almost 1 in 5 litres of England's water leaks away | Environment Agency, Water resources 2025 to 2026 |
 | 2026-11-11 19:30 | reel | Manchester's water arrives at walking pace (Thirlmere aqueduct) | ICE, Lake District National Park, United Utilities |
+| 2026-11-12 12:30 | reel | Queen Victoria switched on Glasgow's water (Loch Katrine) | ICE, Scottish Water |
+| 2026-11-12 19:30 | carousel | How often does England's tap water pass? (DWI 2025, 99.97%) | DWI Chief Inspector's report 2025, DWI white or cloudy water |
+| 2026-11-13 12:30 | reel | A 22-mile wall guards Belfast's water (Mourne Wall, Silent Valley) | NI Water |
+| 2026-11-13 19:30 | reel | Half of Bristol's water comes from a canal | Bristol Water |
 
 # Ideas backlog (facts must still be checked at the time)
 

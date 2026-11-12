@@ -1,0 +1,217 @@
+{
+ "title": "Half of Bristol's water comes from a canal",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "HALF OF BRISTOL'S WATER",
+  "COMES FROM A CANAL"
+ ],
+ "lines": [
+  {
+   "text": "Half of Bristol's tap water comes from a canal.",
+   "gap": 0.3,
+   "caps": [
+    "HALF OF *BRISTOL'S",
+    "TAP WATER",
+    "FROM A *CANAL"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.5,
+     51.6,
+     16000
+    ],
+    "pins": [
+     [
+      "GLOUCESTER",
+      -2.24,
+      51.86,
+      null
+     ],
+     [
+      "BRISTOL",
+      -2.59,
+      51.45,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "In drier weather, Bristol Water says just over half comes from the Gloucester and Sharpness Canal.",
+   "gap": 0.3,
+   "caps": [
+    "IN *DRIER WEATHER",
+    "JUST OVER *HALF",
+    "GLOUCESTER AND *SHARPNESS",
+    "*CANAL"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · BRISTOL WATER",
+    "items": [
+     {
+      "v": "50",
+      "suffix": "%+",
+      "l": "FROM THE CANAL (DRIER WEATHER)",
+      "red": true
+     }
+    ],
+    "source": "BRISTOL WATER"
+   }
+  },
+  {
+   "text": "And most of the canal's flow comes from the River Severn.",
+   "gap": 0.3,
+   "caps": [
+    "MOST OF ITS *FLOW",
+    "THE RIVER *SEVERN"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · BRISTOL WATER",
+    "l1": "CANAL WATER",
+    "l2": "MOSTLY FROM THE SEVERN",
+    "source": "BRISTOL WATER"
+   }
+  },
+  {
+   "text": "More than a third comes from four reservoirs in the Mendips.",
+   "gap": 0.3,
+   "caps": [
+    "MORE THAN A *THIRD",
+    "*4 RESERVOIRS",
+    "THE *MENDIPS"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.6,
+     51.4,
+     18000
+    ],
+    "pins": [
+     [
+      "MENDIP RESERVOIRS",
+      -2.68,
+      51.3,
+      null
+     ]
+    ],
+    "title": "MENDIP RESERVOIRS"
+   }
+  },
+  {
+   "text": "Chew Valley, Blagdon, Cheddar and Barrow.",
+   "gap": 0.3,
+   "caps": [
+    "*CHEW VALLEY",
+    "*BLAGDON",
+    "*CHEDDAR",
+    "AND *BARROW"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.6,
+     51.4,
+     18000
+    ],
+    "pins": [
+     [
+      "MENDIP RESERVOIRS",
+      -2.68,
+      51.3,
+      null
+     ]
+    ],
+    "title": "MENDIP RESERVOIRS"
+   }
+  },
+  {
+   "text": "Together they hold about thirty-eight billion litres. That's Wembley Stadium, filled ten times.",
+   "gap": 0.3,
+   "caps": [
+    "ABOUT *38 BILLION",
+    "LITRES",
+    "*WEMBLEY",
+    "*10 TIMES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · BRISTOL WATER",
+    "items": [
+     {
+      "v": "38",
+      "suffix": "bn L",
+      "l": "RESERVOIR STORAGE",
+      "red": true
+     }
+    ],
+    "source": "BRISTOL WATER"
+   }
+  },
+  {
+   "text": "The last tenth or so comes from springs, wells and boreholes.",
+   "gap": 0.3,
+   "caps": [
+    "ABOUT A *TENTH",
+    "*SPRINGS",
+    "WELLS AND *BOREHOLES"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · BRISTOL WATER",
+    "l1": "ABOUT A TENTH",
+    "l2": "FROM UNDERGROUND",
+    "source": "BRISTOL WATER"
+   }
+  },
+  {
+   "text": "On the fourth of November, the reservoirs were forty-three percent full, up from thirty-five a year earlier.",
+   "gap": 0.3,
+   "caps": [
+    "*4 NOVEMBER",
+    "*43% FULL",
+    "UP FROM *35%"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "BRISTOL WATER · 4 NOV",
+    "items": [
+     {
+      "v": "43",
+      "suffix": "%",
+      "l": "2026",
+      "red": true
+     },
+     {
+      "v": "35",
+      "suffix": "%",
+      "l": "2025"
+     }
+    ],
+    "bars": true,
+    "source": "BRISTOL WATER"
+   }
+  },
+  {
+   "text": "Where does your water come from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE DOES *YOURS",
+    "COME FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Bristol Water, Where your water comes from: https://www.bristolwater.co.uk/where-your-water-comes-from"
+ ]
+}

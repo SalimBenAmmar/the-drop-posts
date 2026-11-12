@@ -1,0 +1,192 @@
+{
+ "title": "A 22-mile wall guards Belfast's water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "A 22-MILE WALL",
+  "GUARDS BELFAST'S WATER"
+ ],
+ "lines": [
+  {
+   "text": "A twenty-two mile stone wall guards Belfast's water.",
+   "gap": 0.3,
+   "caps": [
+    "A *22-MILE",
+    "STONE *WALL",
+    "BELFAST'S *WATER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -6.2,
+     54.35,
+     14000
+    ],
+    "pins": [
+     [
+      "MOURNE MOUNTAINS",
+      -6.0,
+      54.15,
+      null
+     ],
+     [
+      "BELFAST",
+      -5.93,
+      54.6,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "It's the Mourne Wall, and it runs over the tops of fifteen mountains.",
+   "gap": 0.3,
+   "caps": [
+    "THE *MOURNE WALL",
+    "*15",
+    "*MOUNTAINS"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · NI WATER",
+    "l1": "THE MOURNE WALL",
+    "l2": "OVER 15 MOUNTAINS",
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "It was built by hand, out of granite, between nineteen-oh-four and nineteen twenty-two.",
+   "gap": 0.3,
+   "caps": [
+    "BY *HAND",
+    "*GRANITE",
+    "*1904",
+    "TO *1922"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · NI WATER",
+    "l1": "HAND-BUILT GRANITE",
+    "l2": "1904 TO 1922",
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "It marks out a nine thousand acre catchment, where the rain is collected.",
+   "gap": 0.3,
+   "caps": [
+    "*9,000 ACRE",
+    "*CATCHMENT"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · NI WATER",
+    "items": [
+     {
+      "v": "9,000",
+      "l": "ACRE CATCHMENT",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "That rain fills Silent Valley and Ben Crom reservoirs.",
+   "gap": 0.3,
+   "caps": [
+    "*SILENT VALLEY",
+    "*BEN CROM"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -6.0,
+     54.2,
+     24000
+    ],
+    "pins": [
+     [
+      "MOURNE RESERVOIRS",
+      -5.99,
+      54.15,
+      null
+     ]
+    ],
+    "title": "MOURNE MOUNTAINS · CO. DOWN"
+   }
+  },
+  {
+   "text": "Silent Valley's dam took ten years to build, with two thousand local workmen.",
+   "gap": 0.3,
+   "caps": [
+    "*10 YEARS",
+    "*2,000",
+    "LOCAL *WORKMEN"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · NI WATER",
+    "l1": "DAM BUILT 1923–1933",
+    "l2": "2,000 LOCAL WORKMEN",
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "Then a fifty-six kilometre pipeline carries the water to Belfast.",
+   "gap": 0.3,
+   "caps": [
+    "*56 KM",
+    "TO *BELFAST"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · NI WATER",
+    "items": [
+     {
+      "v": "56",
+      "suffix": " km",
+      "l": "MOURNE CONDUIT TO BELFAST",
+      "red": true
+     }
+    ],
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "They supply most of County Down, and a large part of Belfast.",
+   "gap": 0.3,
+   "caps": [
+    "MOST OF",
+    "*COUNTY DOWN",
+    "A LARGE *PART",
+    "OF *BELFAST"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · NI WATER",
+    "l1": "MOST OF COUNTY DOWN",
+    "l2": "A LARGE PART OF BELFAST",
+    "source": "NI WATER"
+   }
+  },
+  {
+   "text": "Where's yours from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE'S *YOURS FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "NI Water, Silent Valley: https://www.niwater.com/siteFiles/resources/pdf/silent-valley.pdf",
+  "NI Water, Mourne Wall 100th birthday: https://www.niwater.com/about-us/news/2022/ni-water-s-wonder-wall-to-get-some-tlc-as-it-marks-its-100th-birthday"
+ ]
+}

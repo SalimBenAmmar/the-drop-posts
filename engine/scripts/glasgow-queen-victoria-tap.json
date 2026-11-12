@@ -1,0 +1,227 @@
+{
+ "title": "Queen Victoria switched on Glasgow's water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "QUEEN VICTORIA",
+  "SWITCHED ON GLASGOW'S WATER"
+ ],
+ "lines": [
+  {
+   "text": "Queen Victoria switched on Glasgow's tap water.",
+   "gap": 0.3,
+   "caps": [
+    "QUEEN *VICTORIA",
+    "SWITCHED *ON",
+    "GLASGOW'S *WATER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -4.35,
+     56.05,
+     16000
+    ],
+    "pins": [
+     [
+      "LOCH KATRINE",
+      -4.47,
+      56.24,
+      null
+     ],
+     [
+      "GLASGOW",
+      -4.25,
+      55.86,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "On the fourteenth of October, eighteen fifty-nine, she opened a sluice at Loch Katrine.",
+   "gap": 0.3,
+   "caps": [
+    "*14 OCTOBER",
+    "*1859",
+    "A *SLUICE",
+    "LOCH *KATRINE"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "INSTITUTION OF CIVIL ENGINEERS",
+    "l1": "14 OCTOBER 1859",
+    "l2": "OPENED BY THE QUEEN",
+    "source": "ICE"
+   }
+  },
+  {
+   "text": "The water then ran to the city by gravity, through nearly twenty-six miles of aqueduct.",
+   "gap": 0.3,
+   "caps": [
+    "BY *GRAVITY",
+    "NEARLY *26 MILES",
+    "OF *AQUEDUCT"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "INSTITUTION OF CIVIL ENGINEERS",
+    "items": [
+     {
+      "v": "26",
+      "suffix": " mi",
+      "l": "OF AQUEDUCT (NEARLY)",
+      "red": true
+     }
+    ],
+    "source": "ICE"
+   }
+  },
+  {
+   "text": "Thirteen miles of that were tunnels cut through hard rock.",
+   "gap": 0.25,
+   "caps": [
+    "*13 MILES",
+    "OF *TUNNELS",
+    "HARD *ROCK"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "INSTITUTION OF CIVIL ENGINEERS",
+    "items": [
+     {
+      "v": "13",
+      "suffix": " mi",
+      "l": "HARD ROCK TUNNELS",
+      "red": true
+     }
+    ],
+    "source": "ICE"
+   }
+  },
+  {
+   "text": "Over three thousand people worked on it.",
+   "gap": 0.3,
+   "caps": [
+    "OVER *3,000",
+    "*PEOPLE"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "INSTITUTION OF CIVIL ENGINEERS",
+    "items": [
+     {
+      "v": "3,000+",
+      "l": "PEOPLE BUILT IT",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "ICE"
+   }
+  },
+  {
+   "text": "And it's still working today.",
+   "gap": 0.25,
+   "caps": [
+    "*STILL",
+    "*WORKING"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -4.35,
+     56.05,
+     22000
+    ],
+    "pins": [
+     [
+      "LOCH KATRINE",
+      -4.47,
+      56.24,
+      null
+     ],
+     [
+      "MILNGAVIE",
+      -4.31,
+      55.94,
+      null
+     ]
+    ],
+    "title": "LOCH KATRINE TO MILNGAVIE"
+   }
+  },
+  {
+   "text": "Scottish Water says the aqueduct feeds the Milngavie and Balmore treatment works.",
+   "gap": 0.3,
+   "caps": [
+    "SCOTTISH *WATER",
+    "*MILNGAVIE",
+    "AND *BALMORE"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -4.35,
+     56.05,
+     22000
+    ],
+    "pins": [
+     [
+      "LOCH KATRINE",
+      -4.47,
+      56.24,
+      null
+     ],
+     [
+      "MILNGAVIE",
+      -4.31,
+      55.94,
+      null
+     ]
+    ],
+    "title": "LOCH KATRINE TO MILNGAVIE"
+   }
+  },
+  {
+   "text": "Together, they supply more than one point three million people.",
+   "gap": 0.3,
+   "caps": [
+    "MORE THAN",
+    "*1.3 MILLION",
+    "PEOPLE"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "items": [
+     {
+      "v": "1.3",
+      "suffix": "m+",
+      "l": "PEOPLE SUPPLIED",
+      "red": true
+     }
+    ],
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "Is your water older than you think? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "*OLDER",
+    "THAN YOU *THINK?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Institution of Civil Engineers, Glasgow water supply: https://www.ice.org.uk/what-is-civil-engineering/infrastructure-projects/glasgow-water-supply",
+  "Scottish Water, Loch Katrine Aqueduct: https://scottishwater.co.uk/In-Your-Area/Investments-in-Your-Area/Loch-Katrine-Aqueduct"
+ ]
+}
