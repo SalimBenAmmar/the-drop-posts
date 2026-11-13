@@ -1,0 +1,239 @@
+{
+ "title": "Northern Europe's biggest man-made lake is in Northumberland",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "NORTHERN EUROPE'S BIGGEST",
+  "MAN-MADE LAKE"
+ ],
+ "lines": [
+  {
+   "text": "Northern Europe's biggest man-made lake is in Northumberland.",
+   "gap": 0.3,
+   "caps": [
+    "NORTHERN *EUROPE'S",
+    "*BIGGEST",
+    "MAN-MADE *LAKE",
+    "*NORTHUMBERLAND"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.1,
+     55.1,
+     14000
+    ],
+    "pins": [
+     [
+      "KIELDER WATER",
+      -2.55,
+      55.2,
+      null
+     ],
+     [
+      "NEWCASTLE",
+      -1.61,
+      54.97,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "It's Kielder Water, and it holds two hundred billion litres.",
+   "gap": 0.3,
+   "caps": [
+    "*KIELDER WATER",
+    "IT HOLDS",
+    "*200 BILLION",
+    "LITRES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · NORTHUMBRIAN WATER",
+    "items": [
+     {
+      "v": "200",
+      "suffix": "bn L",
+      "l": "CAPACITY",
+      "red": true
+     }
+    ],
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "The Queen opened it on the twenty-sixth of May, nineteen eighty-two.",
+   "gap": 0.3,
+   "caps": [
+    "THE *QUEEN",
+    "OPENED IT",
+    "*26 MAY",
+    "*1982"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "NORTHUMBRIAN WATER",
+    "l1": "OPENED 26 MAY 1982",
+    "l2": "BY THE QUEEN",
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "It cost a hundred and sixty-seven million pounds, and took seven years to build.",
+   "gap": 0.3,
+   "caps": [
+    "*£167 MILLION",
+    "*7 YEARS",
+    "TO BUILD"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "NORTHUMBRIAN WATER",
+    "items": [
+     {
+      "v": "£167M",
+      "static": true,
+      "l": "COST",
+      "red": true
+     },
+     {
+      "v": "7",
+      "suffix": " YRS",
+      "l": "TO BUILD"
+     }
+    ],
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "Twenty-seven miles of shoreline, and fifty-two metres deep.",
+   "gap": 0.3,
+   "caps": [
+    "*27 MILES",
+    "OF SHORELINE",
+    "*52 METRES",
+    "DEEP"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "NORTHUMBRIAN WATER",
+    "items": [
+     {
+      "v": "27",
+      "suffix": " MI",
+      "l": "SHORELINE",
+      "red": true
+     },
+     {
+      "v": "52",
+      "suffix": " M",
+      "l": "DEEPEST POINT"
+     }
+    ],
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "Tunnels link the Tyne to the Wear, Derwent and Tees, so its water can be released into all four rivers.",
+   "gap": 0.3,
+   "caps": [
+    "*TUNNELS",
+    "LINK THE *TYNE",
+    "*WEAR, DERWENT",
+    "AND *TEES",
+    "ALL *FOUR RIVERS"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.9,
+     54.85,
+     16000
+    ],
+    "pins": [
+     [
+      "KIELDER WATER",
+      -2.55,
+      55.2,
+      null
+     ],
+     [
+      "RIVER TYNE",
+      -1.9,
+      54.97,
+      null
+     ],
+     [
+      "RIVER WEAR",
+      -1.57,
+      54.78,
+      null
+     ],
+     [
+      "RIVER TEES",
+      -1.35,
+      54.55,
+      null
+     ]
+    ],
+    "title": "ONE LAKE, FOUR RIVERS"
+   }
+  },
+  {
+   "text": "It can supply up to nine hundred and nine million litres a day.",
+   "gap": 0.3,
+   "caps": [
+    "UP TO",
+    "*909 MILLION",
+    "LITRES A *DAY"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "NORTHUMBRIAN WATER",
+    "items": [
+     {
+      "v": "909",
+      "suffix": "M L",
+      "l": "MAX SUPPLY PER DAY",
+      "red": true
+     }
+    ],
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "And it sits inside England's largest forest.",
+   "gap": 0.3,
+   "caps": [
+    "ENGLAND'S *LARGEST",
+    "*FOREST"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "NORTHUMBRIAN WATER",
+    "l1": "INSIDE ENGLAND'S",
+    "l2": "LARGEST FOREST",
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "Where does your water come from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE DOES *YOURS",
+    "COME FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Northumbrian Water, Kielder Water celebrates ruby anniversary: https://www.nwg.co.uk/news-and-media/news-releases/kielder-water-celebrates-ruby-anniversary/",
+  "Northumbrian Water, Kielder (PDF): https://www.nwl.co.uk/globalassets/customer-images/water-supplyquality-and-leaks-images/kielder.pdf"
+ ]
+}

@@ -16,6 +16,8 @@
 | 2026-11-12 19:30 | carousel | How often does England's tap water pass? (DWI 2025, 99.97%) | DWI Chief Inspector's report 2025, DWI white or cloudy water |
 | 2026-11-13 12:30 | reel | A 22-mile wall guards Belfast's water (Mourne Wall, Silent Valley) | NI Water |
 | 2026-11-13 19:30 | reel | Half of Bristol's water comes from a canal | Bristol Water |
+| 2026-11-14 12:30 | reel | Northern Europe's biggest man-made lake is in Northumberland (Kielder Water) | Northumbrian Water |
+| 2026-11-14 19:30 | reel | Welsh Water has no shareholders (Glas Cymru, not-for-profit) | Dŵr Cymru Welsh Water |
 
 # Ideas backlog (facts must still be checked at the time)
 

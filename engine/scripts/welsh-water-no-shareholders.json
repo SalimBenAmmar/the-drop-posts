@@ -1,0 +1,189 @@
+{
+ "title": "Welsh Water has no shareholders",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "WELSH WATER HAS",
+  "NO SHAREHOLDERS"
+ ],
+ "lines": [
+  {
+   "text": "Welsh Water has no shareholders.",
+   "gap": 0.3,
+   "caps": [
+    "*WELSH WATER",
+    "NO *SHAREHOLDERS"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · WELSH WATER",
+    "l1": "SHAREHOLDERS:",
+    "l2": "NONE",
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "Since two thousand and one, it's been owned by Glas Cymru.",
+   "gap": 0.3,
+   "caps": [
+    "SINCE *2001",
+    "OWNED BY",
+    "*GLAS CYMRU"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · WELSH WATER",
+    "l1": "SINCE 2001",
+    "l2": "OWNED BY GLAS CYMRU",
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "Glas Cymru calls itself the first not-for-profit utility in Wales and England.",
+   "gap": 0.3,
+   "caps": [
+    "THE *FIRST",
+    "*NOT-FOR-PROFIT",
+    "UTILITY"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · WELSH WATER",
+    "l1": "THE FIRST",
+    "l2": "NOT-FOR-PROFIT UTILITY",
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "Any surplus is reinvested for the benefit of customers.",
+   "gap": 0.3,
+   "caps": [
+    "ANY *SURPLUS",
+    "*REINVESTED",
+    "FOR *CUSTOMERS"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "drop",
+    "title": "WHERE THE SURPLUS GOES",
+    "label": "BACK INTO THE BUSINESS"
+   }
+  },
+  {
+   "text": "By twenty twenty-one, it had returned four hundred and forty million pounds as customer dividends.",
+   "gap": 0.3,
+   "caps": [
+    "BY *2021",
+    "*£440 MILLION",
+    "CUSTOMER *DIVIDENDS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "WELSH WATER · 2001–2021",
+    "items": [
+     {
+      "v": "£440M",
+      "static": true,
+      "l": "CUSTOMER DIVIDENDS",
+      "red": true
+     }
+    ],
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "Instead of shareholders, it has independent members. The role is unpaid.",
+   "gap": 0.3,
+   "caps": [
+    "*INDEPENDENT",
+    "*MEMBERS",
+    "THE ROLE IS",
+    "*UNPAID"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · WELSH WATER",
+    "l1": "INDEPENDENT MEMBERS",
+    "l2": "UNPAID ROLE",
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "It supplies three million people,",
+   "gap": 0.2,
+   "caps": [
+    "*3 MILLION",
+    "PEOPLE"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · WELSH WATER",
+    "items": [
+     {
+      "v": "3",
+      "suffix": "M",
+      "l": "PEOPLE SUPPLIED",
+      "red": true
+     }
+    ],
+    "source": "DŴR CYMRU WELSH WATER"
+   }
+  },
+  {
+   "text": "across most of Wales, Herefordshire and parts of Deeside.",
+   "gap": 0.3,
+   "caps": [
+    "MOST OF *WALES",
+    "*HEREFORDSHIRE",
+    "PARTS OF *DEESIDE"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.6,
+     52.3,
+     7000
+    ],
+    "pins": [
+     [
+      "CARDIFF",
+      -3.18,
+      51.48,
+      null
+     ],
+     [
+      "HEREFORD",
+      -2.72,
+      52.06,
+      null
+     ],
+     [
+      "DEESIDE",
+      -3.03,
+      53.2,
+      null
+     ]
+    ],
+    "title": "WELSH WATER AREA"
+   }
+  },
+  {
+   "text": "Who supplies your water? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHO SUPPLIES *YOURS?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Dŵr Cymru Welsh Water, About us: https://corporate.dwrcymru.com/en/about-us",
+  "Dŵr Cymru Welsh Water, Celebrating 20 years of Glas Cymru: https://corporate.dwrcymru.com/en/glas-cymru-20",
+  "Dŵr Cymru Welsh Water, Become a member: https://corporate.dwrcymru.com/en/about-us/governance/our-members/become-a-member"
+ ]
+}
