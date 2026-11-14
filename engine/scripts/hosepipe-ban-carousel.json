@@ -1,0 +1,114 @@
+{
+ "topic": "HOSEPIPE BANS",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "UK DROUGHT · EXPLAINED",
+   "l1": "Hosepipe ban:",
+   "l2": "what's banned?",
+   "lead": "Its official name is a Temporary Use Ban, or TUB.",
+   "icon": "tap",
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "text",
+   "tag": "WHO DECIDES",
+   "l1": "Only water",
+   "l2": "companies",
+   "lead": "Only water companies can bring in a TUB, under section 76 of the Water Industry Act 1991. First they must tell customers, and publish it on their website and in two local newspapers.",
+   "icon": "drop",
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "steps",
+   "tag": "WHAT'S BANNED",
+   "l1": "With a hosepipe,",
+   "l2": "you can't:",
+   "steps": [
+    "Water your garden or plants at home.",
+    "Clean a private car or leisure boat.",
+    "Fill or maintain a paddling or swimming pool.",
+    "Fill a domestic pond or ornamental fountain.",
+    "Draw water for recreation at home."
+   ],
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "STILL ALLOWED",
+   "l1": "Not a",
+   "l2": "total ban",
+   "paras": [
+    "Water plants with a watering can, or with rain from a water butt.",
+    "Wash your car with a bucket, and reuse household water on plants."
+   ],
+   "source": "THAMES WATER, HOSEPIPE BAN"
+  },
+  {
+   "type": "stats",
+   "tag": "DO THEY WORK?",
+   "l1": "Less water",
+   "l2": "going out",
+   "items": [
+    {
+     "v": "10%",
+     "l": "LESS HOME USE · YORKSHIRE 2025",
+     "red": true
+    },
+    {
+     "v": "9%",
+     "l": "LESS DEMAND · ANGLIAN 2026"
+    }
+   ],
+   "lead": "In past droughts, TUBs cut the water put into supply by 3 to 5%.",
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "stats",
+   "tag": "WHAT PEOPLE THINK",
+   "l1": "Most people",
+   "l2": "back them",
+   "items": [
+    {
+     "v": "80%",
+     "l": "SAY NECESSARY",
+     "red": true
+    },
+    {
+     "v": "78%",
+     "l": "SAY FAIR"
+    }
+   ],
+   "lead": "And 76% said bans are effective, in Environment Agency research.",
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "LAST YEAR",
+   "l1": "4 companies",
+   "l2": "in 2025",
+   "paras": [
+    "Thames Water, Southern Water, South East Water and Yorkshire Water all had bans in part or all of their areas."
+   ],
+   "source": "ENVIRONMENT AGENCY"
+  },
+  {
+   "type": "tips",
+   "tag": "WHY BANS HELP",
+   "l1": "What a ban",
+   "l2": "protects",
+   "tips": [
+    "More water stays in rivers for wildlife.",
+    "Reservoirs last longer into a dry spell.",
+    "Everyone sees that water is scarce."
+   ],
+   "cta": [
+    "HAS YOUR AREA HAD A BAN?",
+    "Comment your town and we'll cover it next."
+   ],
+   "source": "ENVIRONMENT AGENCY"
+  }
+ ]
+}

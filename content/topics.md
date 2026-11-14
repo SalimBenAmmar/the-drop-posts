@@ -18,12 +18,13 @@
 | 2026-11-13 19:30 | reel | Half of Bristol's water comes from a canal | Bristol Water |
 | 2026-11-14 12:30 | reel | Northern Europe's biggest man-made lake is in Northumberland (Kielder Water) | Northumbrian Water |
 | 2026-11-14 19:30 | reel | Welsh Water has no shareholders (Glas Cymru, not-for-profit) | Dŵr Cymru Welsh Water |
+| 2026-11-15 12:30 | carousel | Hosepipe ban: what's banned? (TUBs, s76 WIA 1991) | Environment Agency blog, Thames Water |
+| 2026-11-15 19:30 | reel | Edinburgh's water falls 1 m every 4 km (Talla Reservoir, Glencorse) | Scottish Water |
 
 # Ideas backlog (facts must still be checked at the time)
 
 - Is bottled water better than tap? What UK regulators say
 - Why boiling water doesn't remove limescale
-- What a hosepipe ban is and when they happen
 - How hard is the water in Manchester / Leeds / Bristol / Cardiff (one city per episode)
 - Where Glasgow's water comes from (Loch Katrine)
 - What the Drinking Water Inspectorate actually tests

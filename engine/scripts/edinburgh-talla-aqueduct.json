@@ -1,0 +1,223 @@
+{
+ "title": "Edinburgh's water falls one metre every four kilometres",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "SOME OF EDINBURGH'S WATER",
+  "FALLS 1 M EVERY 4 KM"
+ ],
+ "lines": [
+  {
+   "text": "Some of Edinburgh's water falls just one metre every four kilometres.",
+   "gap": 0.3,
+   "caps": [
+    "*EDINBURGH'S WATER",
+    "*ONE METRE",
+    "EVERY *4 KM"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "1 METRE DOWN",
+    "l2": "EVERY 4 KM",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "It starts at Talla Reservoir, in the Borders hills near Tweedsmuir.",
+   "gap": 0.3,
+   "caps": [
+    "*TALLA",
+    "RESERVOIR",
+    "NEAR *TWEEDSMUIR"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.3,
+     55.7,
+     22000
+    ],
+    "pins": [
+     [
+      "TALLA",
+      -3.41,
+      55.48,
+      null
+     ]
+    ],
+    "title": "TALLA RESERVOIR · BORDERS"
+   }
+  },
+  {
+   "text": "It was finished in nineteen-oh-five.",
+   "gap": 0.3,
+   "caps": [
+    "FINISHED IN",
+    "*1905"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "FINISHED 1905",
+    "l2": "OVER 120 YEARS AGO",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "It holds about twelve point seven billion litres.",
+   "gap": 0.3,
+   "caps": [
+    "ABOUT *12.7",
+    "BILLION *LITRES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "items": [
+     {
+      "v": "12.7",
+      "static": true,
+      "l": "BILLION LITRES · TALLA",
+      "red": true
+     }
+    ],
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "That's more than Gladhouse, Portmore, Rosebery and Edgelaw put together.",
+   "gap": 0.3,
+   "caps": [
+    "*MORE THAN",
+    "FOUR RESERVOIRS",
+    "*COMBINED"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "BIGGER THAN",
+    "l2": "4 OTHER RESERVOIRS COMBINED",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "From there, a thirty-five mile aqueduct carries it north,",
+   "gap": 0.2,
+   "caps": [
+    "A *35-MILE",
+    "*AQUEDUCT",
+    "CARRIES IT *NORTH"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.3,
+     55.7,
+     22000
+    ],
+    "pins": [
+     [
+      "TALLA",
+      -3.41,
+      55.48,
+      null
+     ],
+     [
+      "EDINBURGH",
+      -3.19,
+      55.95,
+      null
+     ]
+    ],
+    "title": "TALLA TO EDINBURGH"
+   }
+  },
+  {
+   "text": "to Glencorse treatment works near Penicuik, completed in twenty twelve.",
+   "gap": 0.3,
+   "caps": [
+    "*GLENCORSE",
+    "NEAR *PENICUIK",
+    "*2012"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.3,
+     55.7,
+     22000
+    ],
+    "pins": [
+     [
+      "TALLA",
+      -3.41,
+      55.48,
+      null
+     ],
+     [
+      "GLENCORSE WTW",
+      -3.22,
+      55.85,
+      null
+     ]
+    ],
+    "title": "GLENCORSE · PENICUIK"
+   }
+  },
+  {
+   "text": "And the original Victorian valves still keep the city supplied.",
+   "gap": 0.3,
+   "caps": [
+    "ORIGINAL *VICTORIAN",
+    "*VALVES",
+    "STILL IN USE"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "drop",
+    "title": "VICTORIAN VALVES",
+    "label": "STILL IN SERVICE"
+   }
+  },
+  {
+   "text": "Opening one once took three people eight hours.",
+   "gap": 0.3,
+   "caps": [
+    "*THREE PEOPLE",
+    "*EIGHT HOURS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "items": [
+     {
+      "v": "8",
+      "suffix": " HRS",
+      "l": "TO OPEN ONE VALVE",
+      "red": true
+     }
+    ],
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "Where does your water start? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE DOES *YOURS",
+    "START?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Scottish Water, Talla Reservoir is 120 years old (8 May 2026): https://app-sw-sitecore-dr-cm.azurewebsites.net/about-us/news-and-views/2026/05/080526-talla-reservoir-at-120",
+  "Scottish Water, Water Woods scheme at Talla Reservoir (Sept 2025): https://swazurecms.scottishwater.co.uk/About-Us/News-and-Views/2025/09/300925-Talla-Woodland"
+ ]
+}
