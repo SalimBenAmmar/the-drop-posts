@@ -20,6 +20,8 @@
 | 2026-11-14 19:30 | reel | Welsh Water has no shareholders (Glas Cymru, not-for-profit) | Dŵr Cymru Welsh Water |
 | 2026-11-15 12:30 | carousel | Hosepipe ban: what's banned? (TUBs, s76 WIA 1991) | Environment Agency blog, Thames Water |
 | 2026-11-15 19:30 | reel | Edinburgh's water falls 1 m every 4 km (Talla Reservoir, Glencorse) | Scottish Water |
+| 2026-11-16 12:30 | reel | Cloudy tap water is usually just air (glass test) | DWI, DWQR Scotland |
+| 2026-11-16 19:30 | reel | Yorkshire has its own grid, for water (Yorkshire Grid, 133 reservoirs) | Yorkshire Water, Water resilience in Yorkshire |
 
 # Ideas backlog (facts must still be checked at the time)
 
@@ -28,5 +30,4 @@
 - How hard is the water in Manchester / Leeds / Bristol / Cardiff (one city per episode)
 - Where Glasgow's water comes from (Loch Katrine)
 - What the Drinking Water Inspectorate actually tests
-- Why tap water sometimes looks cloudy (air bubbles)
 - What makes tap water taste different in different towns

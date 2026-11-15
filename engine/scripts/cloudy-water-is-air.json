@@ -1,0 +1,167 @@
+{
+ "title": "Cloudy tap water is usually just air",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "CLOUDY TAP WATER?",
+  "IT'S USUALLY JUST AIR"
+ ],
+ "lines": [
+  {
+   "text": "Cloudy tap water is usually just air.",
+   "gap": 0.3,
+   "caps": [
+    "*CLOUDY TAP WATER",
+    "USUALLY JUST *AIR"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "glass",
+    "label": "USUALLY JUST AIR"
+   }
+  },
+  {
+   "text": "The Drinking Water Inspectorate says it's tiny air bubbles, trapped in the water.",
+   "gap": 0.3,
+   "caps": [
+    "DRINKING WATER *INSPECTORATE",
+    "TINY AIR *BUBBLES",
+    "*TRAPPED IN THE WATER"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · DWI",
+    "l1": "TINY AIR BUBBLES",
+    "l2": "TRAPPED IN THE WATER",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "Usually after the water's been off nearby, like a burst main.",
+   "gap": 0.3,
+   "caps": [
+    "WATER *OFF NEARBY",
+    "LIKE A *BURST MAIN"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · DWI",
+    "l1": "WATER TURNED OFF NEARBY",
+    "l2": "BURST MAIN OR REPAIRS",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "The test? Pour a glass.",
+   "gap": 0.3,
+   "caps": [
+    "THE *TEST?",
+    "POUR A *GLASS"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "glass",
+    "title": "THE GLASS TEST",
+    "label": "POUR AND WATCH"
+   }
+  },
+  {
+   "text": "If it clears from the bottom up, it's air.",
+   "gap": 0.3,
+   "caps": [
+    "CLEARS FROM THE *BOTTOM UP",
+    "IT'S *AIR"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · DWI",
+    "l1": "CLEARS FROM THE BOTTOM UP",
+    "l2": "IT'S JUST AIR",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "It's not harmful to health.",
+   "gap": 0.3,
+   "caps": [
+    "*NOT HARMFUL",
+    "TO HEALTH"
+   ],
+   "scene": {
+    "type": "check",
+    "text": "NOT HARMFUL",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "It normally clears within twenty-four hours.",
+   "gap": 0.3,
+   "caps": [
+    "NORMALLY *CLEARS",
+    "WITHIN *24 HOURS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · DWI",
+    "items": [
+     {
+      "v": "24",
+      "suffix": "h",
+      "l": "NORMALLY CLEARS WITHIN",
+      "red": true
+     }
+    ],
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "If not, or it tastes odd, contact your supplier.",
+   "gap": 0.3,
+   "caps": [
+    "IF *NOT",
+    "TASTES *ODD?",
+    "CALL YOUR *SUPPLIER"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · DWI",
+    "l1": "LONGER THAN 24 HOURS?",
+    "l2": "CONTACT YOUR SUPPLIER",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "Cloudy every time? Check your stop tap is fully open.",
+   "gap": 0.3,
+   "caps": [
+    "CLOUDY *EVERY TIME?",
+    "CHECK YOUR *STOP TAP",
+    "FULLY *OPEN"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "DWI · DWQR SCOTLAND",
+    "l1": "CLOUDY EVERY TIME?",
+    "l2": "CHECK YOUR STOP TAP",
+    "source": "DWI, DWQR SCOTLAND"
+   }
+  },
+  {
+   "text": "Has your tap ever run white? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "EVER RUN *WHITE?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Drinking Water Inspectorate, White or cloudy water: https://www.dwi.gov.uk/consumers/learn-more-about-your-water/white-or-cloudy-water/",
+  "DWQR Scotland, White, cloudy or milky water: https://dwqr.scot/public-water-supply/drinking-water-quality-faqs/white-cloudy-or-milky-water"
+ ]
+}

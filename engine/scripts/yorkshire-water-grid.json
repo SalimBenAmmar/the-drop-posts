@@ -1,0 +1,233 @@
+{
+ "title": "Yorkshire has its own grid, for water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "YORKSHIRE HAS A GRID",
+  "FOR WATER"
+ ],
+ "lines": [
+  {
+   "text": "Yorkshire has its own grid. Not for electricity. For water.",
+   "gap": 0.3,
+   "caps": [
+    "YORKSHIRE HAS A *GRID",
+    "NOT *ELECTRICITY",
+    "FOR *WATER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.2,
+     53.7,
+     16000
+    ],
+    "pins": [
+     [
+      "LEEDS",
+      -1.55,
+      53.8,
+      null
+     ],
+     [
+      "SHEFFIELD",
+      -1.47,
+      53.38,
+      null
+     ],
+     [
+      "YORK",
+      -1.08,
+      53.96,
+      null
+     ],
+     [
+      "HULL",
+      -0.34,
+      53.74,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "After the drought of the mid nineties disrupted supplies, Yorkshire Water built it.",
+   "gap": 0.3,
+   "caps": [
+    "THE *DROUGHT",
+    "OF *1995–96",
+    "YORKSHIRE WATER *BUILT IT"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · YORKSHIRE WATER",
+    "l1": "DROUGHT OF 1995–96",
+    "l2": "THE GRID WAS THE ANSWER",
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "It moves water around the county, to balance supply and demand.",
+   "gap": 0.3,
+   "caps": [
+    "*MOVES WATER",
+    "AROUND THE *COUNTY",
+    "SUPPLY AND *DEMAND"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.2,
+     53.7,
+     16000
+    ],
+    "pins": [
+     [
+      "LEEDS",
+      -1.55,
+      53.8,
+      null
+     ],
+     [
+      "SHEFFIELD",
+      -1.47,
+      53.38,
+      null
+     ],
+     [
+      "YORK",
+      -1.08,
+      53.96,
+      null
+     ],
+     [
+      "HULL",
+      -0.34,
+      53.74,
+      null
+     ]
+    ],
+    "title": "THE YORKSHIRE GRID"
+   }
+  },
+  {
+   "text": "It now reaches ninety-nine percent of Yorkshire.",
+   "gap": 0.3,
+   "caps": [
+    "NOW REACHES",
+    "*99%",
+    "OF *YORKSHIRE"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · YORKSHIRE WATER",
+    "items": [
+     {
+      "v": "99",
+      "suffix": "%",
+      "l": "OF YORKSHIRE ON THE GRID",
+      "red": true
+     }
+    ],
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "Sources? A hundred and thirty-three reservoirs, nine rivers, forty-five groundwater sources.",
+   "gap": 0.3,
+   "caps": [
+    "*133 RESERVOIRS",
+    "*9 RIVERS",
+    "*45 GROUNDWATER",
+    "SOURCES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · YORKSHIRE WATER",
+    "items": [
+     {
+      "v": "133",
+      "suffix": "",
+      "l": "RESERVOIRS",
+      "red": true
+     },
+     {
+      "v": "9",
+      "suffix": "",
+      "l": "RIVER SOURCES"
+     }
+    ],
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "Forty-eight treatment works clean it.",
+   "gap": 0.3,
+   "caps": [
+    "*48",
+    "TREATMENT *WORKS",
+    "*CLEAN IT"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "flask",
+    "title": "TREATMENT WORKS",
+    "value": "48",
+    "unit": "ACROSS YORKSHIRE"
+   }
+  },
+  {
+   "text": "Then it flows through thirty-one thousand kilometres of mains.",
+   "gap": 0.3,
+   "caps": [
+    "*31,000 KM",
+    "OF *MAINS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · YORKSHIRE WATER",
+    "items": [
+     {
+      "v": "31",
+      "suffix": ",000 km",
+      "l": "OF WATER MAINS",
+      "red": true
+     }
+    ],
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "Over three quarters of the way round the Earth.",
+   "gap": 0.3,
+   "caps": [
+    "OVER *THREE QUARTERS",
+    "ROUND THE *EARTH"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "YORKSHIRE WATER · 31,000 KM",
+    "l1": "THREE QUARTERS OF THE WAY",
+    "l2": "ROUND THE EARTH",
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "Where's yours from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE'S *YOURS FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Yorkshire Water, Water resilience in Yorkshire (appendix): https://www.yorkshirewater.com/media/ibaf0hyk/water-resilience-in-yorkshire-appendix.pdf",
+  "Yorkshire Water, Water resilience in Yorkshire: https://www.yorkshirewater.com/media/qmsnlec1/water-resilience-in-yorkshire.pdf"
+ ]
+}
