@@ -1,0 +1,113 @@
+{
+ "topic": "RESERVOIR TO TAP",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "WALES · STEP BY STEP",
+   "l1": "Rain to tap",
+   "l2": "in 8 steps",
+   "lead": "How Welsh Water turns reservoir water into tap water.",
+   "icon": "tap",
+   "source": "WELSH WATER"
+  },
+  {
+   "type": "stats",
+   "tag": "THE SCALE",
+   "l1": "Every day",
+   "l2": "in Wales",
+   "items": [
+    {
+     "v": "800M",
+     "l": "LITRES A DAY",
+     "red": true
+    },
+    {
+     "v": "1.4M",
+     "l": "HOMES & BUSINESSES"
+    }
+   ],
+   "lead": "Over 800 million litres a day, to over 1.4 million homes and businesses, through a network covering 27,000 km.",
+   "source": "WELSH WATER, PROVIDING CLEAN WATER"
+  },
+  {
+   "type": "steps",
+   "tag": "STEPS 1–3",
+   "l1": "First, take",
+   "l2": "the bits out",
+   "steps": [
+    "Screens catch large debris like branches and leaves.",
+    "A coagulant makes tiny particles clump into flocs.",
+    "The clumps settle, or air bubbles float them off as sludge."
+   ],
+   "source": "WELSH WATER, HOW WATER IS TREATED"
+  },
+  {
+   "type": "text",
+   "tag": "STEP 4",
+   "l1": "Then through",
+   "l2": "fine sand",
+   "lead": "Water passes down through fine sand, which traps the particles that are left. To clean the filter, the flow is reversed at a high rate.",
+   "icon": "flask",
+   "source": "WELSH WATER, HOW WATER IS TREATED"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "STEPS 5–6",
+   "l1": "pH, then",
+   "l2": "chlorine",
+   "paras": [
+    "Chemicals correct and stabilise the pH when needed.",
+    "Chlorine kills remaining bacteria. Some sites add UV light too."
+   ],
+   "source": "WELSH WATER, HOW WATER IS TREATED"
+  },
+  {
+   "type": "steps",
+   "tag": "STEPS 7–8",
+   "l1": "Stored, then",
+   "l2": "sent to you",
+   "steps": [
+    "Treated water waits in enclosed service reservoirs.",
+    "They cover peak demand and keep the pressure up.",
+    "Pipes carry it on, usually by gravity."
+   ],
+   "source": "WELSH WATER, HOW WATER IS TREATED"
+  },
+  {
+   "type": "stats",
+   "tag": "CHECKED ALL YEAR",
+   "l1": "Tested",
+   "l2": "all year",
+   "items": [
+    {
+     "v": "300K",
+     "l": "WATER TESTS A YEAR",
+     "red": true
+    },
+    {
+     "v": "365",
+     "l": "DAYS A YEAR, 24 HOURS"
+    }
+   ],
+   "lead": "Some 300,000 water tests are taken and analysed over a year.",
+   "source": "WELSH WATER"
+  },
+  {
+   "type": "tips",
+   "tag": "THE SHORT VERSION",
+   "l1": "Reservoir",
+   "l2": "to tap",
+   "tips": [
+    "Clean it: screens, flocs, then sand.",
+    "Make it safe: pH, then chlorine.",
+    "Deliver it: stored, then mostly by gravity."
+   ],
+   "cta": [
+    "WHERE DOES YOURS COME FROM?",
+    "Comment your town and we'll cover it next."
+   ],
+   "source": "WELSH WATER"
+  }
+ ]
+}
