@@ -15,7 +15,10 @@ const ROOT = process.cwd();
 const QUEUE = path.join(ROOT, 'queue');
 const POSTED = path.join(ROOT, 'posted');
 const FAILED = path.join(ROOT, 'failed');
-const MAX_PER_RUN = 5;
+// Catch-up pacing: one post per run, and at least MIN_GAP_HOURS since the last published post,
+// so a backlog (e.g. after an outage) drains gradually instead of flooding the feed.
+const MAX_PER_RUN = 1;
+const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS || 4);
 const MAX_ATTEMPTS = 3;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -117,6 +120,21 @@ async function readQueue() {
   return posts.sort((a, b) => new Date(a.publish_at) - new Date(b.publish_at));
 }
 
+async function lastPublishedAt() {
+  let files = [];
+  try { files = await fs.readdir(POSTED); } catch { return 0; }
+  let latest = 0;
+  for (const f of files) {
+    if (!f.endsWith('.json')) continue;
+    try {
+      const j = JSON.parse(await fs.readFile(path.join(POSTED, f), 'utf8'));
+      const t = new Date(j.published_at || 0).getTime();
+      if (t > latest) latest = t;
+    } catch {}
+  }
+  return latest;
+}
+
 async function archive(post, destRoot, extra) {
   await fs.mkdir(destRoot, { recursive: true });
   const { id, ...rest } = post;
@@ -187,6 +205,14 @@ async function main() {
   const now = Date.now();
   const due = (await readQueue()).filter((p) => p.publish_at && new Date(p.publish_at).getTime() <= now);
   if (!due.length) { console.log('Nothing due.'); return; }
+
+  const last = await lastPublishedAt();
+  const gapH = last ? (now - last) / 3600000 : Infinity;
+  if (gapH < MIN_GAP_HOURS) {
+    console.log(`${due.length} due, but the last post went out ${gapH.toFixed(1)} h ago (min gap ${MIN_GAP_HOURS} h). Waiting.`);
+    return;
+  }
+  if (due.length > 1) console.log(`${due.length} posts due; publishing the oldest one now, the rest every ${MIN_GAP_HOURS} h.`);
 
   for (const post of due.slice(0, MAX_PER_RUN)) {
     try {
