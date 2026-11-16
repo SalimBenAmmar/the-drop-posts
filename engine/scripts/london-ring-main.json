@@ -1,0 +1,70 @@
+{
+ "title": "There's a 50-mile water tunnel under London",
+ "voice": "bm_george",
+ "speed": 1.1,
+ "lead_in": 0.1,
+ "hook": ["A 50-MILE WATER TUNNEL", "UNDER LONDON"],
+ "lines": [
+  {
+   "text": "There's a fifty-mile tunnel of water under London.",
+   "gap": 0.25,
+   "caps": ["A *50-MILE TUNNEL", "OF *WATER", "UNDER *LONDON"],
+   "scene": {"type": "map", "cam": [-0.12, 51.5, 22000], "pins": [["LONDON", -0.12, 51.5, null]]}
+  },
+  {
+   "text": "The London Ring Main. The papers called it the M twenty-five for water.",
+   "gap": 0.25,
+   "caps": ["THE LONDON *RING MAIN", "THE *M25", "FOR *WATER"],
+   "scene": {"type": "card", "tag": "OFFICIAL · THAMES WATER", "l1": "THE LONDON RING MAIN", "l2": "\"THE M25 FOR WATER\"", "source": "THAMES WATER"}
+  },
+  {
+   "text": "When it opened, it was the longest tunnel built in the UK. Longer than the Channel Tunnel.",
+   "gap": 0.25,
+   "caps": ["THE *LONGEST TUNNEL", "BUILT IN THE *UK", "LONGER THAN THE", "*CHANNEL TUNNEL"],
+   "scene": {"type": "card", "tag": "THAMES WATER · 50 MILES", "l1": "UK'S LONGEST TUNNEL", "l2": "WHEN IT OPENED", "source": "THAMES WATER"}
+  },
+  {
+   "text": "It's thirty metres deep, and two and a half metres wide.",
+   "gap": 0.25,
+   "caps": ["*30 METRES", "*DEEP", "*2.5 METRES WIDE"],
+   "scene": {"type": "stat", "tag": "OFFICIAL · THAMES WATER", "items": [{"v": "30", "suffix": " m", "l": "DEEP", "red": true}, {"v": "2.5", "suffix": " m", "l": "WIDE"}], "source": "THAMES WATER"}
+  },
+  {
+   "text": "A boring machine dug it over seven years, with no trenches in the roads.",
+   "gap": 0.25,
+   "caps": ["A *BORING MACHINE", "*7 YEARS", "NO *TRENCHES"],
+   "scene": {"type": "icon", "icon": "rock", "title": "DUG BY MACHINE", "value": "7", "unit": "YEARS TO BUILD"}
+  },
+  {
+   "text": "It carries up to thirteen hundred million litres a day.",
+   "gap": 0.25,
+   "caps": ["UP TO *1,300 MILLION", "LITRES A *DAY"],
+   "scene": {"type": "card", "tag": "OFFICIAL · THAMES WATER", "l1": "1,300 MILLION LITRES", "l2": "A DAY, AT MOST", "source": "THAMES WATER"}
+  },
+  {
+   "text": "For about three and a half million customers.",
+   "gap": 0.25,
+   "caps": ["ABOUT *3.5 MILLION", "*CUSTOMERS"],
+   "scene": {"type": "stat", "tag": "OFFICIAL · THAMES WATER", "items": [{"v": "3.5", "suffix": "M", "l": "CUSTOMERS SUPPLIED", "red": true}], "source": "THAMES WATER"}
+  },
+  {
+   "text": "And gravity moves the water round, not pumps.",
+   "gap": 0.25,
+   "caps": ["*GRAVITY MOVES IT", "NOT *PUMPS"],
+   "scene": {"type": "icon", "icon": "drop", "title": "FLOWS BY GRAVITY", "label": "NO COSTLY PUMPS"}
+  },
+  {
+   "text": "The Queen opened it in November nineteen ninety-four.",
+   "gap": 0.25,
+   "caps": ["THE *QUEEN", "OPENED IT", "NOVEMBER *1994"],
+   "scene": {"type": "card", "tag": "OFFICIAL · THAMES WATER", "l1": "OPENED 11 NOV 1994", "l2": "BY THE QUEEN", "source": "THAMES WATER"}
+  },
+  {
+   "text": "Is yours under your feet? Comment your town.",
+   "gap": 0.2,
+   "caps": ["UNDER YOUR *FEET?", "COMMENT YOUR *TOWN"],
+   "scene": {"type": "cta", "title": "COMMENT YOUR TOWN"}
+  }
+ ],
+ "sources": ["Thames Water, London Ring Main turns 25: https://www.thameswater.co.uk/news/2019/nov/london-ring-main-turns-twenty-five"]
+}

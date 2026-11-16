@@ -22,6 +22,7 @@
 | 2026-11-15 19:30 | reel | Edinburgh's water falls 1 m every 4 km (Talla Reservoir, Glencorse) | Scottish Water |
 | 2026-11-16 12:30 | reel | Cloudy tap water is usually just air (glass test) | DWI, DWQR Scotland |
 | 2026-11-16 19:30 | reel | Yorkshire has its own grid, for water (Yorkshire Grid, 133 reservoirs) | Yorkshire Water, Water resilience in Yorkshire |
+| 2026-11-17 12:30 | reel | There's a 50-mile water tunnel under London (London Ring Main) | Thames Water |
 
 # Ideas backlog (facts must still be checked at the time)
 
