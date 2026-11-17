@@ -1,0 +1,221 @@
+{
+  "title": "Cambridge's tap water comes from under the ground",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "CAMBRIDGE'S WATER",
+    "COMES FROM UNDERGROUND"
+  ],
+  "lines": [
+    {
+      "text": "Cambridge's tap water comes from underground.",
+      "gap": 0.3,
+      "caps": [
+        "*CAMBRIDGE'S WATER",
+        "FROM *UNDERGROUND"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          0.12,
+          52.2,
+          9000
+        ],
+        "pins": [
+          [
+            "CAMBRIDGE",
+            0.12,
+            52.2,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "text": "Ninety-nine per cent of its supply is groundwater.",
+      "gap": 0.3,
+      "caps": [
+        "*99 PER CENT",
+        "IS *GROUNDWATER"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · GOV.UK",
+        "items": [
+          {
+            "v": "99",
+            "suffix": "%",
+            "l": "CAMBRIDGE WATER · FROM GROUNDWATER",
+            "red": true
+          }
+        ],
+        "bars": true,
+        "source": "GOV.UK, MARCH 2024"
+      }
+    },
+    {
+      "text": "Not a river. Not a reservoir. Rock.",
+      "gap": 0.3,
+      "caps": [
+        "NOT A *RIVER",
+        "NOT A *RESERVOIR",
+        "*ROCK"
+      ],
+      "scene": {
+        "type": "icon",
+        "icon": "rock",
+        "title": "THE CHALK AQUIFER",
+        "label": "WATER STORED IN ROCK"
+      }
+    },
+    {
+      "text": "It's held in the chalk aquifer, south and east of the city.",
+      "gap": 0.3,
+      "caps": [
+        "THE *CHALK AQUIFER",
+        "SOUTH AND *EAST"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          0.3,
+          52.1,
+          12000
+        ],
+        "pins": [
+          [
+            "CAMBRIDGE",
+            0.12,
+            52.2,
+            null
+          ]
+        ],
+        "hatch": "southeast",
+        "hatchLabel": "CHALK",
+        "hatchLabelAt": [
+          0.7,
+          51.85
+        ],
+        "title": "CAMBRIDGE · CHALK AQUIFER"
+      }
+    },
+    {
+      "text": "Cambridge Water pumps it up from twenty-four boreholes.",
+      "gap": 0.3,
+      "caps": [
+        "PUMPED UP",
+        "FROM *24 BOREHOLES"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · CAMBRIDGE WATER",
+        "items": [
+          {
+            "v": "24",
+            "suffix": "",
+            "l": "BOREHOLES",
+            "red": true
+          }
+        ],
+        "source": "CAMBRIDGE WATER"
+      }
+    },
+    {
+      "text": "Cambridge averages five hundred and eighty-five millimetres of rain a year.",
+      "gap": 0.3,
+      "caps": [
+        "*585 MM",
+        "OF RAIN",
+        "A *YEAR"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · CAMBRIDGE WATER",
+        "items": [
+          {
+            "v": "585",
+            "suffix": " mm",
+            "l": "AVERAGE RAINFALL A YEAR",
+            "red": true
+          }
+        ],
+        "source": "CAMBRIDGE WATER"
+      }
+    },
+    {
+      "text": "And half of it needs to fall in winter, to refill the chalk.",
+      "gap": 0.3,
+      "caps": [
+        "*HALF OF IT",
+        "IN *WINTER",
+        "TO *REFILL IT"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · CAMBRIDGE WATER",
+        "l1": "WINTER RAIN",
+        "l2": "REFILLS THE CHALK",
+        "source": "CAMBRIDGE WATER"
+      }
+    },
+    {
+      "text": "That chalk also feeds chalk streams. About eighty-five per cent of the world's are in England.",
+      "gap": 0.3,
+      "caps": [
+        "*CHALK STREAMS",
+        "*85 PER CENT",
+        "IN *ENGLAND"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · CAMBRIDGE WATER",
+        "items": [
+          {
+            "v": "85",
+            "suffix": "%",
+            "l": "WORLD'S CHALK STREAMS IN ENGLAND",
+            "red": true
+          }
+        ],
+        "bars": true,
+        "source": "CAMBRIDGE WATER"
+      }
+    },
+    {
+      "text": "A new Fens Reservoir is planned for the mid twenty-thirties.",
+      "gap": 0.3,
+      "caps": [
+        "A NEW *FENS",
+        "*RESERVOIR",
+        "MID *2030s"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · GOV.UK",
+        "l1": "FENS RESERVOIR",
+        "l2": "EXPECTED 2035–37",
+        "source": "GOV.UK, MARCH 2024"
+      }
+    },
+    {
+      "text": "River, reservoir or ground? Comment your guess.",
+      "gap": 0.2,
+      "caps": [
+        "RIVER, RESERVOIR",
+        "OR *GROUND?",
+        "COMMENT YOUR *GUESS"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "COMMENT YOUR GUESS"
+      }
+    }
+  ],
+  "sources": [
+    "GOV.UK, Addressing water scarcity in Greater Cambridge (March 2024): https://www.gov.uk/government/publications/addressing-water-scarcity-in-greater-cambridge-update-on-government-measures/addressing-water-scarcity-in-greater-cambridge-update-on-government-measures",
+    "Cambridge Water, Where our water comes from: https://www.cambridge-water.co.uk/environment/managing-water-resources/where-our-water-comes-from",
+    "Cambridge Water, How water gets to your taps: https://www.cambridge-water.co.uk/household/my-water-supply/water-quality/how-water-gets-to-your-taps",
+    "Cambridge Water, Five surprising facts about chalk streams: https://www.cambridge-water.co.uk/news/two-minute-read-five-surprising-facts-about-chalk-streams/"
+  ]
+}

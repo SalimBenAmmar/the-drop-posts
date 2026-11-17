@@ -24,6 +24,8 @@
 | 2026-11-16 19:30 | reel | Yorkshire has its own grid, for water (Yorkshire Grid, 133 reservoirs) | Yorkshire Water, Water resilience in Yorkshire |
 | 2026-11-17 12:30 | reel | There's a 50-mile water tunnel under London (London Ring Main) | Thames Water |
 | 2026-11-17 19:30 | carousel | Rain to tap in 8 steps (Welsh Water treatment) | Welsh Water, How water is treated and distributed; Providing clean water |
+| 2026-11-18 12:30 | reel | Liverpool's tap water comes from a lake in Wales (Lake Vyrnwy, Vyrnwy aqueduct 1892) | United Utilities, Senedd Research |
+| 2026-11-18 19:30 | reel | Cambridge's tap water comes from underground (99% groundwater, chalk aquifer, 24 boreholes) | GOV.UK Greater Cambridge water scarcity, Cambridge Water |
 
 # Ideas backlog (facts must still be checked at the time)
 

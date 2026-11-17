@@ -1,0 +1,196 @@
+{
+  "title": "Liverpool's tap water comes from a lake in Wales",
+  "voice": "bm_george",
+  "speed": 1.05,
+  "lead_in": 0.1,
+  "hook": [
+    "LIVERPOOL'S WATER",
+    "COMES FROM WALES"
+  ],
+  "lines": [
+    {
+      "text": "Liverpool's tap water comes from a lake in Wales.",
+      "gap": 0.3,
+      "caps": [
+        "*LIVERPOOL'S WATER",
+        "A LAKE IN *WALES"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -3.1,
+          53.1,
+          8000
+        ],
+        "pins": [
+          [
+            "LAKE VYRNWY",
+            -3.46,
+            52.77,
+            null
+          ],
+          [
+            "LIVERPOOL",
+            -2.98,
+            53.41,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "text": "It's called Lake Vyrnwy, in the hills of mid Wales.",
+      "gap": 0.3,
+      "caps": [
+        "*LAKE VYRNWY",
+        "MID *WALES"
+      ],
+      "scene": {
+        "type": "map",
+        "cam": [
+          -3.46,
+          52.85,
+          14000
+        ],
+        "pins": [
+          [
+            "LAKE VYRNWY",
+            -3.46,
+            52.77,
+            null
+          ]
+        ],
+        "title": "LAKE VYRNWY · MID WALES"
+      }
+    },
+    {
+      "text": "Its water mostly goes to Liverpool and Cheshire.",
+      "gap": 0.3,
+      "caps": [
+        "MOSTLY *LIVERPOOL",
+        "AND *CHESHIRE"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · SENEDD RESEARCH",
+        "l1": "LAKE VYRNWY",
+        "l2": "LIVERPOOL & CHESHIRE",
+        "source": "SENEDD RESEARCH"
+      }
+    },
+    {
+      "text": "It travels through the Vyrnwy aqueduct, three pipelines with a combined length of about ninety-five miles.",
+      "gap": 0.3,
+      "caps": [
+        "THE VYRNWY *AQUEDUCT",
+        "*THREE PIPELINES",
+        "ABOUT *95 MILES"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "items": [
+          {
+            "v": "95",
+            "suffix": " mi",
+            "l": "COMBINED LENGTH · 153 KM",
+            "red": true
+          }
+        ],
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "When it opened in eighteen ninety-two, it was the longest aqueduct in the world.",
+      "gap": 0.3,
+      "caps": [
+        "OPENED IN *1892",
+        "THE *LONGEST",
+        "IN THE *WORLD"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "l1": "OPENED 14 JULY 1892",
+        "l2": "LONGEST IN THE WORLD",
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "Today it carries up to two hundred and ten million litres a day.",
+      "gap": 0.3,
+      "caps": [
+        "UP TO *210",
+        "MILLION LITRES",
+        "A *DAY"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "items": [
+          {
+            "v": "210",
+            "suffix": "M",
+            "l": "LITRES A DAY · UP TO",
+            "red": true
+          }
+        ],
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "That helps supply more than nine hundred thousand people in Merseyside and Cheshire.",
+      "gap": 0.3,
+      "caps": [
+        "*900,000+ PEOPLE",
+        "*MERSEYSIDE",
+        "AND *CHESHIRE"
+      ],
+      "scene": {
+        "type": "stat",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "items": [
+          {
+            "v": "900",
+            "suffix": "k+",
+            "l": "PEOPLE SUPPLIED",
+            "red": true
+          }
+        ],
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "More than a hundred and thirty years on, it's still flowing.",
+      "gap": 0.3,
+      "caps": [
+        "*130+ YEARS ON",
+        "STILL *FLOWING"
+      ],
+      "scene": {
+        "type": "card",
+        "tag": "OFFICIAL · UNITED UTILITIES",
+        "l1": "SINCE 1892",
+        "l2": "STILL FLOWING",
+        "source": "UNITED UTILITIES"
+      }
+    },
+    {
+      "text": "Where does your water come from? Comment your town.",
+      "gap": 0.2,
+      "caps": [
+        "WHERE DOES *YOURS",
+        "COME FROM?",
+        "COMMENT YOUR *TOWN"
+      ],
+      "scene": {
+        "type": "cta",
+        "title": "COMMENT YOUR TOWN"
+      }
+    }
+  ],
+  "sources": [
+    "United Utilities, Vyrnwy aqueduct maintenance programme: https://www.unitedutilities.com/corporate/responsibility/stakeholders/vyrnwy-aqueduct-maintenance-programme/",
+    "Senedd Research, Exporting Wales' water: https://research.senedd.wales/research-articles/exporting-wales-water-how-much-and-where-to/"
+  ]
+}
