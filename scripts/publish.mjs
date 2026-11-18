@@ -203,7 +203,9 @@ async function main() {
 
   if (!BASE) throw new Error('MEDIA_BASE_URL is not set');
   const now = Date.now();
-  const due = (await readQueue()).filter((p) => p.publish_at && new Date(p.publish_at).getTime() <= now);
+  // not_before (optional) holds a post back until that time even if publish_at has passed.
+  const due = (await readQueue()).filter((p) => p.publish_at && new Date(p.publish_at).getTime() <= now
+    && (!p.not_before || new Date(p.not_before).getTime() <= now));
   if (!due.length) { console.log('Nothing due.'); return; }
 
   const last = await lastPublishedAt();
