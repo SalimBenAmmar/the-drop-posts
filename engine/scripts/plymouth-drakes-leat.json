@@ -1,0 +1,182 @@
+{
+ "title": "Sir Francis Drake brought Plymouth its water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "SIR FRANCIS DRAKE",
+  "BROUGHT PLYMOUTH WATER"
+ ],
+ "lines": [
+  {
+   "text": "Sir Francis Drake brought Plymouth its water.",
+   "gap": 0.3,
+   "caps": [
+    "SIR FRANCIS *DRAKE",
+    "PLYMOUTH'S *WATER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -4.12,
+     50.4,
+     30000
+    ],
+    "pins": [
+     [
+      "PLYMOUTH",
+      -4.14,
+      50.375,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "In fifteen ninety-one, a channel called Drake's Leat opened.",
+   "gap": 0.3,
+   "caps": [
+    "IN *1591",
+    "DRAKE'S *LEAT"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · PLYMOUTH CITY COUNCIL",
+    "l1": "DRAKE'S LEAT",
+    "l2": "OPENED 1591",
+    "source": "PLYMOUTH CITY COUNCIL"
+   }
+  },
+  {
+   "text": "It ran seventeen miles, from the River Meavy on Dartmoor.",
+   "gap": 0.3,
+   "caps": [
+    "*17 MILES",
+    "FROM THE *RIVER MEAVY"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -4.09,
+     50.44,
+     42000
+    ],
+    "pins": [
+     [
+      "RIVER MEAVY",
+      -4.03,
+      50.5,
+      null
+     ],
+     [
+      "PLYMOUTH",
+      -4.14,
+      50.375,
+      null
+     ]
+    ],
+    "title": "DARTMOOR TO PLYMOUTH"
+   }
+  },
+  {
+   "text": "Drake was the contractor, and he got leases for six water mills along it.",
+   "gap": 0.3,
+   "caps": [
+    "DRAKE WAS THE *CONTRACTOR",
+    "*SIX WATER MILLS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · PLYMOUTH CITY COUNCIL",
+    "items": [
+     {
+      "v": "17",
+      "suffix": " mi",
+      "l": "LEAT LENGTH",
+      "red": false
+     },
+     {
+      "v": "6",
+      "suffix": "",
+      "l": "WATER MILLS LEASED",
+      "red": true
+     }
+    ],
+    "source": "PLYMOUTH CITY COUNCIL"
+   }
+  },
+  {
+   "text": "It supplied the city's water for several hundred years.",
+   "gap": 0.3,
+   "caps": [
+    "*SEVERAL HUNDRED",
+    "*YEARS"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "drop",
+    "title": "PLYMOUTH'S SUPPLY",
+    "label": "FOR SEVERAL HUNDRED YEARS"
+   }
+  },
+  {
+   "text": "Then reservoirs took over, and iron pipes arrived in eighteen twenty-six.",
+   "gap": 0.3,
+   "caps": [
+    "*RESERVOIRS",
+    "IRON PIPES IN *1826"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · PLYMOUTH CITY COUNCIL",
+    "l1": "IRON PIPES",
+    "l2": "1826",
+    "source": "PLYMOUTH CITY COUNCIL"
+   }
+  },
+  {
+   "text": "After the war, Blitz rubble buried the city centre stretch.",
+   "gap": 0.3,
+   "caps": [
+    "*BLITZ RUBBLE",
+    "*BURIED IT"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "rock",
+    "title": "BURIED",
+    "label": "UNDER BLITZ RUBBLE"
+   }
+  },
+  {
+   "text": "Now it's been partly uncovered, during work on Armada Way.",
+   "gap": 0.3,
+   "caps": [
+    "PARTLY *UNCOVERED",
+    "*ARMADA WAY"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · PLYMOUTH CITY COUNCIL",
+    "l1": "ARMADA WAY",
+    "l2": "LEAT UNCOVERED",
+    "source": "PLYMOUTH CITY COUNCIL"
+   }
+  },
+  {
+   "text": "Does your town have a story like this? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "A STORY *LIKE THIS?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Plymouth City Council, Drake's Leat uncovered as part of Armada Way regeneration project: https://www.plymouth.gov.uk/news/drakes-leat-uncovered-part-armada-way-regeneration-project"
+ ]
+}

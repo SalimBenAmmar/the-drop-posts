@@ -26,6 +26,8 @@
 | 2026-11-17 19:30 | carousel | Rain to tap in 8 steps (Welsh Water treatment) | Welsh Water, How water is treated and distributed; Providing clean water |
 | 2026-11-18 12:30 | reel | Liverpool's tap water comes from a lake in Wales (Lake Vyrnwy, Vyrnwy aqueduct 1892) | United Utilities, Senedd Research |
 | 2026-11-18 19:30 | reel | Cambridge's tap water comes from underground (99% groundwater, chalk aquifer, 24 boreholes) | GOV.UK Greater Cambridge water scarcity, Cambridge Water |
+| 2026-11-19 12:30 | reel | Sir Francis Drake brought Plymouth its water (Drake's Leat, 1591, 17 miles from River Meavy) | Plymouth City Council |
+| 2026-11-19 19:30 | reel | Europe's biggest spring source may be near Portsmouth (Havant & Bedhampton springs, 30%, Havant Thicket 8.7bn L) | Portsmouth Water, British Geological Survey |
 
 # Ideas backlog (facts must still be checked at the time)
 

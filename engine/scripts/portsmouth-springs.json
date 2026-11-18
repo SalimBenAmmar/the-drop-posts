@@ -1,0 +1,166 @@
+{
+ "title": "Portsmouth drinks from Europe's biggest spring source",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "EUROPE'S BIGGEST SPRING",
+  "MAY BE NEAR PORTSMOUTH"
+ ],
+ "lines": [
+  {
+   "text": "Europe's biggest spring water source may be near Portsmouth.",
+   "gap": 0.3,
+   "caps": [
+    "EUROPE'S *BIGGEST",
+    "NEAR *PORTSMOUTH"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.0,
+     50.9,
+     35000
+    ],
+    "pins": [
+     [
+      "BEDHAMPTON SPRINGS",
+      -0.995,
+      50.853,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Portsmouth Water says the Havant and Bedhampton springs are thought to be the largest in Europe.",
+   "gap": 0.3,
+   "caps": [
+    "*HAVANT AND BEDHAMPTON",
+    "THE *LARGEST",
+    "IN *EUROPE"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · PORTSMOUTH WATER",
+    "l1": "HAVANT & BEDHAMPTON",
+    "l2": "LARGEST IN EUROPE?",
+    "source": "PORTSMOUTH WATER"
+   }
+  },
+  {
+   "text": "Rain soaks into the chalk, then bursts out right here.",
+   "gap": 0.3,
+   "caps": [
+    "RAIN SOAKS INTO *CHALK",
+    "BURSTS *OUT"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "rock",
+    "title": "CHALK SPRINGS",
+    "label": "WATER FROM THE ROCK"
+   }
+  },
+  {
+   "text": "Together they flow at about a hundred and four thousand cubic metres a day.",
+   "gap": 0.3,
+   "caps": [
+    "ABOUT *104,000",
+    "CUBIC METRES",
+    "A *DAY"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · BRITISH GEOLOGICAL SURVEY",
+    "items": [
+     {
+      "v": "104",
+      "suffix": "k",
+      "l": "CUBIC METRES A DAY",
+      "red": true
+     }
+    ],
+    "source": "BRITISH GEOLOGICAL SURVEY"
+   }
+  },
+  {
+   "text": "That's enough to fill forty Olympic pools, every day.",
+   "gap": 0.3,
+   "caps": [
+    "*40 OLYMPIC POOLS",
+    "EVERY *DAY"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "bath",
+    "title": "EVERY DAY",
+    "value": "40",
+    "unit": "OLYMPIC POOLS"
+   }
+  },
+  {
+   "text": "They provide thirty per cent of Portsmouth Water's supply.",
+   "gap": 0.3,
+   "caps": [
+    "*30 PER CENT",
+    "OF THE *SUPPLY"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · PORTSMOUTH WATER",
+    "items": [
+     {
+      "v": "30",
+      "suffix": "%",
+      "l": "OF PORTSMOUTH WATER'S SUPPLY",
+      "red": true
+     }
+    ],
+    "bars": true,
+    "source": "PORTSMOUTH WATER"
+   }
+  },
+  {
+   "text": "Spare winter water flows out to sea, so a new reservoir at Havant Thicket will store up to eight point seven billion litres.",
+   "gap": 0.3,
+   "caps": [
+    "SPARE *WINTER WATER",
+    "*HAVANT THICKET",
+    "UP TO *8.7 BILLION",
+    "*LITRES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · PORTSMOUTH WATER",
+    "items": [
+     {
+      "v": "8.7",
+      "suffix": "bn",
+      "l": "LITRES · HAVANT THICKET",
+      "red": true
+     }
+    ],
+    "source": "PORTSMOUTH WATER"
+   }
+  },
+  {
+   "text": "River, reservoir, or spring: where's yours from? Comment your guess.",
+   "gap": 0.2,
+   "caps": [
+    "RIVER, RESERVOIR",
+    "OR *SPRING?",
+    "COMMENT YOUR *GUESS"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR GUESS"
+   }
+  }
+ ],
+ "sources": [
+  "Portsmouth Water, Havant Thicket Reservoir FAQs: https://havant-thicket-reservoir.uk.engagementhq.com/what-is-water-recycling/faqs",
+  "Portsmouth Water, A summary of the benefits of Havant Thicket Reservoir: https://www.portsmouthwater.co.uk/wp-content/uploads/2021/05/A-SUMMARY-OF-THE-BENEFITS-OF-HAVANT-THICKET-RESERVOIR1.pdf",
+  "British Geological Survey, Karst hydrogeology of the Bedhampton and Havant springs: https://www.bgs.ac.uk/groundwater/?p=3422"
+ ]
+}
