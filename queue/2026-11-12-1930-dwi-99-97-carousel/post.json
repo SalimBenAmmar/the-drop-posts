@@ -10,5 +10,6 @@
     "slide_5.jpg",
     "slide_6.jpg",
     "slide_7.jpg"
-  ]
+  ],
+  "min_gap_hours": 0.9
 }

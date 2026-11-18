@@ -208,11 +208,13 @@ async function main() {
 
   const last = await lastPublishedAt();
   const gapH = last ? (now - last) / 3600000 : Infinity;
-  if (gapH < MIN_GAP_HOURS) {
-    console.log(`${due.length} due, but the last post went out ${gapH.toFixed(1)} h ago (min gap ${MIN_GAP_HOURS} h). Waiting.`);
+  // A post can set its own min_gap_hours (e.g. to release part of a backlog faster).
+  const minGap = Number(due[0].min_gap_hours ?? MIN_GAP_HOURS);
+  if (gapH < minGap) {
+    console.log(`${due.length} due, but the last post went out ${gapH.toFixed(1)} h ago (min gap ${minGap} h). Waiting.`);
     return;
   }
-  if (due.length > 1) console.log(`${due.length} posts due; publishing the oldest one now, the rest every ${MIN_GAP_HOURS} h.`);
+  if (due.length > 1) console.log(`${due.length} posts due; publishing the oldest one now (min gap ${minGap} h).`);
 
   for (const post of due.slice(0, MAX_PER_RUN)) {
     try {
