@@ -1,4 +1,5 @@
 {
+  "id": "2026-11-11-1230-one-in-five-litres-leaks",
   "type": "reel",
   "publish_at": "2026-11-11T12:30:00Z",
   "caption": "Almost 1 in 5 litres of England's tap water leaks away before it reaches a tap 💧\nThe Environment Agency's new report says leakage was 18.6% of supply in 2025 to 2026: 2,621 million litres a day, or about 101 litres per property every day. Essex & Suffolk Water lost 11.0%, Thames Water 22.4%. Leakage is down around 12% since 2017–18.\n\nWho do you think leaks the most near you? Comment your town 👇\nSource: Environment Agency, Water resources 2025 to 2026 (GOV.UK)\n\n#ukwater #savewater #waterquality #london #england",
@@ -6,5 +7,7 @@
     "reel.mp4"
   ],
   "cover": "cover.jpg",
-  "min_gap_hours": 0.9
+  "min_gap_hours": 0.9,
+  "ig_media_id": "18130225529484601",
+  "published_at": "2026-11-18T14:45:07.216Z"
 }
