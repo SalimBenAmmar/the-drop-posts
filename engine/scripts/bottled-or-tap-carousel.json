@@ -1,0 +1,108 @@
+{
+ "topic": "BOTTLED OR TAP?",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "ENGLAND · READ THE LABEL",
+   "l1": "Bottled water",
+   "l2": "from the tap?",
+   "lead": "It's legal: one type of bottled water can come from any source, including public supplies.",
+   "icon": "tap",
+   "source": "DEFRA, GOV.UK"
+  },
+  {
+   "type": "text",
+   "tag": "THE RULES",
+   "l1": "Three legal",
+   "l2": "types",
+   "paras": [
+    "In England, bottled water is sold as one of three types.",
+    "1. Natural mineral water",
+    "2. Spring water",
+    "3. Bottled drinking water"
+   ],
+   "source": "DEFRA, COMPARE TYPES OF BOTTLED WATER"
+  },
+  {
+   "type": "text",
+   "tag": "TYPE 1",
+   "l1": "Natural",
+   "l2": "mineral water",
+   "paras": [
+    "From a protected underground source, bottled at the spring or borehole.",
+    "No disinfection. Only five treatments are allowed, and its composition must go on the label."
+   ],
+   "source": "DEFRA, GOV.UK"
+  },
+  {
+   "type": "stats",
+   "tag": "TYPE 1 · RECOGNITION",
+   "l1": "Approved",
+   "l2": "first",
+   "items": [
+    {
+     "v": "2",
+     "l": "YEARS IT CAN TAKE TO BE RECOGNISED",
+     "red": true
+    },
+    {
+     "v": "20%",
+     "l": "MAX CHANGE IN MAKE-UP"
+    }
+   ],
+   "lead": "The local authority must recognise it before it can be sold.",
+   "source": "DEFRA, NATURAL MINERAL WATER GUIDANCE"
+  },
+  {
+   "type": "text",
+   "tag": "TYPES 2 AND 3",
+   "l1": "Spring water and",
+   "l2": "drinking water",
+   "paras": [
+    "Spring water: underground, bottled at the source, any treatment allowed.",
+    "Bottled drinking water: any source, including public supplies. Any treatment, not listed on the label."
+   ],
+   "source": "DEFRA, GOV.UK"
+  },
+  {
+   "type": "text",
+   "tag": "WHO CHECKS WHAT",
+   "l1": "Two different",
+   "l2": "regulators",
+   "paras": [
+    "Bottled water is regulated by local authorities.",
+    "Tap water in England is overseen by the Drinking Water Inspectorate."
+   ],
+   "icon": "flask",
+   "source": "DWI"
+  },
+  {
+   "type": "text",
+   "big": true,
+   "tag": "TAP WATER · 2025",
+   "l1": "99.97%",
+   "l2": "passed",
+   "paras": [
+    "Public water supplies in England met the standards in 99.97% of tests in 2025.",
+    "That's from over 3.5 million samples."
+   ],
+   "source": "DWI, CHIEF INSPECTOR'S REPORT 2025"
+  },
+  {
+   "type": "tips",
+   "tag": "THE SHORT VERSION",
+   "l1": "Check the",
+   "l2": "label",
+   "tips": [
+    "'Natural mineral water': recognised source, no disinfection.",
+    "'Spring water': underground, bottled at source.",
+    "'Bottled drinking water': could come from any source."
+   ],
+   "cta": [
+    "TAP OR BOTTLED?",
+    "Comment which you drink, and your town."
+   ],
+   "source": "DEFRA, DWI"
+  }
+ ]
+}

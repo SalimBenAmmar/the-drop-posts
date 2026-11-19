@@ -1,0 +1,164 @@
+{
+ "title": "The Dambusters practised over your tap water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "THE DAMBUSTERS PRACTISED",
+  "OVER THIS RESERVOIR"
+ ],
+ "lines": [
+  {
+   "text": "The Dambusters practised over a reservoir that still fills taps in four cities.",
+   "gap": 0.3,
+   "caps": [
+    "THE *DAMBUSTERS",
+    "PRACTISED HERE",
+    "*FOUR CITIES"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.6,
+     53.2,
+     6000
+    ],
+    "pins": [
+     [
+      "DERWENT DAM",
+      -1.745,
+      53.41,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "It's the Derwent Reservoir, in the Peak District.",
+   "gap": 0.3,
+   "caps": [
+    "*DERWENT RESERVOIR",
+    "PEAK *DISTRICT"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.745,
+     53.36,
+     14000
+    ],
+    "pins": [
+     [
+      "DERWENT DAM",
+      -1.745,
+      53.41,
+      null
+     ]
+    ],
+    "title": "UPPER DERWENT · PEAK DISTRICT"
+   }
+  },
+  {
+   "text": "Before their nineteen forty-three raid, six one seven Squadron practised low flying here.",
+   "gap": 0.3,
+   "caps": [
+    "BEFORE THE *1943 RAID",
+    "*617 SQUADRON",
+    "*LOW FLYING HERE"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · GOV.UK",
+    "l1": "617 SQUADRON",
+    "l2": "PRACTISED AT DERWENT",
+    "source": "GOV.UK"
+   }
+  },
+  {
+   "text": "The valley's reservoirs supply Sheffield, Nottingham, Derby and Leicester.",
+   "gap": 0.3,
+   "caps": [
+    "*SHEFFIELD",
+    "*NOTTINGHAM",
+    "*DERBY",
+    "AND *LEICESTER"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SEVERN TRENT · ICE",
+    "l1": "SHEFFIELD · DERBY",
+    "l2": "NOTTINGHAM · LEICESTER",
+    "source": "SEVERN TRENT, ICE"
+   }
+  },
+  {
+   "text": "Its first two dams were built between nineteen-oh-one and nineteen-sixteen.",
+   "gap": 0.3,
+   "caps": [
+    "FIRST *TWO DAMS",
+    "*1901 TO 1916"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · ICE",
+    "l1": "HOWDEN & DERWENT",
+    "l2": "BUILT 1901–1916",
+    "source": "INSTITUTION OF CIVIL ENGINEERS"
+   }
+  },
+  {
+   "text": "A third, Ladybower, flooded the villages of Derwent and Ashopton.",
+   "gap": 0.3,
+   "caps": [
+    "*LADYBOWER",
+    "FLOODED *TWO VILLAGES"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · ICE",
+    "l1": "LADYBOWER",
+    "l2": "TWO VILLAGES FLOODED",
+    "source": "INSTITUTION OF CIVIL ENGINEERS"
+   }
+  },
+  {
+   "text": "Together, the three reservoirs hold nearly forty-six billion litres.",
+   "gap": 0.3,
+   "caps": [
+    "*THREE RESERVOIRS",
+    "NEARLY *46 BILLION",
+    "*LITRES"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · ICE",
+    "items": [
+     {
+      "v": "46",
+      "suffix": "bn",
+      "l": "LITRES · NEARLY",
+      "red": true
+     }
+    ],
+    "source": "INSTITUTION OF CIVIL ENGINEERS"
+   }
+  },
+  {
+   "text": "Is your water from the Peak District? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "FROM THE *PEAK DISTRICT?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "GOV.UK, Dambusters raid remembered: https://www.gov.uk/government/news/dambusters-raid-remembered",
+  "Severn Trent, For a dam good day out head on up to Upper Derwent: https://stwater.co.uk/news/news-releases/for-a-dam-good-day-out-head-on-up-to-upper-derwent",
+  "Institution of Civil Engineers, Derwent Valley reservoirs: https://ice.org.uk/what-is-civil-engineering/infrastructure-projects/derwent-valley-reservoirs"
+ ]
+}

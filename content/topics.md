@@ -28,10 +28,11 @@
 | 2026-11-18 19:30 | reel | Cambridge's tap water comes from underground (99% groundwater, chalk aquifer, 24 boreholes) | GOV.UK Greater Cambridge water scarcity, Cambridge Water |
 | 2026-11-19 12:30 | reel | Sir Francis Drake brought Plymouth its water (Drake's Leat, 1591, 17 miles from River Meavy) | Plymouth City Council |
 | 2026-11-19 19:30 | reel | Europe's biggest spring source may be near Portsmouth (Havant & Bedhampton springs, 30%, Havant Thicket 8.7bn L) | Portsmouth Water, British Geological Survey |
+| 2026-11-20 12:30 | carousel | Bottled water from the tap? (3 legal types: natural mineral, spring, bottled drinking water; DWI 99.97%) | Defra GOV.UK compare types of bottled water, natural mineral water guidance, bottled drinking water guidance; DWI |
+| 2026-11-20 19:30 | reel | The Dambusters practised over a reservoir that still supplies four cities (Derwent, 617 Sqn; Sheffield, Nottingham, Derby, Leicester; 46bn L) | GOV.UK, Severn Trent, ICE |
 
 # Ideas backlog (facts must still be checked at the time)
 
-- Is bottled water better than tap? What UK regulators say
 - Why boiling water doesn't remove limescale
 - How hard is the water in Manchester / Leeds / Bristol / Cardiff (one city per episode)
 - Where Glasgow's water comes from (Loch Katrine)
