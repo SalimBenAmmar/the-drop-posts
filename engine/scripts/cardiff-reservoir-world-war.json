@@ -1,0 +1,191 @@
+{
+ "title": "A world war paused Cardiff's reservoir",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "A WORLD WAR PAUSED",
+  "CARDIFF'S RESERVOIR"
+ ],
+ "lines": [
+  {
+   "text": "A world war stopped work on Cardiff's reservoir.",
+   "gap": 0.3,
+   "caps": [
+    "A *WORLD WAR",
+    "STOPPED *CARDIFF'S",
+    "*RESERVOIR"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.31,
+     51.64,
+     16000
+    ],
+    "pins": [
+     [
+      "CARDIFF",
+      -3.1791,
+      51.4816,
+      null
+     ],
+     [
+      "LLWYN-ON",
+      -3.441,
+      51.797,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Its Victorian water came from the Taff Fawr valley, in the Brecon Beacons.",
+   "gap": 0.3,
+   "caps": [
+    "THE *TAFF FAWR",
+    "VALLEY",
+    "BRECON *BEACONS"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -3.45,
+     51.8,
+     170000
+    ],
+    "pins": [
+     [
+      "CANTREF",
+      -3.461,
+      51.832,
+      null
+     ],
+     [
+      "LLWYN-ON",
+      -3.441,
+      51.797,
+      null
+     ]
+    ],
+    "title": "TAFF FAWR RESERVOIRS"
+   }
+  },
+  {
+   "text": "Cantref reservoir opened in eighteen ninety-two.",
+   "gap": 0.3,
+   "caps": [
+    "*CANTREF",
+    "OPENED *1892"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · COFLEIN",
+    "l1": "CANTREF RESERVOIR",
+    "l2": "OPENED 1892",
+    "source": "COFLEIN, RCAHMW"
+   }
+  },
+  {
+   "text": "A bigger one, Llwyn-on, was started in nineteen eleven.",
+   "gap": 0.3,
+   "caps": [
+    "A *BIGGER ONE",
+    "*LLWYN-ON",
+    "STARTED *1911"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · COFLEIN",
+    "l1": "LLWYN-ON RESERVOIR",
+    "l2": "WORK STARTS 1911",
+    "source": "COFLEIN, RCAHMW"
+   }
+  },
+  {
+   "text": "In nineteen fifteen, the First World War stopped the work.",
+   "gap": 0.3,
+   "caps": [
+    "*1915",
+    "THE *FIRST WORLD WAR",
+    "*STOPPED IT"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · COFLEIN",
+    "l1": "1915",
+    "l2": "WORK SUSPENDED",
+    "source": "COFLEIN, RCAHMW"
+   }
+  },
+  {
+   "text": "It restarted in nineteen nineteen, and opened in nineteen twenty-six.",
+   "gap": 0.3,
+   "caps": [
+    "RESTARTED *1919",
+    "OPENED *1926"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · COFLEIN",
+    "l1": "RESTARTED 1919",
+    "l2": "OPENED JUNE 1926",
+    "source": "COFLEIN, RCAHMW"
+   }
+  },
+  {
+   "text": "It holds one thousand two hundred and sixty million gallons.",
+   "gap": 0.3,
+   "caps": [
+    "*1,260 MILLION",
+    "*GALLONS"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · COFLEIN",
+    "items": [
+     {
+      "v": "1,260m",
+      "l": "GALLONS · LLWYN-ON",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "COFLEIN, RCAHMW"
+   }
+  },
+  {
+   "text": "Today, Llwynon works still supplies parts of Cardiff.",
+   "gap": 0.3,
+   "caps": [
+    "*LLWYNON WORKS",
+    "STILL SUPPLIES",
+    "*CARDIFF"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · DWI",
+    "l1": "LLWYNON WORKS",
+    "l2": "STILL SUPPLIES CARDIFF",
+    "source": "DRINKING WATER INSPECTORATE"
+   }
+  },
+  {
+   "text": "Where does your water come from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE'S *YOUR WATER FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Coflein (RCAHMW), Cantref Reservoir: https://coflein.gov.uk/en/site/404685",
+  "Coflein (RCAHMW), Llwyn-On Reservoir: https://coflein.gov.uk/en/site/404686/",
+  "Drinking Water Inspectorate, Notice of Regulation Cardiff (Ely/Radyr/Llandaf): https://www.dwi.gov.uk/improvement-programmes/dwr-cymru-welsh-water/notice-of-regulation-cardiff-ely-radyr-llanaf"
+ ]
+}

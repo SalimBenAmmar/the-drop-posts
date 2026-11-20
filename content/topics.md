@@ -30,6 +30,8 @@
 | 2026-11-19 19:30 | reel | Europe's biggest spring source may be near Portsmouth (Havant & Bedhampton springs, 30%, Havant Thicket 8.7bn L) | Portsmouth Water, British Geological Survey |
 | 2026-11-20 12:30 | carousel | Bottled water from the tap? (3 legal types: natural mineral, spring, bottled drinking water; DWI 99.97%) | Defra GOV.UK compare types of bottled water, natural mineral water guidance, bottled drinking water guidance; DWI |
 | 2026-11-20 19:30 | reel | The Dambusters practised over a reservoir that still supplies four cities (Derwent, 617 Sqn; Sheffield, Nottingham, Derby, Leicester; 46bn L) | GOV.UK, Severn Trent, ICE |
+| 2026-11-21 12:30 | reel | Norwich drinks from a river (River Wensum at Heigham; East of England driest region, ~600mm; Heigham £36m upgrade, UK's largest submerged ultrafiltration plant) | Anglian Water news, Anglian Water WRMP24 Norfolk |
+| 2026-11-21 19:30 | reel | A world war paused Cardiff's reservoir (Cantref 1892, 323m gal; Llwyn-on 1911–1926, paused 1915, 1,260m gal; Llwynon WTW supplies Cardiff) | Coflein RCAHMW, DWI |
 
 # Ideas backlog (facts must still be checked at the time)
 

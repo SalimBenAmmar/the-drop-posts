@@ -1,0 +1,165 @@
+{
+ "title": "Norwich drinks from a river",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "NORWICH DRINKS",
+  "FROM A RIVER"
+ ],
+ "lines": [
+  {
+   "text": "Norwich drinks from a river.",
+   "gap": 0.3,
+   "caps": [
+    "*NORWICH",
+    "DRINKS FROM A *RIVER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     1.0,
+     52.65,
+     9000
+    ],
+    "pins": [
+     [
+      "NORWICH",
+      1.2979,
+      52.6309,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Part of it is taken from the River Wensum, at Heigham.",
+   "gap": 0.3,
+   "caps": [
+    "THE RIVER *WENSUM",
+    "AT *HEIGHAM"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     1.27,
+     52.637,
+     30000
+    ],
+    "pins": [
+     [
+      "HEIGHAM WORKS",
+      1.2655,
+      52.6395,
+      null
+     ]
+    ],
+    "title": "RIVER WENSUM · NORWICH"
+   }
+  },
+  {
+   "text": "And the East of England is the driest region in the UK.",
+   "gap": 0.3,
+   "caps": [
+    "THE *EAST OF ENGLAND",
+    "THE *DRIEST REGION"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · ANGLIAN WATER",
+    "l1": "EAST OF ENGLAND",
+    "l2": "DRIEST REGION IN THE UK",
+    "source": "ANGLIAN WATER, WRMP24"
+   }
+  },
+  {
+   "text": "It gets about two thirds of the national average rainfall. Roughly six hundred millimetres a year.",
+   "gap": 0.3,
+   "caps": [
+    "ABOUT *TWO THIRDS",
+    "OF AVERAGE *RAIN",
+    "ROUGHLY *600 MM"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · ANGLIAN WATER",
+    "items": [
+     {
+      "v": "600",
+      "suffix": "mm",
+      "l": "RAIN A YEAR · APPROX",
+      "red": true
+     }
+    ],
+    "source": "ANGLIAN WATER, WRMP24"
+   }
+  },
+  {
+   "text": "The river water is cleaned at Heigham, a works more than a hundred years old.",
+   "gap": 0.3,
+   "caps": [
+    "CLEANED AT *HEIGHAM",
+    "*100+ YEARS OLD"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "flask",
+    "title": "HEIGHAM WATER TREATMENT WORKS",
+    "label": "MORE THAN 100 YEARS OLD"
+   }
+  },
+  {
+   "text": "A thirty-six million pound upgrade added the UK's largest ever submerged ultrafiltration plant.",
+   "gap": 0.3,
+   "caps": [
+    "*£36 MILLION",
+    "UK'S *LARGEST",
+    "*ULTRAFILTRATION"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · ANGLIAN WATER",
+    "items": [
+     {
+      "v": "£36m",
+      "l": "HEIGHAM UPGRADE",
+      "red": true
+     }
+    ],
+    "source": "ANGLIAN WATER"
+   }
+  },
+  {
+   "text": "Anglian Water says it can now treat enough to fill five hundred baths every minute.",
+   "gap": 0.3,
+   "caps": [
+    "*500 BATHS",
+    "EVERY *MINUTE"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "bath",
+    "title": "ENOUGH WATER TO FILL",
+    "value": "500",
+    "unit": "BATHS A MINUTE"
+   }
+  },
+  {
+   "text": "Does your water come from a river? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "FROM A *RIVER?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Anglian Water, Investing in our infrastructure: https://www.anglianwater.co.uk/news/investing-in-our-infrastructure",
+  "Anglian Water, WRMP24 WRZ summary Area 4 Norfolk: https://anglianwater.co.uk/siteassets/household/corporate/wrmp24/wrmp24--wrz-reports/wrmp24-wrz-summary-area-4-norfolk-supporting-document.pdf",
+  "Greater Norwich Local Plan, Policy R31 Heigham Water Treatment Works: https://www.gnlp.org.uk/node/192"
+ ]
+}
