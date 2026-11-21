@@ -5,5 +5,7 @@
   "media": [
     "reel.mp4"
   ],
-  "cover": "cover.jpg"
+  "cover": "cover.jpg",
+  "attempts": 1,
+  "last_error": "Media container 17989659428900511 ERROR: Error: Media upload has failed with error code 2207003"
 }
