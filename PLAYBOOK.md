@@ -9,10 +9,15 @@ Every daily run follows this file. The engine lives in `engine/`; posts go in `q
 - Rotation in `state.json`: `cycle` = reel, reel, reel, reel, carousel; `next_index` = the next item; `last_queued_slot` = UTC time of the last queued post.
 - Fill every empty slot after `last_queued_slot` up to **36 hours from now** (normally 2 posts, at most 4). Each slot takes the next item of the cycle; then update `next_index` and `last_queued_slot`.
 - If a slot is already in the past, skip it (never queue posts in the past).
+- **Backlog cap:** count the folders in `queue/`. Queue at most `4 − (that count)` new posts (never below 0). If the publisher is behind, skip the extra slots but still move `last_queued_slot` forward. The publisher only posts inside the UK windows 12:30–14:30 and 19:30–21:30, one per window, so a backlog drains at 2 a day and never floods the feed.
 
 ## 2. Topics
 
 - UK tap water only: hardness by region, chlorine, where water comes from, water companies, reservoirs and rivers, drought and hosepipe bans, leaks, water use, bills, sewage and river quality news, myths (bottled vs tap, boiling, filters), limescale tips, regional "your town" episodes.
+- **What performs (first 2 weeks, public plays):** hard-water contrasts and "your city's water" hooks win (London rock 1.5K, Liverpool from Wales 1.5K, Scotland soft vs London hard 1.2K, Portsmouth springs 681). Company structure and pure history lose (Welsh Water ownership 118, Glasgow/Queen Victoria 123). So:
+  - Lead with what the viewer can check in their own kitchen or town (hardness, taste, smell, colour, where their tap water comes from, what they pay, what they waste). History is allowed only as the second beat, never the hook.
+  - At least 2 of every 4 reels are city episodes for big audiences (London, Birmingham, Manchester, Leeds, Glasgow, Liverpool, Sheffield, Bristol, Newcastle, Edinburgh, Cardiff, Leicester, Nottingham, Belfast). Use a series label in the caption's first line ("Where does Leeds' water come from?").
+  - Contrast hooks are best: two places, two numbers, or a myth vs fact.
 - Pick a topic not in `content/topics.md`. Prefer regional variety (London, Birmingham, Manchester, Leeds, Bristol, Cardiff, Glasgow, Edinburgh, Belfast, Newcastle, Norwich...) because regional posts pull UK comments.
 - Current news is allowed when an official or major UK news source covers it; explain it calmly, no outrage bait.
 - **Never mention Freshyva, filters for sale, or any product.** Pure education.
@@ -37,8 +42,10 @@ Every daily run follows this file. The engine lives in `engine/`; posts go in `q
 ```
 
 - **Hook = scroll stopper**: line 1 is a surprising, true, concrete claim said in the first second ("There's rock in London's tap water."). The same claim is the on-screen `hook`, visible from frame 1. No intros, no "did you know", no logo first.
-- 8–11 lines, 30–40 seconds, British English, spoken like a friend explaining. Numbers written as words in `text` ("a hundred and thirty-six").
-- Last line always invites comments: "Comment your town." or "Comment your guess."
+- **Watch time first:** 6–8 lines, **22–30 seconds** (short reels get rewatched; long ones get skipped). Cut background lines; keep only the hook, 3–5 facts, a payoff and the CTA. The payoff line (the most surprising number or twist) goes second to last so people stay to the end.
+- British English, spoken like a friend explaining. Numbers written as words in `text` ("a hundred and thirty-six").
+- The hook line is 8 words or fewer, uses "your" or a named city, and states the claim (no questions without answers, no "did you know").
+- Last line is an easy, specific question anyone can answer in one word, then the town: "Hard or soft where you live? Comment your town.", "Guess how many litres? Comment your guess.", "Tap or bottled? Comment below." Never just "Comment your town." on its own. The `cta` scene `title` is the short question only, **max 18 characters** or it overflows (e.g. "HARD OR SOFT?", "YOUR GUESS?", "TAP OR BOTTLED?"); the caption chunks underneath carry "COMMENT YOUR *TOWN".
 - `caps`: 1–3 words per chunk, uppercase, in spoken order, matching the words said; exactly one `*KEY` word per chunk where possible.
 - Consecutive lines with an identical `scene` object stay on the same shot.
 
@@ -69,7 +76,8 @@ ffmpeg -y -ss 1.2 -i out/<slug>/reel.mp4 -frames:v 1 -q:v 2 out/<slug>/cover.jpg
 ```
 - 6–8 slides. Slide 1 `cover` is the hook (curiosity gap, e.g. "Why your kettle turns white" + "It isn't dirt. It's dissolved rock.").
 - Middle slides: `text` (lead or paras), `steps` (3–5 steps), `stats` (2 big numbers), `scale` (rows with relative widths `w`).
-- Last slide `tips` with `"cta": ["QUESTION?", "Comment your town and we'll cover it next."]`.
+- Last slide `tips` with `"cta": ["QUESTION?", "Save this, and comment your town for the next one."]` (carousels are for saves and shares).
+- Cover: one bold claim in under 7 words plus a lead that opens a curiosity gap. Topics that work as carousels: checklists, myth vs fact, "what your bill pays for", step-by-step processes, comparisons by city.
 - Every slide that states a fact sets `source`.
 - Build: `node carousel.mjs scripts/<slug>-carousel.json out/<slug>-carousel` (a "WARNING overflows" line means shorten that slide's text and rebuild).
 
@@ -90,7 +98,9 @@ Caption format:
 <Hook sentence> 💧
 <2–3 short sentences with the key facts and numbers>
 
-<Comment question> 👇
+<Same easy question as the video's CTA> 👇
+<Share line: "Send this to someone in <city>." for city posts, "Save this for later." for carousels and tips>
+Follow @ukwaterlab for your town next.
 Source: <names>
 
 #tag1 #tag2 #tag3 #tag4 #tag5

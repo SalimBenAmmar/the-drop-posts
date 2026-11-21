@@ -20,6 +20,20 @@ const FAILED = path.join(ROOT, 'failed');
 const MAX_PER_RUN = 1;
 const MIN_GAP_HOURS = Number(process.env.MIN_GAP_HOURS || 4);
 const MAX_ATTEMPTS = 3;
+// Posting windows (UK local time, DST-aware): posts only go out in these windows, so an outage
+// backlog never floods the feed or posts in the middle of the night. One post per window (MIN_GAP_HOURS).
+const WINDOWS_UK = (process.env.WINDOWS_UK || '12:30-14:30,19:30-21:30').split(',').map((w) => w.split('-').map((t) => {
+  const [h, m] = t.split(':').map(Number); return h * 60 + m;
+}));
+function ukMinutes(date) {
+  const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(date);
+  const get = (t) => Number(parts.find((x) => x.type === t).value);
+  return get('hour') * 60 + get('minute');
+}
+function inWindow(date) {
+  const m = ukMinutes(date);
+  return WINDOWS_UK.some(([a, b]) => m >= a && m <= b);
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -207,6 +221,10 @@ async function main() {
   const due = (await readQueue()).filter((p) => p.publish_at && new Date(p.publish_at).getTime() <= now
     && (!p.not_before || new Date(p.not_before).getTime() <= now));
   if (!due.length) { console.log('Nothing due.'); return; }
+  if (!inWindow(new Date(now)) && !process.env.IGNORE_WINDOWS) {
+    console.log(`${due.length} due, but it's outside the UK posting windows (${process.env.WINDOWS_UK || '12:30-14:30,19:30-21:30'}). Waiting.`);
+    return;
+  }
 
   const last = await lastPublishedAt();
   const gapH = last ? (now - last) / 3600000 : Infinity;
