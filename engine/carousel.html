@@ -64,7 +64,7 @@ function head(sl, big) { return `<div class="tag">${esc(sl.tag)}</div><h1${big ?
 const T = {
   cover: (sl) => `${head(sl, true)}${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}<div class="visual">${ICONS[sl.icon || 'drop']}</div>`,
   text: (sl) => `${head(sl, sl.big)}${(sl.paras || [sl.lead]).map((x) => `<p class="lead">${esc(x)}</p>`).join('')}${sl.icon ? `<div class="visual">${ICONS[sl.icon]}</div>` : ''}`,
-  steps: (sl) => `${head(sl)}<div class="tl">${sl.steps.map((x, k) => `<div class="${k === (sl.hot ?? 1) ? 'hot' : ''}"><small>STEP ${k + 1}</small><span>${esc(x)}</span></div>`).join('')}</div>`,
+  steps: (sl) => `${head(sl)}<div class="tl">${sl.steps.map((x, k) => `<div class="${k === (sl.hot ?? 1) ? 'hot' : ''}"><small>STEP ${k + (sl.start ?? 1)}</small><span>${esc(x)}</span></div>`).join('')}</div>`,
   stats: (sl) => `${head(sl)}<div class="big">${sl.items.map((it) => `<div><strong${it.red ? ' style="color:#C8102E"' : ''}>${esc(it.v)}</strong><small>${esc(it.l)}</small></div>`).join('')}</div>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}`,
   scale: (sl) => { const mx = Math.max(...sl.rows.map((r) => r.w || 1)); return `${head(sl)}<div class="scale">${sl.rows.map((r) => `<div class="${r.hot ? 'hot' : ''}"><b>${esc(r.b)}</b><i style="width:${Math.round(320 * (r.w || 1) / mx)}px"></i>${esc(r.t)}</div>`).join('')}</div>${sl.lead ? `<p class="lead">${esc(sl.lead)}</p>` : ''}`; },
   tips: (sl) => `${head(sl)}<div class="tips">${sl.tips.map((x, k) => `<div><span>${k + 1}</span>${esc(x)}</div>`).join('')}</div>${sl.cta ? `<div class="cta"><b>${esc(sl.cta[0])}</b>${esc(sl.cta[1])}</div>` : ''}`

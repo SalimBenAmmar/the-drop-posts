@@ -32,6 +32,8 @@
 | 2026-11-20 19:30 | reel | The Dambusters practised over a reservoir that still supplies four cities (Derwent, 617 Sqn; Sheffield, Nottingham, Derby, Leicester; 46bn L) | GOV.UK, Severn Trent, ICE |
 | 2026-11-21 12:30 | reel | Norwich drinks from a river (River Wensum at Heigham; East of England driest region, ~600mm; Heigham £36m upgrade, UK's largest submerged ultrafiltration plant) | Anglian Water news, Anglian Water WRMP24 Norfolk |
 | 2026-11-21 19:30 | reel | A world war paused Cardiff's reservoir (Cantref 1892, 323m gal; Llwyn-on 1911–1926, paused 1915, 1,260m gal; Llwynon WTW supplies Cardiff) | Coflein RCAHMW, DWI |
+| 2026-11-22 12:30 | reel | Aberdeen drinks the River Dee (Cairnton intake, Invercannie WTW opened by Queen Victoria 16 Oct 1866, ~300,000 customers, up to 63m L/day, 19m L tank) | Scottish Water |
+| 2026-11-22 19:30 | carousel | Where your flush goes (5 sewage treatment steps, 4,600m L/day, sludge to biogas, storm overflows, 65,000+ blockages, 15cm sewer, 3 Ps) | Thames Water, Bournemouth Water, Southern Water |
 
 # Ideas backlog (facts must still be checked at the time)
 

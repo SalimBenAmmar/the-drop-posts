@@ -1,0 +1,116 @@
+{
+ "topic": "SEWAGE TREATMENT",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "LOO TO RIVER",
+   "l1": "Where your",
+   "l2": "flush goes",
+   "lead": "Five steps between your toilet and the river, as Thames Water explains them.",
+   "icon": "drop",
+   "source": "THAMES WATER"
+  },
+  {
+   "type": "stats",
+   "tag": "THE SCALE",
+   "l1": "Every day",
+   "l2": "in one region",
+   "items": [
+    {
+     "v": "4.6BN",
+     "l": "LITRES OF SEWAGE A DAY",
+     "red": true
+    },
+    {
+     "v": "350+",
+     "l": "TREATMENT WORKS"
+    }
+   ],
+   "lead": "Thames Water treats 4,600 million litres of sewage every day, at over 350 works, for 16 million customers.",
+   "source": "THAMES WATER"
+  },
+  {
+   "type": "steps",
+   "tag": "STEPS 1–3",
+   "l1": "Sieve, settle,",
+   "l2": "add bacteria",
+   "steps": [
+    "Screens remove wipes, nappies and cotton buds, then grit.",
+    "Settlement tanks let solids sink as sludge.",
+    "Air is pumped in so useful bacteria break down the waste."
+   ],
+   "source": "THAMES WATER"
+  },
+  {
+   "type": "steps",
+   "tag": "STEPS 4–5",
+   "l1": "Settle again,",
+   "l2": "then the river",
+   "steps": [
+    "A final tank lets the bacteria sink out. Some works also filter through sand.",
+    "Treated water goes back to local rivers and streams, regulated by the Environment Agency."
+   ],
+   "source": "THAMES WATER",
+   "start": 4,
+   "hot": 0
+  },
+  {
+   "type": "text",
+   "tag": "THE SLUDGE",
+   "l1": "Sludge into",
+   "l2": "power",
+   "paras": [
+    "Sludge is digested to make biogas, which is burned for heat and electricity.",
+    "What's left is recycled to farmland as fertiliser."
+   ],
+   "icon": "flask",
+   "source": "THAMES WATER"
+  },
+  {
+   "type": "text",
+   "tag": "WHEN IT RAINS HARD",
+   "l1": "Storm",
+   "l2": "overflows",
+   "paras": [
+    "When works can't treat all the flow, the extra goes into storm tanks.",
+    "When those fill, untreated wastewater can spill into rivers or the sea."
+   ],
+   "source": "BOURNEMOUTH WATER"
+  },
+  {
+   "type": "stats",
+   "tag": "WHY IT BLOCKS",
+   "l1": "Small pipes,",
+   "l2": "big problems",
+   "items": [
+    {
+     "v": "65K+",
+     "l": "BLOCKAGES A YEAR",
+     "red": true
+    },
+    {
+     "v": "15cm",
+     "l": "AVERAGE SEWER WIDTH"
+    }
+   ],
+   "lead": "Over 65,000 blockages a year in Thames Water's region come from the wrong things going down drains.",
+   "source": "THAMES WATER, BOURNEMOUTH WATER"
+  },
+  {
+   "type": "tips",
+   "tag": "THE SHORT VERSION",
+   "l1": "Only flush",
+   "l2": "the 3 Ps",
+   "tips": [
+    "Pee, paper and poo only.",
+    "Bin wipes, nappies and cotton buds.",
+    "Keep fat, oil and grease out of the sink."
+   ],
+   "cta": [
+    "KNEW ALL FIVE STEPS?",
+    "Comment your town and we'll cover it next."
+   ],
+   "source": "BOURNEMOUTH WATER, SOUTHERN WATER"
+  }
+ ]
+}

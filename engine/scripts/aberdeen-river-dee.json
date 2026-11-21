@@ -1,0 +1,179 @@
+{
+ "title": "Aberdeen drinks the River Dee",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "ABERDEEN DRINKS",
+  "THE RIVER DEE"
+ ],
+ "lines": [
+  {
+   "text": "Aberdeen's tap water comes straight out of the River Dee.",
+   "gap": 0.3,
+   "caps": [
+    "*ABERDEEN'S",
+    "TAP WATER",
+    "THE RIVER *DEE"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.3,
+     57.1,
+     45000
+    ],
+    "pins": [
+     [
+      "ABERDEEN",
+      -2.0943,
+      57.1497,
+      null
+     ],
+     [
+      "BANCHORY",
+      -2.4986,
+      57.0508,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Scottish Water takes it from the river at Cairnton, on Deeside.",
+   "gap": 0.3,
+   "caps": [
+    "*SCOTTISH WATER",
+    "AT *CAIRNTON",
+    "ON *DEESIDE"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "RIVER DEE",
+    "l2": "INTAKE AT CAIRNTON",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "Then it's treated at Invercannie water works.",
+   "gap": 0.3,
+   "caps": [
+    "*TREATED AT",
+    "*INVERCANNIE"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "flask",
+    "title": "INVERCANNIE",
+    "label": "WATER TREATMENT WORKS"
+   }
+  },
+  {
+   "text": "Queen Victoria opened it on the sixteenth of October, eighteen sixty-six.",
+   "gap": 0.3,
+   "caps": [
+    "QUEEN *VICTORIA",
+    "OPENED IT",
+    "OCTOBER *1866"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "OPENED BY QUEEN VICTORIA",
+    "l2": "16 OCTOBER 1866",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "Today it serves around three hundred thousand customers across the North East.",
+   "gap": 0.3,
+   "caps": [
+    "AROUND *300,000",
+    "*CUSTOMERS",
+    "THE *NORTH EAST"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "items": [
+     {
+      "v": "300,000",
+      "l": "CUSTOMERS IN THE NORTH EAST",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "It can make up to sixty-three million litres of drinking water a day.",
+   "gap": 0.3,
+   "caps": [
+    "UP TO",
+    "*63 MILLION",
+    "*LITRES A DAY"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "items": [
+     {
+      "v": "63m",
+      "l": "LITRES A DAY, AT MOST",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "An upgrade added a storage tank that holds nineteen million litres.",
+   "gap": 0.3,
+   "caps": [
+    "AN *UPGRADE",
+    "STORAGE *TANK",
+    "*19 MILLION LITRES"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · SCOTTISH WATER",
+    "l1": "NEW STORAGE TANK",
+    "l2": "19 MILLION LITRES",
+    "source": "SCOTTISH WATER"
+   }
+  },
+  {
+   "text": "Over a hundred and fifty years on, the Dee still fills Aberdeen's kettles.",
+   "gap": 0.3,
+   "caps": [
+    "*150 YEARS ON",
+    "THE *DEE",
+    "FILLS *KETTLES"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "kettle",
+    "title": "SINCE 1866",
+    "label": "FROM THE RIVER DEE"
+   }
+  },
+  {
+   "text": "Where does your water come from? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHERE'S *YOUR WATER FROM?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "COMMENT YOUR TOWN"
+   }
+  }
+ ],
+ "sources": [
+  "Scottish Water, Invercannie Water Treatment Works Upgrade: https://scottishwater.co.uk/in-your-area/investments-in-your-area/invercannie-water-treatment-works-upgrade"
+ ]
+}
