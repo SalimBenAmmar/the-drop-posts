@@ -66,8 +66,9 @@ node render.mjs scripts/<slug>.json out/<slug> --sheet      # one frame per seco
 node render.mjs scripts/<slug>.json out/<slug> --video
 ~/venv/bin/python sound.py scripts/<slug>.json out/<slug>
 ffmpeg -y -i out/<slug>/video_noaudio.mp4 -i out/<slug>/mix.wav -c:v copy -c:a aac -b:a 160k -shortest -movflags +faststart out/<slug>/reel.mp4
-ffmpeg -y -ss 1.2 -i out/<slug>/reel.mp4 -frames:v 1 -q:v 2 out/<slug>/cover.jpg
 ```
+
+**Cover (every reel):** add an entry to `engine/covers.json` (`slug`, `n` = the next number, `tag` = city or topic in caps, `title` = 2–3 short lines with one `*key*` phrase, and `pins` [["LABEL", lon, lat, side?]] for places or `icon` drop|kettle|flask|tap for topics), then `node covers.mjs covers.json out/covers <slug>` and use `out/covers/<slug>.jpg` as the queued `cover.jpg`. Same template for every reel so the profile grid stays harmonised; all text must sit inside the centre 3:4 band (the grid crop). Look at it before queueing (title fits, pin labels don't collide; set side "l", "r", "bl" or "br" to move a label).
 
 ## 5. Carousel (`engine/scripts/<slug>-carousel.json`)
 
