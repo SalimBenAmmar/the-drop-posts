@@ -22,5 +22,7 @@
  {"slug": "dambusters-derwent-water", "n": 21, "tag": "PEAK DISTRICT", "title": ["The *Dambusters'*", "reservoir still", "supplies 4 cities"], "pins": [["DERWENT", -1.73, 53.41]]},
  {"slug": "norwich-water-from-a-river", "n": 22, "tag": "NORWICH", "title": ["*Norwich*", "drinks", "from a river"], "pins": [["NORWICH", 1.2974, 52.6309]]},
  {"slug": "cardiff-reservoir-world-war", "n": 23, "tag": "CARDIFF", "title": ["A world war", "paused *Cardiff's*", "reservoir"], "pins": [["CARDIFF", -3.1791, 51.4816]]},
- {"slug": "aberdeen-river-dee", "n": 24, "tag": "ABERDEEN", "title": ["*Aberdeen*", "drinks the", "River Dee"], "pins": [["ABERDEEN", -2.0943, 57.1497]]}
+ {"slug": "aberdeen-river-dee", "n": 24, "tag": "ABERDEEN", "title": ["*Aberdeen*", "drinks the", "River Dee"], "pins": [["ABERDEEN", -2.0943, 57.1497]]},
+ {"slug": "yorkshire-hard-east-soft-west", "n": 25, "tag": "YORKSHIRE", "title": ["*Hard* in the east.", "*Soft* in the west."], "pins": [["YORKSHIRE", -1.3, 53.95]]},
+ {"slug": "no-legal-limit-hard-water", "n": 26, "tag": "HARD WATER", "title": ["Hard water has", "*no legal*", "*limit*"], "icon": "flask"}
 ]

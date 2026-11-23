@@ -1,0 +1,150 @@
+{
+ "title": "Yorkshire's water: hard in the east, soft in the west",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "YORKSHIRE'S WATER",
+  "HARD EAST \u00b7 SOFT WEST"
+ ],
+ "lines": [
+  {
+   "text": "Yorkshire's tap water is harder in the east.",
+   "gap": 0.3,
+   "caps": [
+    "*YORKSHIRE'S",
+    "TAP WATER",
+    "HARDER IN THE *EAST"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.25,
+     53.9,
+     15000
+    ],
+    "pins": [
+     [
+      "WEST",
+      -1.95,
+      53.85,
+      "SOFT"
+     ],
+     [
+      "EAST",
+      -0.55,
+      53.95,
+      "HARD"
+     ]
+    ]
+   }
+  },
+  {
+   "text": "And softer in the west.",
+   "gap": 0.3,
+   "caps": [
+    "*SOFTER",
+    "IN THE *WEST"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.25,
+     53.9,
+     15000
+    ],
+    "pins": [
+     [
+      "WEST",
+      -1.95,
+      53.85,
+      "SOFT"
+     ],
+     [
+      "EAST",
+      -0.55,
+      53.95,
+      "HARD"
+     ]
+    ]
+   }
+  },
+  {
+   "text": "It's the rock. Rain that runs through chalk and limestone picks up minerals.",
+   "gap": 0.3,
+   "caps": [
+    "IT'S THE *ROCK",
+    "*CHALK AND",
+    "*LIMESTONE",
+    "PICKS UP *MINERALS"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "rock",
+    "title": "CHALK & LIMESTONE",
+    "label": "ADD MINERALS"
+   }
+  },
+  {
+   "text": "The west is more moorland than chalk, so its water stays softer.",
+   "gap": 0.3,
+   "caps": [
+    "THE WEST IS",
+    "MORE *MOORLAND",
+    "STAYS *SOFTER"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL \u00b7 YORKSHIRE WATER",
+    "l1": "WEST: MOORLAND",
+    "l2": "EAST: CHALK & LIMESTONE",
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "Yorkshire Water says there's no known health risk from hard water.",
+   "gap": 0.3,
+   "caps": [
+    "*YORKSHIRE WATER",
+    "NO KNOWN",
+    "HEALTH *RISK"
+   ],
+   "scene": {
+    "type": "check",
+    "text": "NO KNOWN HEALTH RISK",
+    "source": "YORKSHIRE WATER"
+   }
+  },
+  {
+   "text": "That white crust on your kettle element? It's calcium carbonate, from the rock.",
+   "gap": 0.3,
+   "caps": [
+    "THAT *WHITE CRUST",
+    "ON YOUR *KETTLE",
+    "CALCIUM *CARBONATE"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "kettle",
+    "title": "LIMESCALE",
+    "label": "CALCIUM CARBONATE"
+   }
+  },
+  {
+   "text": "Hard or soft where you live? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "HARD OR *SOFT?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "HARD OR SOFT?"
+   }
+  }
+ ],
+ "sources": [
+  "Yorkshire Water, Let's learn about water hardness: https://www.yorkshirewater.com/education/water-hardness/",
+  "Yorkshire Water, Check your water hardness: https://www.yorkshirewater.com/your-water/water-hardness/"
+ ]
+}

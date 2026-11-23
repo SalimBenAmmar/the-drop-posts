@@ -1,0 +1,117 @@
+{
+ "title": "There's no legal limit on hard water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "YOUR WATER'S HARDNESS",
+  "HAS NO LEGAL LIMIT"
+ ],
+ "lines": [
+  {
+   "text": "Your tap water's hardness has no legal limit.",
+   "gap": 0.3,
+   "caps": [
+    "YOUR *HARDNESS",
+    "NO *LEGAL LIMIT"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": "uk",
+    "pins": []
+   }
+  },
+  {
+   "text": "Hardness is calcium and magnesium, dissolved from the rocks rain flows through.",
+   "gap": 0.3,
+   "caps": [
+    "*CALCIUM",
+    "AND *MAGNESIUM",
+    "FROM THE *ROCKS"
+   ],
+   "scene": {
+    "type": "particles"
+   }
+  },
+  {
+   "text": "Up to fifty milligrams a litre is soft. Over three hundred is very hard.",
+   "gap": 0.3,
+   "caps": [
+    "UP TO *50 MG/L",
+    "IS *SOFT",
+    "OVER 300:",
+    "*VERY HARD"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SEVERN TRENT",
+    "items": [
+     {
+      "v": "0–50",
+      "l": "SOFT",
+      "static": true
+     },
+     {
+      "v": "300+",
+      "l": "VERY HARD",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "SEVERN TRENT"
+   }
+  },
+  {
+   "text": "Severn Trent says it's not harmful, not even very hard water.",
+   "gap": 0.3,
+   "caps": [
+    "NOT *HARMFUL",
+    "NOT EVEN",
+    "*VERY HARD WATER"
+   ],
+   "scene": {
+    "type": "check",
+    "text": "NOT HARMFUL",
+    "source": "SEVERN TRENT"
+   }
+  },
+  {
+   "text": "But above five hundred, some people can taste the minerals, and pipes scale up fast.",
+   "gap": 0.3,
+   "caps": [
+    "ABOVE *500",
+    "*TASTE THE MINERALS",
+    "PIPES *SCALE UP"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · SEVERN TRENT",
+    "items": [
+     {
+      "v": "500",
+      "l": "MG/L · NOT NORMALLY EXCEEDED",
+      "red": true,
+      "static": true
+     }
+    ],
+    "source": "SEVERN TRENT"
+   }
+  },
+  {
+   "text": "Soft or very hard where you live? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "SOFT OR *VERY HARD?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "WHICH BAND?"
+   }
+  }
+ ],
+ "sources": [
+  "Severn Trent, Facts on water hardness: https://stwater.co.uk/content/dam/stw/my-water/document/WaterHardness.pdf",
+  "Severn Trent, Understanding your water: https://www.stwater.co.uk/my-supply/water-quality/understanding-your-water/"
+ ]
+}
