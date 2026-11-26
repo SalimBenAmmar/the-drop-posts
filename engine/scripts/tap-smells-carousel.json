@@ -1,0 +1,90 @@
+{
+ "topic": "TAP WATER SMELLS",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "TASTE & SMELL",
+   "l1": "What's that",
+   "l2": "smell?",
+   "lead": "Most odd tastes come from your own plumbing, fittings or appliances, says the regulator.",
+   "icon": "tap",
+   "source": "DWI"
+  },
+  {
+   "type": "text",
+   "tag": "SWIMMING POOL",
+   "l1": "Chlorine",
+   "l2": "taste",
+   "paras": [
+    "Chlorine keeps water safe. Companies usually keep it to 0.5 mg/l or less.",
+    "Chill a jug in the fridge. Bin it after 24 hours."
+   ],
+   "icon": "flask",
+   "source": "DWI"
+  },
+  {
+   "type": "text",
+   "tag": "TCP OR MEDICINAL",
+   "l1": "Like",
+   "l2": "antiseptic",
+   "paras": [
+    "Chlorine reacting with rubber or plastic in kettles, tap washers or appliance hoses.",
+    "Boil water in a saucepan. If that tastes fine, your kettle is the cause."
+   ],
+   "icon": "kettle",
+   "source": "DWI"
+  },
+  {
+   "type": "text",
+   "tag": "MUSTY OR EARTHY",
+   "l1": "Stale",
+   "l2": "pipes",
+   "paras": [
+    "Water left standing in little-used pipes, from harmless bacteria or fungi.",
+    "Run the tap for a few minutes."
+   ],
+   "icon": "drop",
+   "source": "DWI"
+  },
+  {
+   "type": "steps",
+   "tag": "ROTTEN OR SEWAGE",
+   "l1": "Try the",
+   "l2": "glass test",
+   "steps": [
+    "Fill a glass and take it to another room.",
+    "Smell gone? It's your sink or drain. Clean or unblock it.",
+    "Still there? Contact your water company immediately."
+   ],
+   "source": "DWI"
+  },
+  {
+   "type": "text",
+   "tag": "METALLIC OR WOODY",
+   "l1": "Old pipes",
+   "l2": "tell",
+   "paras": [
+    "Metallic: water left in copper, iron or galvanised pipes. Run the tap.",
+    "Woody: old black plastic pipes."
+   ],
+   "icon": "drop",
+   "source": "DWI"
+  },
+  {
+   "type": "tips",
+   "tag": "BEFORE YOU CALL",
+   "l1": "Quick",
+   "l2": "checks",
+   "tips": [
+    "Drink from the cold kitchen tap.",
+    "Check your other taps, and ask a neighbour.",
+    "Petrol or fuel smell? Call your water company and council now."
+   ],
+   "cta": [
+    "SMELL ANYTHING?",
+    "Save this, and comment your town for the next one."
+   ],
+   "source": "DWI"
+  }
+ ]
+}

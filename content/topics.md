@@ -36,6 +36,10 @@
 | 2026-11-22 19:30 | carousel | Where your flush goes (5 sewage treatment steps, 4,600m L/day, sludge to biogas, storm overflows, 65,000+ blockages, 15cm sewer, 3 Ps) | Thames Water, Bournemouth Water, Southern Water |
 | 2026-11-24 12:30 | reel | Yorkshire's water: hard in the east, soft in the west (chalk/limestone vs moorland, no known health risk, kettle limescale = calcium carbonate) | Yorkshire Water, Let's learn about water hardness |
 | 2026-11-24 19:30 | reel | Your water's hardness has no legal limit (no UK standard; bands 0–50 soft, 300+ very hard mg/l CaCO3; not harmful; should not normally exceed 500 mg/l) | Severn Trent, Facts on water hardness; Understanding your water |
+| 2026-11-26 12:30 | reel | Manchester's tap water is naturally soft (NW upland reservoirs soft/very soft, southern boreholes blended, many bottled waters moderately hard) | United Utilities, Water hardness; Water hardness factsheet 2024 |
+| 2026-11-26 19:30 | reel | Most of London's tap water is river water (~70% rivers: Thames, Lee, Kennet, Wey, Tillingbourne; up to 30% chalk aquifers, up to 40% in drought) | Thames Water, Water resources in your area |
+| 2026-11-27 12:30 | carousel | What's that smell in your tap water? (chlorine, TCP, musty, rotten/glass test, metallic, woody, petrol) | DWI, Taste and odour; TCP or medicinal; Chlorine |
+| 2026-11-27 19:30 | reel | Newcastle and Sunderland drink from different reservoirs (Kielder for Gosforth/Fenham; Derwent Reservoir N. Pennines for Sunderland/Durham; Burnhope, River Wear; 17,000km mains) | Northumbrian Water, From tourism to tap (2021); Severn Trent |
 
 # Ideas backlog (facts must still be checked at the time)
 

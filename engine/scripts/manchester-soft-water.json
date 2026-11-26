@@ -1,0 +1,153 @@
+{
+ "title": "Manchester's tap water is naturally soft",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "MANCHESTER'S WATER",
+  "NATURALLY SOFT"
+ ],
+ "lines": [
+  {
+   "text": "Manchester's tap water is naturally soft.",
+   "gap": 0.3,
+   "caps": [
+    "*MANCHESTER'S",
+    "TAP WATER",
+    "NATURALLY *SOFT"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.6,
+     54.0,
+     9000
+    ],
+    "pins": [
+     [
+      "THIRLMERE",
+      -3.06,
+      54.54,
+      "SOFT"
+     ],
+     [
+      "MANCHESTER",
+      -2.2426,
+      53.4808,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Most North West water comes from upland reservoirs.",
+   "gap": 0.3,
+   "caps": [
+    "MOST *NORTH WEST",
+    "WATER",
+    "UPLAND *RESERVOIRS"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.6,
+     54.0,
+     9000
+    ],
+    "pins": [
+     [
+      "THIRLMERE",
+      -3.06,
+      54.54,
+      "SOFT"
+     ],
+     [
+      "MANCHESTER",
+      -2.2426,
+      53.4808,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "United Utilities says those are soft or very soft.",
+   "gap": 0.3,
+   "caps": [
+    "*UNITED UTILITIES",
+    "SOFT OR",
+    "VERY *SOFT"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · UNITED UTILITIES",
+    "l1": "UPLAND RESERVOIRS",
+    "l2": "SOFT OR VERY SOFT",
+    "source": "UNITED UTILITIES"
+   }
+  },
+  {
+   "text": "Water turns hard when it runs through limestone or chalk.",
+   "gap": 0.3,
+   "caps": [
+    "TURNS *HARD",
+    "*LIMESTONE",
+    "OR *CHALK"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "rock",
+    "title": "LIMESTONE & CHALK",
+    "label": "MAKE WATER HARD"
+   }
+  },
+  {
+   "text": "Some southern boreholes are harder, but they're blended with softer water.",
+   "gap": 0.3,
+   "caps": [
+    "SOME *BOREHOLES",
+    "ARE *HARDER",
+    "*BLENDED",
+    "WITH SOFTER WATER"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · UNITED UTILITIES",
+    "l1": "SOME BOREHOLES: HARDER",
+    "l2": "BLENDED WITH SOFT",
+    "source": "UNITED UTILITIES"
+   }
+  },
+  {
+   "text": "And many bottled waters? They're moderately hard.",
+   "gap": 0.3,
+   "caps": [
+    "MANY *BOTTLED",
+    "WATERS?",
+    "MODERATELY *HARD"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "glass",
+    "title": "BOTTLED WATER",
+    "label": "OFTEN MODERATELY HARD"
+   }
+  },
+  {
+   "text": "Hard or soft where you live? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "HARD OR *SOFT?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "HARD OR SOFT?"
+   }
+  }
+ ],
+ "sources": [
+  "United Utilities, Water hardness: https://www.unitedutilities.com/services/your-water-supply/about-your-water/water-hardness/",
+  "United Utilities, Water hardness factsheet 2024: https://corporate.unitedutilities.com/globalassets/documents/pdf/10271_6335-water-hardness-factsheet-2024.pdf"
+ ]
+}

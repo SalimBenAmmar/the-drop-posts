@@ -1,0 +1,176 @@
+{
+ "title": "Newcastle and Sunderland drink from different reservoirs",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "NEWCASTLE: KIELDER",
+  "SUNDERLAND: DERWENT"
+ ],
+ "lines": [
+  {
+   "text": "Newcastle and Sunderland get water from different reservoirs.",
+   "gap": 0.3,
+   "caps": [
+    "*NEWCASTLE",
+    "AND *SUNDERLAND",
+    "DIFFERENT *RESERVOIRS"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.5,
+     54.94,
+     45000
+    ],
+    "pins": [
+     [
+      "NEWCASTLE",
+      -1.6178,
+      54.9783,
+      null
+     ],
+     [
+      "SUNDERLAND",
+      -1.3829,
+      54.9069,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "North of the city, Gosforth and Fenham get some from Kielder.",
+   "gap": 0.3,
+   "caps": [
+    "NORTH OF THE *CITY",
+    "*GOSFORTH, FENHAM",
+    "FROM *KIELDER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -2.1,
+     55.08,
+     16000
+    ],
+    "pins": [
+     [
+      "KIELDER",
+      -2.58,
+      55.19,
+      null
+     ],
+     [
+      "GOSFORTH",
+      -1.6157,
+      55.007,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Sunderland and parts of Durham drink from Derwent Reservoir.",
+   "gap": 0.3,
+   "caps": [
+    "*SUNDERLAND",
+    "PARTS OF *DURHAM",
+    "*DERWENT RESERVOIR"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -1.68,
+     54.88,
+     25000
+    ],
+    "pins": [
+     [
+      "DERWENT RES.",
+      -1.98,
+      54.86,
+      null
+     ],
+     [
+      "SUNDERLAND",
+      -1.3829,
+      54.9069,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Burnhope Reservoir and the River Wear add more.",
+   "gap": 0.3,
+   "caps": [
+    "*BURNHOPE",
+    "AND THE RIVER *WEAR",
+    "ADD *MORE"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · NORTHUMBRIAN WATER",
+    "l1": "BURNHOPE + RIVER WEAR",
+    "l2": "TREATED AT 2 WORKS",
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "Over seventeen thousand kilometres of main carry it.",
+   "gap": 0.3,
+   "caps": [
+    "OVER *17,000",
+    "KILOMETRES",
+    "OF *MAIN"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · NORTHUMBRIAN WATER",
+    "items": [
+     {
+      "v": "17,000 km+",
+      "static": true,
+      "l": "OF WATER MAIN",
+      "red": true
+     }
+    ],
+    "source": "NORTHUMBRIAN WATER"
+   }
+  },
+  {
+   "text": "No, not the Dambusters' Derwent. That's in the Peak District.",
+   "gap": 0.3,
+   "caps": [
+    "NOT THE *DAMBUSTERS'",
+    "DERWENT",
+    "THAT'S THE *PEAK DISTRICT"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "TWO DERWENTS",
+    "l1": "NOT THE DAMBUSTERS' ONE",
+    "l2": "THAT'S IN THE PEAK DISTRICT",
+    "source": "NORTHUMBRIAN WATER · SEVERN TRENT"
+   }
+  },
+  {
+   "text": "Which reservoir is yours? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "WHICH *RESERVOIR",
+    "IS YOURS?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "WHICH RESERVOIR?"
+   }
+  }
+ ],
+ "sources": [
+  "Northumbrian Water, From tourism to tap (29 Jan 2021): https://www.nwg.co.uk/news-and-media/news-releases/from-tourism-to-tap--some-of-the-best-beauty-spots-highlighted-as-northumbrian-water-reveals-where-your-water-comes-from",
+  "Severn Trent, Upper Derwent: https://stwater.co.uk/news/news-releases/for-a-dam-good-day-out-head-on-up-to-upper-derwent"
+ ]
+}

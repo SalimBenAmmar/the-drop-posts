@@ -1,0 +1,149 @@
+{
+ "title": "Most of London's tap water is river water",
+ "voice": "bm_george",
+ "speed": 1.05,
+ "lead_in": 0.1,
+ "hook": [
+  "LONDON'S TAP WATER",
+  "IS MOSTLY RIVER WATER"
+ ],
+ "lines": [
+  {
+   "text": "Most of London's tap water is river water.",
+   "gap": 0.3,
+   "caps": [
+    "MOST OF *LONDON'S",
+    "TAP WATER",
+    "IS *RIVER WATER"
+   ],
+   "scene": {
+    "type": "map",
+    "cam": [
+     -0.2,
+     51.5,
+     14000
+    ],
+    "pins": [
+     [
+      "LONDON",
+      -0.1276,
+      51.5072,
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "text": "Thames Water says rivers give about seventy per cent.",
+   "gap": 0.3,
+   "caps": [
+    "*THAMES WATER",
+    "RIVERS GIVE",
+    "ABOUT *70%"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · THAMES WATER",
+    "items": [
+     {
+      "v": "70",
+      "suffix": "%",
+      "l": "FROM RIVERS",
+      "red": true
+     },
+     {
+      "v": "30",
+      "suffix": "%",
+      "l": "UP TO · UNDERGROUND"
+     }
+    ],
+    "bars": true,
+    "source": "THAMES WATER"
+   }
+  },
+  {
+   "text": "Not just the Thames. The Lee, Kennet and Wey too.",
+   "gap": 0.3,
+   "caps": [
+    "NOT JUST THE *THAMES",
+    "THE *LEE",
+    "*KENNET AND WEY"
+   ],
+   "scene": {
+    "type": "card",
+    "tag": "OFFICIAL · THAMES WATER",
+    "l1": "THAMES · LEE · KENNET",
+    "l2": "WEY · TILLINGBOURNE",
+    "source": "THAMES WATER"
+   }
+  },
+  {
+   "text": "River water is pumped into big reservoirs in West and North London.",
+   "gap": 0.3,
+   "caps": [
+    "*PUMPED INTO",
+    "BIG *RESERVOIRS",
+    "WEST AND *NORTH LONDON"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "drop",
+    "title": "RESERVOIRS",
+    "label": "WEST & NORTH LONDON"
+   }
+  },
+  {
+   "text": "The rest comes from underground, mostly from chalk.",
+   "gap": 0.3,
+   "caps": [
+    "THE *REST",
+    "FROM *UNDERGROUND",
+    "MOSTLY *CHALK"
+   ],
+   "scene": {
+    "type": "icon",
+    "icon": "rock",
+    "title": "CHALK AQUIFERS",
+    "label": "UP TO 30% A DAY"
+   }
+  },
+  {
+   "text": "And in a drought, that underground share can rise to forty per cent.",
+   "gap": 0.3,
+   "caps": [
+    "IN A *DROUGHT",
+    "UNDERGROUND SHARE",
+    "UP TO *40%"
+   ],
+   "scene": {
+    "type": "stat",
+    "tag": "OFFICIAL · THAMES WATER",
+    "items": [
+     {
+      "v": "40",
+      "suffix": "%",
+      "l": "UP TO · IN A DROUGHT",
+      "red": true
+     }
+    ],
+    "source": "THAMES WATER"
+   }
+  },
+  {
+   "text": "River or underground where you live? Comment your town.",
+   "gap": 0.2,
+   "caps": [
+    "RIVER OR",
+    "*UNDERGROUND?",
+    "COMMENT YOUR *TOWN"
+   ],
+   "scene": {
+    "type": "cta",
+    "title": "RIVER OR GROUND?"
+   }
+  }
+ ],
+ "sources": [
+  "Thames Water, Water resources in your area: https://www.thameswater.co.uk/help-and-advice/water-quality/where-our-water-comes-from/reservoir-levels-and-rainfall-figures"
+ ]
+}
